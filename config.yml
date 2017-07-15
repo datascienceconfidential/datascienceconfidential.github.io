@@ -1,2 +1,3 @@
 name: Experimental test blog
-	markdown: kramdown
+markdown: kramdown
+  syntax_highlighter: rouge
