@@ -1,3 +1,4 @@
 name: Experimental test blog
 markdown: kramdown
+  input: GFM
   syntax_highlighter: rouge
