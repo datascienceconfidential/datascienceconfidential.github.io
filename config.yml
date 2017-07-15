@@ -1,7 +1,7 @@
 name: Experimental test blog
-markdown: redcarpet
-  input: GFM
-  syntax_highlighter: rouge
-  syntax_highlighter_opts:
-      # Use existing pygments syntax highlighting cs
-      css_class: 'highlight'
+markdown:       kramdown
+redcarpet:
+    extensions: ['smart']
+
+highlighter:         rouge
+fenced_code_blocks:  true
