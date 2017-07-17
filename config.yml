@@ -5,3 +5,6 @@ redcarpet:
 
 highlighter:         rouge
 fenced_code_blocks:  true
+
+gems:
+  - jekyll-feed
