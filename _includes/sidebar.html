@@ -17,10 +17,6 @@
 
   <nav class="sidebar-nav">
     <div class="sidebar-nav-item">
-    <a href="{{ site.baseurl }}">My site</a><br>
-     <a href="https://rtrvale.github.io" target="_blank">About</a>&nbsp;&nbsp;
-      |&nbsp;&nbsp;<a href="{{ site.baseurl }}/feed.xml" target="_blank">RSS</a><br/>
-    Search: <form onsubmit="search_google()" ><input type="text" id="google-search"></form>
     </div>
     {% for post in site.posts %}
       <a class="sidebar-nav-item" href="{{ post.url }}">{{ post.date | date_to_string }} &raquo; {{ post.title }}</a>
