@@ -6,4 +6,6 @@ redcarpet:
 highlighter:         rouge
 fenced_code_blocks:  true
 
-url: testblog1.github.io
+name:         Data Science Confidential
+description:  Data Science Confidential
+url:          https://testblog1.github.io
