@@ -1,0 +1,9 @@
+---
+layout: post
+title: "Test post with code listing"
+date: 2015-01-01
+categories: python
+---
+
+
+<img src="{{site.baseurl}}/bike.png" />
