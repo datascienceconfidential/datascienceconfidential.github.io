@@ -20,6 +20,22 @@ title: Data Science Confidential
 		<li><a href="https://rtrvale.github.io" target=new>My homepage</a>
 	</ul>
 
+<div class="posts">
+  {% for post in paginator.posts %}
+  <div class="post">
+    <h1 class="post-title">
+      <a href="{{ post.url }}">
+        {{ post.title }}
+      </a>
+    </h1>
+
+    <span class="post-date">{{ post.date | date_to_string }}</span>
+
+    {{ post.content }}
+    <a href="{{ post.url }}#disqus_thread">View or add comments</a>
+  </div>
+  {% endfor %}
+</div>
 
 <div class="pagination">
   {% if paginator.next_page %}
