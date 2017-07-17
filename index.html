@@ -4,6 +4,18 @@ title: Experimental test blog
 ---
 <div class="blurb">
 	<h1 style="font-family:monospace; font-weight:bold;">Data Science Confidential</h1>
-	<p>I'm best known as the horrible cop from <em>A Touch of Evil</em> Don't trust me. <a href="/about">Read more about my life...</a></p>
+	<p>This is a blog about statistics, machine learning, computing etc. The title is a reference to the movie
+	<a href="https://en.wikipedia.org/wiki/Kansas_City_Confidential#cite_note-9">Kansas City Confidential</a>.
+		
+	<p>Click on the thing in the top left to view a list of recent posts, or for the most recent post, go here:
+	{% assign post = site.posts.first %}
+	{% if post.title %}
+            <a href="{{ root_url }}{{ post.url }}">{{ post.title }}</a>
+        {% endif %}
+	</p>
+		
+	<ul>
+		<li><a href="https://rtrvale.github.io">My homepage</a>
+	</ul>
 </div><!-- /.blurb -->
 
