@@ -41,7 +41,7 @@ body {
 }
 
 html {
-  font-family: "PT Serif", Georgia, "Times New Roman", serif;
+  font-family: "PT Sans", Georgia, "Times New Roman", sans;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -151,7 +151,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "PT Sans", Helvetica, Arial, sans-serif;
   font-size: .875rem; /* 15px */
   color: rgba(255,255,255,.6);
-  background-color: #202020;
+  background-color: #ADD8E6;
   -webkit-transition: all .3s ease-in-out;
           transition: all .3s ease-in-out;
 }
