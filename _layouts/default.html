@@ -16,13 +16,13 @@
 		<body class="theme-base-09 sidebar-overlay">
 		    
 			
-			Sidebar should appear here!
+			<!-- Sidebar should appear here! -->
 			 {% include sidebar.html %}
 			<label for="sidebar-checkbox" class="sidebar-toggle"></label>
-			This should come after the sidebar
+			<!-- This should come after the sidebar -->
 			
 
-    <script    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
+    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
          content to avoid any CSS collisions with our real content. -->
     <div class="wrap">
       <div class="masthead">
@@ -38,6 +38,7 @@
         {{ content }}
       </div>
     </div>
+    <script>
       (function(document) {
         var toggle = document.querySelector('.sidebar-toggle');
         var sidebar = document.querySelector('#sidebar');
