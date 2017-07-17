@@ -13,3 +13,5 @@ baseurl:          /
 
 title: Data Science Confidential
 tagline: Data Science Confidential
+
+paginate:     5
