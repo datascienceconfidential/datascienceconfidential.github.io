@@ -17,6 +17,7 @@
 
   <nav class="sidebar-nav">
     <div class="sidebar-nav-item">
+    Posts
     </div>
     {% for post in site.posts %}
       <a class="sidebar-nav-item" href="{{ post.url }}">{{ post.date | date_to_string }} &raquo; {{ post.title }}</a>
