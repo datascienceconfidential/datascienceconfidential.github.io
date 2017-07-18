@@ -8,9 +8,6 @@ layout: default
     
   {% assign author_data = site.data.authors | where:"id", page.author %}
   {% assign author = author_data | first %}
-  {{author[1].id}}
-  {{author.name}}
-  {{author[:page.author].email}}
   {% if author %}
     by {{author.name}} in&nbsp; 
   {% endif %}
