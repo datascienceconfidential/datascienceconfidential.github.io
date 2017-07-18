@@ -11,6 +11,11 @@ layout: default
   {% else %}
     {% assign categories = page.categories %}
   {% endif %}
+    
+  {% if post.author %}
+    by <a href="post.author.email">{{post.author.name}}</a> in 
+  {% endif %}
+    
   {% for category in categories %}
   <a href="{{site.baseurl}}/categories/#{{category|slugize}}">{{category}}</a>
   {% unless forloop.last %}&nbsp;{% endunless %}
