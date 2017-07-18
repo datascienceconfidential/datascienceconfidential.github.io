@@ -3,7 +3,7 @@ layout: default
 ---
 
 {% for author in site.data.authors %}
-{{author.name}}
+{{author[1].name}}
 {% endfor %}
 
 {{content}}
