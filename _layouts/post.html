@@ -14,7 +14,7 @@ layout: default
     
   {% assign author = site.authors[page.author] %}
   {% if author %}
-    by <a href="author.email">{{author.name}}</a> in 
+    by <a href="{{author.email}}">{{author.name}}</a> in 
   {% endif %}
     
   {% for category in categories %}
