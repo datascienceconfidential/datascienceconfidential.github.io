@@ -6,7 +6,7 @@ layout: default
   <h1 class="post-title">{{ page.title }}</h1>
  
     
-  {% assign author = site.data.authors | where: "id", page.author %}
+  {% assign author = site.data.authors | where:"id", page.author %}
   {{author.id}}
   {{author.name}}
   {{author.email}}
