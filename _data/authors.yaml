@@ -1,4 +1,5 @@
-- name: Richard Vale
+- id: richard_vale
+  name: Richard Vale
   name_short: Richard
   web: rtrvale.github.io
   email: rtrvale@gmail.com
