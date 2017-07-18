@@ -7,14 +7,14 @@ Is anything actually changing?
 {% for author in site.data.authors %}
    <h3>{{ author.name }}</h3>
    <h3>{{ author.id }}</h3>
-   {% for post in site.posts %}
+{% for post in site.posts %}
      {{ post.author }}
      {% if post.author = author.id %}
        <article class="archive-item">
          <h4><a href="{{ site.baseurl }}{{ post.url }}">{{post.title}}</a></h4>
        </article>
      {% endif %}
-   {% endfor %}
+{% endfor %}
 {% endfor %}
 
 <!--  <div class="archive-group">
