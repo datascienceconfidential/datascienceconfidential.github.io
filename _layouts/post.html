@@ -12,8 +12,8 @@ layout: default
     {% assign categories = page.categories %}
   {% endif %}
     
-  {% if post.author %}
-    by <a href="post.author.email">{{post.author.name}}</a> in 
+  {% if author %}
+    by <a href="author.email">{{author.name}}</a> in 
   {% endif %}
     
   {% for category in categories %}
