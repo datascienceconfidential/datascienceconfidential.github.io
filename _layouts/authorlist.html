@@ -2,9 +2,11 @@
 layout: default
 ---
 
-<!-- <h1>Posts by author</h1> -->
-Is anything actually changing?
+<h1>Posts by author</h1>
+
 {% for author in site.data.authors %}
-{{ author.name }}
-{{author.id}}
+<h3>{{ author.name }}</h3>
+{% for post in site.posts %}
+{{ post.title }}
+{% endfor %}
 {% endfor %}
