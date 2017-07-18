@@ -6,9 +6,10 @@ layout: default
   <h1 class="post-title">{{ page.title }}</h1>
  
     
-  {% assign author = site.data.authors | where:"id", page.author %}
+  {% assign author_data = site.data.authors | where:"id", page.author %}
+  {% assign author = author_data | first %}
   {{author[1].id}}
-  {{author[page.author].name}}
+  {{author.name}}
   {{author[:page.author].email}}
   {% if author %}
     by {{author.name}} in&nbsp; 
