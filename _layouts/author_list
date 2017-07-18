@@ -4,6 +4,6 @@ layout: default
 
 {% for author in site.data.authors %}
 {{author.name}}
-{% end for %}
+{% endfor %}
 
 {{content}}
