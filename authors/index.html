@@ -8,7 +8,7 @@ title: Authors
 <div id="archives">
 {% for author in site.data.authors %}
   <div class="archive-group">
-    {% capture author_name %}{{ author.name | first }}{% endcapture %}
+    {% capture author_name %}{{ author.name }}{% endcapture %}
     <div id="#{{ author_name | slugize }}"></div>
     <p></p>
     
