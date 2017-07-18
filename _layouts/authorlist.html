@@ -5,7 +5,12 @@ layout: default
 <h1>Posts by author</h1>
 
 {% for author in site.data.authors %}
-   {{ author.name }}
+   <h3>{{ author.name }}</h3>
+   {% for post in site.posts %}
+     {% if post.author = author.id %}
+       {{post.title}}
+     {% endif %}
+   {% endfor %}
 {% endfor %}
 
 {{content}}
