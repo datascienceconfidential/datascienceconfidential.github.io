@@ -7,6 +7,7 @@ Is anything actually changing?
 {% for author in site.data.authors %}
    <h3>{{ author.name }}</h3>
    <h3>{{ author.id }}</h3>
+{% endfor %}
 <!-- {% for post in site.posts %}
      {{ post.author }}
      {% if post.author = author.id %}
@@ -15,7 +16,6 @@ Is anything actually changing?
        </article>
      {% endif %}
 {% endfor %} -->
-{% endfor %}
 
 <!--  <div class="archive-group">
     {% capture author_name %}{{ author | first }}{% endcapture %}
@@ -31,5 +31,3 @@ Is anything actually changing?
     {% endfor %}
   </div>
 {% endfor %} -->
-
-{{content}}
