@@ -7,7 +7,7 @@ layout: default
 {% for author in site.data.authors %}
 <h3>{{ author.name }}</h3>
 {% for post in site.posts %}
-{% if post.author = author.id %}
+{% if post.author == author.id %}
     <article class="archive-item">
       <h4><a href="{{ site.baseurl }}{{ post.url }}">{{post.title}}</a></h4>
     </article>
