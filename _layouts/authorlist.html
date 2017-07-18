@@ -4,30 +4,3 @@ layout: default
 
 <!-- <h1>Posts by author</h1> -->
 Is anything actually changing?
-<!-- {% for author in site.data.authors %}
-   <h3>{{ author.name }}</h3>
-   <h3>{{ author.id }}</h3>
-{% endfor %} -->
-<!-- {% for post in site.posts %}
-     {{ post.author }}
-     {% if post.author = author.id %}
-       <article class="archive-item">
-         <h4><a href="{{ site.baseurl }}{{ post.url }}">{{post.title}}</a></h4>
-       </article>
-     {% endif %}
-{% endfor %} -->
-
-<!--  <div class="archive-group">
-    {% capture author_name %}{{ author | first }}{% endcapture %}
-    <div id="#{{ author_name | slugize }}"></div>
-    <p></p>
-    
-    <h3 class="category-head">{{ author_name }}</h3>
-    <a name="{{ author_name | slugize }}"></a>
-    {% for post in site.categories[category_name] %}
-    <article class="archive-item">
-      <h4><a href="{{ site.baseurl }}{{ post.url }}">{{post.title}}</a></h4>
-    </article>
-    {% endfor %}
-  </div>
-{% endfor %} -->
