@@ -3,6 +3,7 @@ layout: post
 title: "Hank Quinlan, Horrible Cop, Launches Site"
 author: richard_vale
 date: 2014-04-30
+categories: python
 ---
 
 Well. Finally got around to putting this old website together. Neat thing about it - powered by [Jekyll](http://jekyllrb.com) 
