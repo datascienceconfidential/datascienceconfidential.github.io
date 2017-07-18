@@ -14,10 +14,12 @@ title: Authors
     
     <h3 class="author-head">{{ author_name }}</h3>
     <a name="{{ author_name | slugize }}"></a>
-    {% for post in site.data.authors[author_name] %}
-    <article class="archive-item">
-      <h4><a href="{{ site.baseurl }}{{ post.url }}">{{post.title}}</a></h4>
-    </article>
+    {% for post in site.posts %}
+    {% if post.author = author_name %}
+      <article class="archive-item">
+        <h4><a href="{{ site.baseurl }}{{ post.url }}">{{post.title}}</a></h4>
+      </article>
+    {% endif %}
     {% endfor %}
   </div>
 {% endfor %}
