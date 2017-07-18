@@ -6,8 +6,8 @@ title: Authors
 <h1>Posts by author</h1>
 
 <div id="archives">
-{% for author in site.data.authors %}
-  {{ author[1].name }}
+{% for author in site.data.authors[0] %}
+  {{ author.name }}
   <!--<div class="archive-group">
     {% capture author_name %}{{ author.name }}{% endcapture %}
     <div id="#{{ author_name | slugize }}"></div>
