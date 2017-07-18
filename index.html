@@ -8,15 +8,13 @@ title: Data Science Confidential
 	<a href="https://en.wikipedia.org/wiki/Kansas_City_Confidential">Kansas City Confidential</a> which spawned
 	a series of 'confidential' films.
 </div><!-- /.blurb -->	
-	
-        <p>Click on the thing in the top left to view a list of recent posts, or for the most recent post, go here:
-	{% assign post = site.posts.first %}
-	{% if post.title %}
-            <a href="{{ root_url }}{{ post.url }}">{{ post.title }}</a>
-        {% endif %}
-	</p>
 		
 	<ul>
+		<li>Click on the thing in the top left to view a list of recent posts
+		<li>For the most recent post, go here: {% assign post = site.posts.first %}{% if post.title %}
+            <a href="{{ root_url }}{{ post.url }}">{{ post.title }}</a>
+        {% endif %}
+		<li>For the master index of all posts, go <a href="{{site.baseurl}}/blog/index.html">here</a>
 		<li><a href="https://rtrvale.github.io" target=new>My homepage</a>
 	</ul>
 
