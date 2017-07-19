@@ -9,7 +9,7 @@ layout: default
   {% assign author_data = site.data.authors | where:"id", page.author %}
   {% assign author = author_data | first %}
   {% if author %}
-    by {{author.name}} in&nbsp; 
+  by <a href="{{site.url}}/authors/">{{author.name}}</a> in&nbsp; 
   {% endif %}
 
   <div class="post-categories">
