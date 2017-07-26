@@ -1,3 +1,55 @@
-The title is a reference to the movie
+---
+layout: default
+title: Data Science Confidential
+---
+<div class="blurb">
+	<h1 style="font-family:monospace; font-weight:bold;">Data Science Confidential</h1>
+	<p>This is a blog about the theory and practice of statistics, machine learning, etc.
+	</p>
+</div><!-- /.blurb -->	
+		
+	<p>
+	None of the information in this blog is confidential. The title is a reference to the movie
 	<a href="https://en.wikipedia.org/wiki/Kansas_City_Confidential">Kansas City Confidential</a> which spawned
 	a series of 'confidential' films.
+	</p>
+	<p>
+	This blog is hosted on <a href="https://pages.github.com/">Github Pages</a>
+	and is powered by <a href="https://jekyllrb.com/">Jekyll</a>. The style is based on 
+	<a href="https://github.com/poole/lanyon">Poole/Lanyon</a>. If you want to make your own blog on Github Pages,
+		start <a href="http://jmcglone.com/guides/github-pages/">here.</a>
+	</p>
+
+<div class="posts">
+  {% for post in paginator.posts %}
+  <div class="post">
+    <h1 class="post-title">
+      <a href="{{ post.url }}">
+        {{ post.title }}
+      </a>
+    </h1>
+
+    <span class="post-date">{{ post.date | date_to_string }}</span>
+
+    {{ post.content }}
+    <a href="{{ post.url }}#disqus_thread">View or add comments</a>
+  </div>
+  {% endfor %}
+</div>
+
+<div class="pagination">
+  {% if paginator.next_page %}
+    <a class="pagination-item older" href="{{ site.baseurl }}page{{paginator.next_page}}">Older</a>
+  {% else %}
+    <!-- <span class="pagination-item older"></span> -->
+  {% endif %}
+  {% if paginator.previous_page %}
+    {% if paginator.page == 2 %}
+      <a class="pagination-item newer" href="{{ site.baseurl }}">Newer</a>
+    {% else %}
+      <a class="pagination-item newer" href="{{ site.baseurl }}page{{paginator.previous_page}}">Newer</a>
+    {% endif %}
+  {% else %}
+    <!-- <span class="pagination-item newer"></span> -->
+  {% endif %}
+</div>
