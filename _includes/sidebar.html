@@ -20,7 +20,9 @@
     Latest Posts
     </div>
     {% for post in site.posts %}
-      <a class="sidebar-nav-item" href="{{ post.url }}">{{ post.date | date_to_string }} &raquo; {{ post.title }}</a>
+      {% if post.date <= site.time %}
+        <a class="sidebar-nav-item" href="{{ post.url }}">{{ post.date | date_to_string }} &raquo; {{ post.title }}</a>
+      {% endif %}
     {% endfor %}
   </nav>
 
