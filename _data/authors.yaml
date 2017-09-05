@@ -1,12 +1,12 @@
 - id: richard_vale
-  name: Richard Vale
+  name: Richard
   name_short: Richard
   web: rtrvale.github.io
   email: rtrvale@gmail.com
   
-- id: hank_quinlan
-  name: Hank Quinlan
-  name_short: Richard
-  web: rtrvale.github.io
-  email: rtrvale@gmail.com
+- id: Example
+  name: Example
+  name_short: Ex
+  web: github.io
+  email: example@gmail.com
 
