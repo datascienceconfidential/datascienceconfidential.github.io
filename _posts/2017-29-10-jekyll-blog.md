@@ -9,17 +9,17 @@ categories: github, jekyll
 I have been wanting to make a Github blog, and have been putting together a list of posts for the last three years. 
 I finally took the plunge, and managed to put a site together, despite not really understanding what I was doing. Github is a site for 
 version control, and therefore an excellent place to store code. Each Github user has some free space to make a website. These websites 
-are static, which means they are not connected to a database (so, for example, it would not be possible to save a list of usernames and 
-passwords which people could use to log in.)
+are static, which means they are not connected to a database \(so, for example, it would not be possible to save a list of usernames and 
+passwords which people could use to log in.\)
 
-However, Github does support a static site generator called Jekyll, which makes it possible to automate parts of your website. 
+However, Github does support a static site generator called <a href="https://jekyllrb.com/">Jekyll</a>, which makes it possible to automate parts of your website. 
 For example, if you write a blog post and tell Jekyll what you are doing, you can choose any categories for your post and it will add 
 them to its list of categories when the site is generated.
 
 I intend to use the blog as a portfolio of work, record of learning, and place to post tutorials on statistical topics. 
-In particular, I have written a large number of posts on Crossvalidated (Stackoverflow for statistics) and I would like to elaborate 
-on some of these. I also have a few old posts on Blogger which I would like to recycle. (Although Blogger supports Mathjax, its styles 
-are not fully customizable and it has distracting ads.)
+In particular, I have written a large number of posts on Crossvalidated \(Stackoverflow for statistics\) and I would like to elaborate 
+on some of these. I also have a few old posts on Blogger which I would like to recycle. \(Although Blogger supports Mathjax, its styles 
+are not fully customizable and it has distracting ads.\)
 
 Here are the steps:
 
@@ -35,18 +35,18 @@ This step is also highly recommended! One benefit of open source tools is being 
 
 * Code listings are fairly easy to do in Github pages, but I also wanted support for mathematical equations. The default equation style 
 in HTML isn’t too bad, but I wanted to use LaTex if possible. This can be done with Mathjax, and it’s a fairly simple matter of 
-including it in a separate file. There are a couple of tutorials available via a Google search (I can’t remember which one worked for 
-me.)
+including it in a separate file. There are a couple of tutorials available via a Google search \(I can’t remember which one worked for 
+me.\)
 
 Here is an example of part of a markdown file including LaTex:
 
 ```markdown
-The density is $$f(x) = \frac{1}{\sigmasqrt{2\pi}}\exp(-\frac{(x-\mu)^2}{2\sigma^2})$$
+The density is $$f(x) = \frac{1}{\sigma\sqrt{2\pi}}\exp(-\frac{(x-\mu)^2}{2\sigma^2})$$
 ```
 
 and how it is rendered on the page:
 
-The density is $$f(x) = \frac{1}{\sigmasqrt{2\pi}}\exp(-\frac{(x-\mu)^2}{2\sigma^2})$$
+The density is $$f(x) = \frac{1}{\sigma\sqrt{2\pi}}\exp(-\frac{(x-\mu)^2}{2\sigma^2})$$
 
 * I needed an RSS feed because I want my blog to be indexed (eventually) at <a href="https://www.r-bloggers.com/">R-Bloggers</a>. 
 This again was very simple. However, be warned that the RSS feed does not display properly in Chrome since it is an XML document.
