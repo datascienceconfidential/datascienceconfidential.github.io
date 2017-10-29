@@ -31,8 +31,7 @@ I wanted to find a style of blog which looked nice on my laptop and phone, so I 
 by Bruce Eckel</a>. I make a fork of the code (meaning I copied it over to my new Github account verbatim) 
 and then altered some things to get it closer to what I wanted.
 
-This step is also highly recommended! The benefit of using open-source tools is that you can see what other people have done and avoid 
-a lot of duplicated effort.
+This step is also highly recommended! One benefit of open source tools is being able to see what working code looks like.
 
 * Code listings are fairly easy to do in Github pages, but I also wanted support for mathematical equations. The default equation style 
 in HTML isn’t too bad, but I wanted to use LaTex if possible. This can be done with Mathjax, and it’s a fairly simple matter of 
@@ -45,11 +44,11 @@ Here is an example of part of a markdown file including LaTex:
 The density is $$f(x) = \frac{1}{\sigmasqrt{2\pi}}\exp(-\frac{(x-\mu)^2}{2\sigma^2})$$
 ```
 
-and how it is rendered:
+and how it is rendered on the page:
 
 The density is $$f(x) = \frac{1}{\sigmasqrt{2\pi}}\exp(-\frac{(x-\mu)^2}{2\sigma^2})$$
 
-* I needed an RSS feed because I want my blog to be indexed (eventually) at >a href="https://www.r-bloggers.com/>R-Bloggers</a>. 
+* I needed an RSS feed because I want my blog to be indexed (eventually) at <a href="https://www.r-bloggers.com/">R-Bloggers</a>. 
 This again was very simple. However, be warned that the RSS feed does not display properly in Chrome since it is an XML document.
 
 * Adding comments using <a href="https://disqus.com/">disqus</a>. This is a more complicated process but it worked.
