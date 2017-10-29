@@ -9,8 +9,8 @@ categories: github jekyll
 I have been wanting to make a Github blog, and have been putting together a list of posts for the last three years. 
 I finally took the plunge, and managed to put a site together, despite not really understanding what I was doing. Github is a site for 
 version control, and therefore an excellent place to store code. Each Github user has some free space to make a website. These websites 
-are static, which means they are not connected to a database (so, for example, it would not be possible to save a list of usernames and 
-passwords which people could use to log in.) Edited: /(works?/) (works?) \(works?\) \\(works?\\)
+are static, which means they are not connected to a database \(so, for example, it would not be possible to save a list of usernames and 
+passwords which people could use to log in.\)
 
 However, Github does support a static site generator called <a href="https://jekyllrb.com/">Jekyll</a>, which makes it possible to automate parts of your website. 
 For example, if you write a blog post and tell Jekyll what you are doing, you can choose any categories for your post and it will add 
@@ -36,17 +36,17 @@ This step is also highly recommended! One benefit of open source tools is being 
 * Code listings are fairly easy to do in Github pages, but I also wanted support for mathematical equations. The default equation style 
 in HTML isn’t too bad, but I wanted to use LaTex if possible. This can be done with Mathjax, and it’s a fairly simple matter of 
 including it in a separate file. There are a couple of tutorials available via a Google search \(I can’t remember which one worked for 
-me.\)
+me but <a href="http://csega.github.io/mypost/2017/03/28/how-to-set-up-mathjax-on-jekyll-and-github-properly.html">this</a> is useful.)
 
 Here is an example of part of a markdown file including LaTex:
 
-```markdown
-The density is $$f(x) = \frac{1}{\sigma\sqrt{2\pi}}\exp(-\frac{(x-\mu)^2}{2\sigma^2})$$
+```
+The density of $X$ is $$f(x) = \frac{1}{\sigma\sqrt{2\pi}}\exp(-\frac{(x-\mu)^2}{2\sigma^2})$$
 ```
 
 and how it is rendered on the page:
 
-The density is $$f(x) = \frac{1}{\sigma\sqrt{2\pi}}\exp\left(-\frac{(x-\mu)^2}{2\sigma^2}\right)$$
+The density of $X$ is $$f(x) = \frac{1}{\sigma\sqrt{2\pi}}\exp\left(-\frac{(x-\mu)^2}{2\sigma^2}\right)$$
 
 * I needed an RSS feed because I want my blog to be indexed \(eventually\) at <a href="https://www.r-bloggers.com/">R-Bloggers</a>. 
 This again was very simple. However, be warned that the RSS feed does not display properly in Chrome since it is an XML document.
