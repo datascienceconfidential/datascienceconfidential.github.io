@@ -41,7 +41,7 @@ me but <a href="http://csega.github.io/mypost/2017/03/28/how-to-set-up-mathjax-o
 Here is an example of part of a markdown file including LaTex:
 
 ```
-The density of $X$ is $$f(x) = \frac{1}{\sigma\sqrt{2\pi}}\exp(-\frac{(x-\mu)^2}{2\sigma^2})$$
+The density of $X$ is $$ f(x) = \frac{1}{\sigma\sqrt{2\pi}}\exp(-\frac{(x-\mu)^2}{2\sigma^2})$$
 ```
 
 and how it is rendered on the page:
