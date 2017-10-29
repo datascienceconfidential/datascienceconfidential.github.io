@@ -28,7 +28,7 @@ learned about the possibility of
 blogging on Github pages in the first place.) I highly recommend following this tutorial to the letter.
 I wanted to find a style of blog which looked nice on my laptop and phone, so I searched among existing Github blogs, and found a 
 <a href="http://bruceeckel.github.io/">blog 
-by Bruce Eckel</a>. I make a fork of the code (meaning I copied it over to my new Github account verbatim) 
+by Bruce Eckel</a>. I make a fork of the code \(meaning I copied it over to my new Github account verbatim\) 
 and then altered some things to get it closer to what I wanted.
 
 This step is also highly recommended! One benefit of open source tools is being able to see what working code looks like.
@@ -48,7 +48,7 @@ and how it is rendered on the page:
 
 The density is $$f(x) = \frac{1}{\sigma\sqrt{2\pi}}\exp(-\frac{(x-\mu)^2}{2\sigma^2})$$
 
-* I needed an RSS feed because I want my blog to be indexed (eventually) at <a href="https://www.r-bloggers.com/">R-Bloggers</a>. 
+* I needed an RSS feed because I want my blog to be indexed \(eventually\) at <a href="https://www.r-bloggers.com/">R-Bloggers</a>. 
 This again was very simple. However, be warned that the RSS feed does not display properly in Chrome since it is an XML document.
 
 * Adding comments using <a href="https://disqus.com/">disqus</a>. This is a more complicated process but it worked.
