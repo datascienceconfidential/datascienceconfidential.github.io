@@ -3,7 +3,7 @@ layout: post
 title: "Creating a blog with Github Pages"
 date: 2017-10-29
 author: dsc
-categories: github,jekyll 
+categories: github jekyll
 ---
 
 I have been wanting to make a Github blog, and have been putting together a list of posts for the last three years. 
