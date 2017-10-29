@@ -23,18 +23,18 @@ are not fully customizable and it has distracting ads.)
 
 Here are the steps:
 
-I started with the excellent <a href="http://jmcglone.com/guides/github-pages/">tutorial by Jonathan MacGlone</a> (this is also where I 
+* I started with the excellent <a href="http://jmcglone.com/guides/github-pages/">tutorial by Jonathan MacGlone</a> (this is also where I 
 learned about the possibility of 
 blogging on Github pages in the first place.) I highly recommend following this tutorial to the letter.
 I wanted to find a style of blog which looked nice on my laptop and phone, so I searched among existing Github blogs, and found a 
 <a href="http://bruceeckel.github.io/">blog 
-by Bruce Eckel</a> which looked nice. I make a fork of the code (meaning I copied it over to my new Github account verbatim) 
+by Bruce Eckel</a>. I make a fork of the code (meaning I copied it over to my new Github account verbatim) 
 and then altered some things to get it closer to what I wanted.
 
 This step is also highly recommended! The benefit of using open-source tools is that you can see what other people have done and avoid 
 a lot of duplicated effort.
 
-Code listings are fairly easy to do in Github pages, but I also wanted support for mathematical equations. The default equation style 
+* Code listings are fairly easy to do in Github pages, but I also wanted support for mathematical equations. The default equation style 
 in HTML isn’t too bad, but I wanted to use LaTex if possible. This can be done with Mathjax, and it’s a fairly simple matter of 
 including it in a separate file. There are a couple of tutorials available via a Google search (I can’t remember which one worked for 
 me.)
@@ -49,26 +49,24 @@ and how it is rendered:
 
 The density is $$f(x) = \frac{1}{\sigmasqrt{2\pi}}\exp(-\frac{(x-\mu)^2}{2\sigma^2})$$
 
-I needed an RSS feed because I want my blog to be indexed (eventually) at >a href="https://www.r-bloggers.com/>R-Bloggers</a>. 
-This again was very simple. However, be warned 
-that the RSS feed does not display properly in Chrome since it is an XML document.
+* I needed an RSS feed because I want my blog to be indexed (eventually) at >a href="https://www.r-bloggers.com/>R-Bloggers</a>. 
+This again was very simple. However, be warned that the RSS feed does not display properly in Chrome since it is an XML document.
 
-Adding comments using <a href="https://disqus.com/">disqus</a>. This is a more complicated process but it worked.
+* Adding comments using <a href="https://disqus.com/">disqus</a>. This is a more complicated process but it worked.
 
-Adding Google Analytics. This was just a question of signing up and using the appropriate code snippet. However, it did take a while 
+* Adding Google Analytics. This was just a question of signing up and using the appropriate code snippet. However, it did take a while 
 for Google Analytics to begin tracking my site, which caused me some frustration.
 
-I am hoping that friends will contribute content eventually, so I required an authorship system. This is easy, but the difficult step 
-was making a page that indexes posts by author.
+* I am hoping that friends will contribute content eventually, so I required an authorship system. This is easy, but the difficult step 
+was making a page that indexes posts by author. I am not sure that this is working yet.
 
-I wanted a pair of arrows at the bottom of every post, so that the interested reader can click through to the next and previous posts.
+* I wanted a pair of arrows at the bottom of every post, so that the interested reader can click through to the next and previous posts.
 
-I wanted to be able to suppress posts so that I can keep them in draft form for a while. After messing around with dates, it turned out 
-that this can be done very easily by setting published=false in the front matter. In future, I will probably look for a markdown 
+* I wanted to be able to suppress posts so that I can keep them in draft form for a while. After messing around with dates, it turned out that this can be done very easily by setting `published=false` in the front matter of the markdown file containing the post. In future, I will probably look for a markdown 
 editor which lets me write the drafts offline.
 
-Finally, having built the entire blog online, it was time to migrate it to a live version. I was going to create a new Github account 
+* Finally, having built the entire blog online, it was time to migrate it to a live version. I was going to create a new Github account 
 for this, but it turned out that it is possible to change a username in Github, so the process was much simpler than expected.
 
-That’s everything for now. The code is quite messy since I do not fully understand what it is doing, and I don’t know how difficult 
+The code is quite messy since I do not fully understand what it is doing, and I don’t know how difficult 
 it will be to add more functionality in the future. But I’m happy with it for now, and finally ready to add content!
