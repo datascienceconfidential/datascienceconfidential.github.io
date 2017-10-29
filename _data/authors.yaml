@@ -1,8 +1,7 @@
-- id: richard
-  name: Richard
-  name_short: Richard
-  web: rtrvale.github.io
-  email: rtrvale@gmail.com
+- id: dsc
+  name: dsc
+  name_short: dsc
+  web: datascienceconfidential@github.io
   
 - id: Example
   name: Example
