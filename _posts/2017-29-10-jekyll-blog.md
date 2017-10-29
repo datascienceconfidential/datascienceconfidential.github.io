@@ -41,12 +41,12 @@ me but <a href="http://csega.github.io/mypost/2017/03/28/how-to-set-up-mathjax-o
 Here is an example of part of a markdown file including LaTex:
 
 ```
-The density of $X$ is $$ f(x) = \frac{1}{\sigma\sqrt{2\pi}}\exp(-\frac{(x-\mu)^2}{2\sigma^2})$$
+The density of $X$ is $$ f(x) = \frac{1}{\sigma\sqrt{2\pi}}\exp(-\frac{(x-\mu)^2}{2\sigma^2}) $$
 ```
 
 and how it is rendered on the page:
 
-The density of $X$ is $$f(x) = \frac{1}{\sigma\sqrt{2\pi}}\exp\left(-\frac{(x-\mu)^2}{2\sigma^2}\right)$$
+The density of $X$ is $$ f(x) = \frac{1}{\sigma\sqrt{2\pi}}\exp\left(-\frac{(x-\mu)^2}{2\sigma^2}\right) $$
 
 * I needed an RSS feed because I want my blog to be indexed \(eventually\) at <a href="https://www.r-bloggers.com/">R-Bloggers</a>. 
 This again was very simple. However, be warned that the RSS feed does not display properly in Chrome since it is an XML document.
