@@ -10,7 +10,7 @@ I have been wanting to make a Github blog, and have been putting together a list
 I finally took the plunge, and managed to put a site together, despite not really understanding what I was doing. Github is a site for 
 version control, and therefore an excellent place to store code. Each Github user has some free space to make a website. These websites 
 are static, which means they are not connected to a database (so, for example, it would not be possible to save a list of usernames and 
-passwords which people could use to log in.) Edited: /(works?/) (works?)
+passwords which people could use to log in.) Edited: /(works?/) (works?) \(works?\) \\(works?\\)
 
 However, Github does support a static site generator called <a href="https://jekyllrb.com/">Jekyll</a>, which makes it possible to automate parts of your website. 
 For example, if you write a blog post and tell Jekyll what you are doing, you can choose any categories for your post and it will add 
@@ -46,7 +46,7 @@ The density is $$f(x) = \frac{1}{\sigma\sqrt{2\pi}}\exp(-\frac{(x-\mu)^2}{2\sigm
 
 and how it is rendered on the page:
 
-The density is $$f(x) = \frac{1}{\sigma\sqrt{2\pi}}\exp(-\frac{(x-\mu)^2}{2\sigma^2})$$
+The density is $$f(x) = \frac{1}{\sigma\sqrt{2\pi}}\exp\left(-\frac{(x-\mu)^2}{2\sigma^2}\right)$$
 
 * I needed an RSS feed because I want my blog to be indexed \(eventually\) at <a href="https://www.r-bloggers.com/">R-Bloggers</a>. 
 This again was very simple. However, be warned that the RSS feed does not display properly in Chrome since it is an XML document.
