@@ -7,7 +7,9 @@ categories: github jekyll
 ---
 
 I have been wanting to make a Github blog, and have been putting together a list of posts for the last three years. 
-I finally took the plunge, and managed to put a site together, despite not really understanding what I was doing. Github is a site for 
+I finally took the plunge, and managed to put a site together, despite not really understanding what I was doing. 
+
+Github is a site for 
 version control, and therefore an excellent place to store code. Each Github user has some free space to make a website. These websites 
 are static, which means they are not connected to a database \(so, for example, it would not be possible to save a list of usernames and 
 passwords which people could use to log in.\)
@@ -60,7 +62,7 @@ This again was very simple. However, be warned that the RSS feed does not displa
 * Adding Google Analytics. This was just a question of signing up and using the appropriate code snippet. However, it did take a while 
 for Google Analytics to begin tracking my site, which caused me some frustration.
 
-* I am hoping that friends will contribute content eventually, so I required an authorship system. This is easy, but the difficult step 
+* I want to invite friends to contribute content eventually, so I required an authorship system. This is easy, but the difficult step 
 was making a page that indexes posts by author. I am not sure that this is working yet.
 
 * I wanted a pair of arrows at the bottom of every post, so that the interested reader can click through to the next and previous posts.
