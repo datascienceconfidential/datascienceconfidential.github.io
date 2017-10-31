@@ -65,7 +65,7 @@ was making a page that indexes posts by author. I am not sure that this is worki
 
 * I wanted a pair of arrows at the bottom of every post, so that the interested reader can click through to the next and previous posts.
 
-* I wanted to be able to suppress posts so that I can keep them in draft form for a while. After messing around with dates, it turned out that this can be done very easily by setting `published=false` in the front matter of the markdown file containing the post. In future, I will probably look for a markdown 
+* I wanted to be able to suppress posts so that I can keep them in draft form for a while. After messing around with dates, it turned out that this can be done very easily by setting `published: false` in the front matter of the markdown file containing the post. In future, I will probably look for a markdown 
 editor which lets me write the drafts offline.
 
 * Finally, having built the entire blog online, it was time to migrate it to a live version. I was going to create a new Github account 
