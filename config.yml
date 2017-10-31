@@ -6,7 +6,7 @@ highlighter:         rouge
 kramdown: 
   input: GFM
   syntax_highlighter: rouge
-fenced_code_blocks:  true
+#fenced_code_blocks:  true
 
 name:         Data Science Confidential
 description:  Data Science Confidential
