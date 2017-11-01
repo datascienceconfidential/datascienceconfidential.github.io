@@ -2,7 +2,7 @@
 layout: post
 title: "Creating a blog with Github Pages"
 date: 2017-10-29
-author: dsc
+author: Richard
 categories: github jekyll
 ---
 
