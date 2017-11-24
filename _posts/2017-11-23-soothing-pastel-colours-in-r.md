@@ -10,7 +10,7 @@ While writing a report recently, I made a series of bar charts like the followin
 
 ```r
 dat <- rep(1:5, 2)
-barplot(dat, col=rep(c("red", "blue"), each=2))
+barplot(dat, col=rep(c("red", "blue"), each=5))
 ```
 
 Upon review, the colours looked rather harsh, so I decided to convert them to something more soothing and professional-looking.
@@ -23,7 +23,7 @@ usually work with rgb values, in which a colour is described by a triple of red,
 0 to 1. In HSV, colours are arranged on a cylinder as in the following picture from the Wikiepdia page.
 
 <div style="width:40%; margin:0 auto;">
- <img src="https://upload.wikimedia.org/wikipedia/commons/0/0d/HSV_color_solid_cylinder_alpha_lowgamma.png" alt="By SharkD CC BY-SA 3.0 license"/>
+ <img src="https://upload.wikimedia.org/wikipedia/commons/0/0d/HSV_color_solid_cylinder_alpha_lowgamma.png" title="By SharkD CC BY-SA 3.0 license"/>
 </div>
 
 It seems that pastellizing a colour will be a simple task. First, convert from rgb to HSV. Second, decrease the saturation. Third, 
@@ -88,4 +88,28 @@ pastellize <- function(x, p){
   # return in convenient format for plots
   rgb(col[1], col[2], col[3])
 }
+```
+A quick demo, showing what happens when the parameter `p` is varied.
+
+```r
+demo <- function(){
+  plot(0,0, xlim=c(0,10), ylim=c(0,10), type="n", xaxt="n", yaxt="n", bty="n", xlab="", ylab="")
+  for (i in 0:9){
+    for (j in 10:0){
+      rect(i,j-1,i+1,j, col=pastellize(rainbow(10)[i+1], j/10), border=NA)
+    }
+  }
+}
+
+demo()
+```
+And finally, here is how to use it in a plot. Much more restful!
+
+```r
+pastel_red <- pastellize("red", 0.3)
+pastel_blue <- pastellize("blue", 0.3)
+
+dat <- rep(1:5, 2)
+barplot(dat, col=rep(c(pastel_red, pastel_blue), each=5), border=NA)
+# border=NA removes black borders from the bars
 ```
