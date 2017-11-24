@@ -23,8 +23,7 @@ usually work with rgb values, in which a colour is described by a triple of red,
 0 to 1. In HSV, colours are arranged on a cylinder as in the following picture from the Wikiepdia page.
 
 <div style="width:40%; margin:0 auto;">
- <img src="https://upload.wikimedia.org/wikipedia/commons/0/0d/HSV_color_solid_cylinder_alpha_lowgamma.png" height=100 width=100 
- alt="By SharkD CC BY-SA 3.0 license"/>
+ <img src="https://upload.wikimedia.org/wikipedia/commons/0/0d/HSV_color_solid_cylinder_alpha_lowgamma.png" alt="By SharkD CC BY-SA 3.0 license"/>
 </div>
 
 It seems that pastellizing a colour will be a simple task. First, convert from rgb to HSV. Second, decrease the saturation. Third, 
@@ -65,3 +64,27 @@ X <- C * (1 - abs(hdash %% 2 -1))
  RGB1 + (v-C)}
 ```
 This function is not as fast or versatile as `rgb2hsv` since it is not vectorized, but it is good enough for now. 
+
+Now here is the pastellizer function.
+
+```r
+pastellize <- function(x, p){
+  
+  # x is a colour
+  # p is a number in [0,1]
+  # p = 1 will give no pastellization
+  
+  # convert hex or letter names to rgb
+  if (is.character(x)) x <- col2rgb(x)/255
+  
+  # convert vector to rgb
+  if (is.numeric(x)) x <- matrix(x, nr=3)
+  
+  col <- rgb2hsv(x, maxColorValue=1)
+  col[2,1] <- col[2,1]*p
+  col <- hsv2rgb(col)
+  
+  # return in convenient format for plots
+  rgb(col[1], col[2], col[3])
+}
+```
