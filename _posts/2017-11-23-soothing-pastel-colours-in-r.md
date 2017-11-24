@@ -16,7 +16,7 @@ barplot(dat, col=rep(c("red", "blue"), each=5))
  <img src="/blog/images/2017-11/barplot1.png" />
 </div>
 
-Upon review, the colours looked rather harsh, so I decided to convert them to something more soothing and professional-looking.
+Upon review, the colours looked rather harsh, so I decided to convert them to something more soothing and professional-looking. I needed a `pastellize` function, but a search on the internet didn't turn up anything.
 This led me to read about [pastel colours](https://en.wikipedia.org/wiki/Pastel_(color)) which Wikipedia describes as
 
 > the family of colors which, when described in the HSV color space, have high value and low to intermediate saturation.
@@ -32,7 +32,7 @@ usually work with rgb values, in which a colour is described by a triple of red,
 It seems that pastellizing a colour will be a simple task. First, convert from rgb to HSV. Second, decrease the saturation. Third, 
 convert back.
 
-R features a handy `rgb2hsv` function which converts rgb values into HSV values. Unfortunately, in typical fashion, there is no
+R features a handy `rgb2hsv` function which converts rgb values into HSV values. Unfortunately, in typical R fashion, there is no
 `hsv2rgb` function. However, the algorithm for this conversion is described on the Wikipedia page as well, so it can be implemented
 in R.
 
@@ -123,3 +123,5 @@ barplot(dat, col=rep(c(pastel_red, pastel_blue), each=5), border=NA)
 <div style="width:70%; margin:0 auto;">
  <img src="/blog/images/2017-11/barplot2.png" />
 </div>
+
+Happy pastellizing!
