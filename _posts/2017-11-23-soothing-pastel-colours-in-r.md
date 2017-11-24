@@ -12,7 +12,7 @@ While writing a report recently, I made a series of bar charts like the followin
 dat <- rep(1:5, 2)
 barplot(dat, col=rep(c("red", "blue"), each=5))
 ```
-<div style="width:40%; margin:0 auto;">
+<div style="width:70%; margin:0 auto;">
  <img src="/blog/images/2017-11/barplot1.png" />
 </div>
 
@@ -106,6 +106,10 @@ demo <- function(){
 
 demo()
 ```
+<div style="width:80%; margin:0 auto;">
+ <img src="/blog/images/2017-11/swatches.png" />
+</div>
+
 And finally, here is how to use it in a plot. Much more restful!
 
 ```r
@@ -116,3 +120,6 @@ dat <- rep(1:5, 2)
 barplot(dat, col=rep(c(pastel_red, pastel_blue), each=5), border=NA)
 # border=NA removes black borders from the bars
 ```
+<div style="width:70%; margin:0 auto;">
+ <img src="/blog/images/2017-11/barplot2.png" />
+</div>
