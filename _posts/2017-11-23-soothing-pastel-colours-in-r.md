@@ -22,8 +22,10 @@ I had vaguely heard of the [HSV colour space](https://en.wikipedia.org/wiki/HSL_
 usually work with rgb values, in which a colour is described by a triple of red, green and blue, with the values of each running from 
 0 to 1. In HSV, colours are arranged on a cylinder as in the following picture from the Wikiepdia page.
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/0/0d/HSV_color_solid_cylinder_alpha_lowgamma.png" height=100 width=100 
-alt="By SharkD CC BY-SA 3.0 license"/>
+<div style="width:40%; margin:0 auto;">
+ <img src="https://upload.wikimedia.org/wikipedia/commons/0/0d/HSV_color_solid_cylinder_alpha_lowgamma.png" height=100 width=100 
+ alt="By SharkD CC BY-SA 3.0 license"/>
+</div>
 
 It seems that pastellizing a colour will be a simple task. First, convert from rgb to HSV. Second, decrease the saturation. Third, 
 convert back.
