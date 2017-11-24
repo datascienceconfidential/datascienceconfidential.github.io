@@ -12,6 +12,9 @@ While writing a report recently, I made a series of bar charts like the followin
 dat <- rep(1:5, 2)
 barplot(dat, col=rep(c("red", "blue"), each=5))
 ```
+<div style="width:40%; margin:0 auto;">
+ <img src="../blog/images/2017/barplot1.png" />
+</div>
 
 Upon review, the colours looked rather harsh, so I decided to convert them to something more soothing and professional-looking.
 This led me to read about [pastel colours](https://en.wikipedia.org/wiki/Pastel_(color)) which Wikipedia describes as
