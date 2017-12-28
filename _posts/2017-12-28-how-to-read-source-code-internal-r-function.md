@@ -95,7 +95,7 @@ end of our search. Lines 486-494 read as follows.
 ```
 
 which reveals that the `do_sample` function calls one of the three functions `walker_ProbSampleReplace`, `ProbSampleReplace` or
-ProbSampleNoReplace` depending on circumstances. These functions are also in the `random.c` file and they are all pure C functions 
+`ProbSampleNoReplace` depending on circumstances. These functions are also in the `random.c` file and they are all pure C functions 
 with no S Expressions involved. For example:
 
 ```c
