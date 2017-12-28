@@ -62,14 +62,14 @@ Searching the repository for `sample` gives a lot of results because the `sample
 Github lets us restrict the results to C code files only, for which there are only 15 hits. In the file `src/main/names.c` we find a 
 table of R function names and their C aliases. This contains the lines:
 
-```C
+```c
 {"sample",	do_sample,	0,	11,	4,	{PP_FUNCALL, PREC_FN,	0}},
 {"sample2",	do_sample2,	0,	11,	2,	{PP_FUNCALL, PREC_FN,	0}},
 ```
 
 So we really want the `do_sample` function. Another search reveals that this function is in the file `random.c`
 
-```C
+```c
 /* do_sample - probability sampling with/without replacement.
    .Internal(sample(n, size, replace, prob))
 */
@@ -78,11 +78,11 @@ SEXP attribute_hidden do_sample(SEXP call, SEXP op, SEXP args, SEXP rho)
 ```
 
 `SEXP` means "S Expression". The inputs and output of the `do_sample` function are S expressions. S was the name of the language which
-was a forerunner of R, and the R source code is written in terms of S Expressions. There is more information about these
+was a forerunner of R, and the R source code is written in terms of S expressions. There is more information about these
 things in the R manual. (Although I have written C code in R before, I have never dealt with S expressions.) Anyway, we are almost at the
 end of our search. Lines 486-494 read as follows.
 
-```C
+```c
 	if (replace) {
 	    int i, nc = 0;
 	    for (i = 0; i < n; i++) if(n * p[i] > 0.1) nc++;
@@ -98,7 +98,7 @@ which reveals that the `do_sample` function calls one of the three functions `wa
 ProbSampleNoReplace` depending on circumstances. These functions are also in the `random.c` file and they are all pure C functions 
 with no S Expressions involved. For example:
 
-```C
+```c
 /*
  *  Unequal Probability Sampling.
  *
