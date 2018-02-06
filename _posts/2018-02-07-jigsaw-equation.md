@@ -34,4 +34,18 @@ To find a minimum in between, it is better to allow everything to be continuous 
 
 $$ \mathrm{complexity} = \sum_{i=1}^b \log \Gamma(n_i +1) + \log \Gamma (b+1) $$
 
-and we would like to minimize this subject to $\sum_{i=1}^b n_i =N$. 
+which we would like to minimize subject to $\sum_{i=1}^b n_i =N$. 
+
+Notice that this is not a conventional calculus problem because $b$ is allowed to vary as well as the $n_i$. However, at a global minimum, regardless of the value of $b$, all the $n_i$ have to be equal. This is because if $n_i < n_j$ for some $j$, then there is some $\varepsilon$ with $n_i + \varepsilon < n_j + \varepsilon$ and then 
+
+$$\log \Gamma (n_i + \varepsilon) + \log \Gamma(n_j - \varepsilon) = \log \Gamma (n_i) + \log \Gamma (n_j) + \varepsilon (\psi(n_i) - \psi(n_j)) + \varepsilon^2 \mathrm{ terms}$$
+
+where $\psi$ is the digamma function. Because $\psi(n_i) < \psi(n_j)$ ($\psi$ is an increasing function; in fact $\psi(x)$ resembles $\log(x)$) we would not have a global minimum.
+
+Therefore, we can assume all the $n_i$ are equal, and since they add up to $N$, we can put $n_i = N/b$ for all $i$. Then
+
+$$ \mathrm{complexity} = b \log \Gamma\left(\frac{N}{b} +1\right) + \log \Gamma (b+1) $$
+
+and now we can let $b$ vary and minimize this using calculus, which gives the equation
+
+$$ \log \Gamma\left(\frac{N}{b} + 1\right) - \frac{N}{b} \psi\left(\frac{N}{b} + 1\right) + \psi(b+1) = 0. $$
