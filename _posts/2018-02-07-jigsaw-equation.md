@@ -11,4 +11,6 @@ The picture below shows <a href="https://www.jigsawpuzzlesdirect.co.uk/prodpage.
 and some even more questionable image processing, that <i>Hidden Hideaway</i> is, in some sense, the ultimate jigsaw puzzle. How?
 Read on!
 
-<center><im src="../"></im>
+<div style="width:70%; margin:0 auto;">
+ <img src="/blog/images/2018-02/G3033.png" />
+</div>
