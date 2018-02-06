@@ -84,7 +84,17 @@ $$
 \begin{aligned}
 \log(N) &= \left(1-\frac{1}{2N}\right)x + \frac{1}{2}\log(x) +\frac{1}{2}(1-\log(2\pi)) \\
 N &= \sqrt{\frac{x}{2\pi}} e^{\left(1-\frac{1}{2N}\right)x + \frac{1}{2}} \\
-\frac{2\piN^2}{e} &= x e^{\left(2-\frac{1}{N}\right)x} \\
-\frac{2\piN(2N-1)}{e} &= \left(2-\frac{1}{N}\right)x e^{\left(2-\frac{1}{N}\right)x}
+\frac{2\pi N^2}{e} &= x e^{\left(2-\frac{1}{N}\right)x} \\
+\frac{2\pi N(2N-1)}{e} &= \left(2-\frac{1}{N}\right)x e^{\left(2-\frac{1}{N}\right)x}
 \end{aligned}
 $$
+
+Now, it so happens that $f(t) = te^t$ has an inverse called $W$, and so using this so-called Lambert W-function, we can get
+
+$$ x = \frac{2N-1}{N} W\left(\frac{2\pi N(2N-1)}{e} \right) $$
+
+which, recalling that $x=N/b$, gives our approximate solution to $\eqref{eq:1}$ as
+
+<div style="border: 1px solid black; padding:10px;">
+$$b = \frac{2N-1}{W(2\pi N(2N-1)/e)} \tag{2}\label{eq:2}$$
+</div>
