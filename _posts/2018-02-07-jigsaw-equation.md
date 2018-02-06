@@ -48,9 +48,28 @@ $$ \mathrm{complexity} = b \log \Gamma\left(\frac{N}{b} +1\right) + \log \Gamma 
 
 and now we can let $b$ vary and minimize this using calculus, which gives the equation
 
-<div style="border: 1px solid black;">
+<div style="border: 1px solid black; padding:10px;">
 $$\log \Gamma\left(\frac{N}{b} + 1\right) - \frac{N}{b} \psi\left(\frac{N}{b} + 1\right) + \psi(b+1) = 0.\tag{1}\label{eq:1}$$
 </div>
 
+<br>
+Recap: the claim is that the amount of trial and error in assembling an $N$-piece jigsaw will be minimized if it is divided into $b$ sections of equal size, where $b$ is related to $N$ by $\eqref{eq:1}$.
 
-Recap: the claim is that the amount of trial and error in assembling an $N$-piece jigsaw will be minimized if it is divided into $b$ sections of equal size, where $b$ is related to $N$ by $\eqref{eq:1}$
+## Approximate solution
+
+A few lines of R can be used to make a graph of $\eqref{eq:1}$, from which it appears that $b$ doesn't vary very spectacularly with $N$.
+
+```r
+j <- function(b, N) lgamma(N/b+1) - (N/b)*digamma(N/b+1) + digamma(b+1)
+y <- N <- 1:5000
+for (i in 1:5000) y[i] <- uniroot(function(b) j(b, N[i]), c(0.1, N[i]))$root
+plot(N, y, "l", ylab="b(N)", main="Graph of (1)", lwd=2)
+```
+
+<div style="width:70%; margin:0 auto;">
+ <img src="/blog/images/2018-02/jigsaw_function_1.png" />
+</div>
+
+I am particularly interested in the cases of a 1000-piece puzzle, for which $b=155.6$ and a 500-piece puzzle, for which $b=86.36$. This corresponds to sections of size 6.4 and 5.8 respectively, so our jigsaw puzzle should be divisible into blocks of aboue 6 pieces each. In terms of the picture, this would correspond to a picture which contains a large number of small and easily-distinguishable items or regions, in other words, something graphically "busy".
+
+
