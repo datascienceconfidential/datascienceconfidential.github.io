@@ -72,4 +72,9 @@ plot(N, y, "l", ylab="b(N)", main="Graph of (1)", lwd=2)
 
 I am particularly interested in the cases of a 1000-piece puzzle, for which $b=155.6$ and a 500-piece puzzle, for which $b=86.36$. This corresponds to sections of size 6.4 and 5.8 respectively, so our jigsaw puzzle should be divisible into blocks of aboue 6 pieces each. In terms of the picture, this would correspond to a picture which contains a large number of small and easily-distinguishable items or regions, in other words, something graphically "busy".
 
+I have not been able to find a way to simplify $\eqref{eq:1}$, but at least it is possible to find an approximate solution, depending on what counts as a solution.
+
+From Stirling's Formula, we have $\log\Gamma(x+1) \approx x\log(x) - x + \frac{1}{2}\log(2\pi x)$. Furthermore, $\psi(x+1) = \psi(x) + 1/x$ for all $x$, and also $\psi(x) \approx \log(x) - \frac{1}{2x}$ is a very good approximation for $x > 1$. If we put $x=N/b$ in $\eqref{eq:1}$, it simplifies down to
+
+$$ 0 \approx x\log(x) - x + \frac{1}{2}\log(2\pi) + \frac{1}{2}\log(x) - x\log(x) + \frac{1}{2} + \log(N/x) + \frac{x}{N} $$
 
