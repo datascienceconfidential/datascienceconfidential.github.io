@@ -76,5 +76,14 @@ I have not been able to find a way to simplify $\eqref{eq:1}$, but at least it i
 
 From Stirling's Formula, we have $\log\Gamma(x+1) \approx x\log(x) - x + \frac{1}{2}\log(2\pi x)$. Furthermore, $\psi(x+1) = \psi(x) + 1/x$ for all $x$, and also $\psi(x) \approx \log(x) - \frac{1}{2x}$ is a very good approximation for $x > 1$. If we put $x=N/b$ in $\eqref{eq:1}$, it simplifies down to
 
-$$ 0 \approx x\log(x) - x + \frac{1}{2}\log(2\pi) + \frac{1}{2}\log(x) - x\log(x) + \frac{1}{2} + \log(N/x) + \frac{x}{N} $$
+$$ 0 \approx x\log(x) - x + \frac{1}{2}\log(2\pi) + \frac{1}{2}\log(x) - x\log(x) - \frac{1}{2} + \log(N/x) + \frac{x}{2N} $$
 
+which after rearrangement gives
+
+$$
+\begin{align*}
+\log(N) &= \left(1-\frac{1}{2N}\right)x + \frac{1}{2}\log(x) +\frac{1}{2}(1-\log(2\pi)) \\
+N &= \sqrt{\frac{x}{2\pi}} e^{\left(1-\frac{1}{2N}\right)x + \frac{1}{2}} \\
+\frac{2\piN^2}{e} &= x e^{\left(2-\frac{1}{N}\right)x} \\
+\frac{2\piN(2N-1)}{e} = \left(2-\frac{1}{N}\right)x e^{\left(2-\frac{1}{N}\right)x}
+$$
