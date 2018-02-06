@@ -48,6 +48,6 @@ $$ \mathrm{complexity} = b \log \Gamma\left(\frac{N}{b} +1\right) + \log \Gamma 
 
 and now we can let $b$ vary and minimize this using calculus, which gives the equation
 
-<div style={border: 1px solid;}>
-$$ \log \Gamma\left(\frac{N}{b} + 1\right) - \frac{N}{b} \psi\left(\frac{N}{b} + 1\right) + \psi(b+1) = 0. \mathrm{   (1)}$$
+<div style="border: 1px solid black;">
+$$\mathrm{(1)}\quad \log \Gamma\left(\frac{N}{b} + 1\right) - \frac{N}{b} \psi\left(\frac{N}{b} + 1\right) + \psi(b+1) = 0.$$
 </div>
