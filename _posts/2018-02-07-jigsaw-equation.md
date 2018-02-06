@@ -49,7 +49,7 @@ $$ \mathrm{complexity} = b \log \Gamma\left(\frac{N}{b} +1\right) + \log \Gamma 
 and now we can let $b$ vary and minimize this using calculus, which gives the equation
 
 <div style="border: 1px solid black;">
-$$\log \Gamma\left(\frac{N}{b} + 1\right) - \frac{N}{b} \psi\left(\frac{N}{b} + 1\right) + \psi(b+1) = 0.\tag{jigsaw}\label{eq:1}$$
+$$\log \Gamma\left(\frac{N}{b} + 1\right) - \frac{N}{b} \psi\left(\frac{N}{b} + 1\right) + \psi(b+1) = 0.\tag{1}\label{eq:1}$$
 </div>
 
 
