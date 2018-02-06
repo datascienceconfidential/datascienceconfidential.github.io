@@ -20,4 +20,10 @@ I wondered if somewhere in between these two extremes, there was an optimum, at 
 
 ## Model
 
-Let us ignore the geometry of the situation completely, and assume we have a jigsaw puzzle with \[N\] pieces, which is divided into \[b\] sections, each of which consists of \[n_i\] pieces. The pieces within each section are assumed to have the same colour or pattern, and the different sections are assumed to be distinguishable from each other. 
+Let us ignore the geometry of the situation completely, and assume we have a jigsaw puzzle with $N$ pieces, which is divided into $b$ sections, each of which consists of $n_i$ pieces. The pieces within each section are assumed to have the same colour or pattern, and the different sections are assumed to be distinguishable from each other.
+
+The sections can be permuted among themselves in $b!$ ways, and there are $n_i!$ ways of permuting the pieces in the $i^{th}$ section. So, altogether, the number of possible configurations is
+
+$$ b! \prod_{i=1}^b n_i! $$
+
+and we would like to minimize this, subject to the condition $\sum_{i=1}^b n_i = N$. 
