@@ -81,9 +81,10 @@ $$ 0 \approx x\log(x) - x + \frac{1}{2}\log(2\pi) + \frac{1}{2}\log(x) - x\log(x
 which after rearrangement gives
 
 $$
-\begin{align*}
+\begin{aligned}
 \log(N) &= \left(1-\frac{1}{2N}\right)x + \frac{1}{2}\log(x) +\frac{1}{2}(1-\log(2\pi)) \\
 N &= \sqrt{\frac{x}{2\pi}} e^{\left(1-\frac{1}{2N}\right)x + \frac{1}{2}} \\
 \frac{2\piN^2}{e} &= x e^{\left(2-\frac{1}{N}\right)x} \\
-\frac{2\piN(2N-1)}{e} = \left(2-\frac{1}{N}\right)x e^{\left(2-\frac{1}{N}\right)x}
+\frac{2\piN(2N-1)}{e} &= \left(2-\frac{1}{N}\right)x e^{\left(2-\frac{1}{N}\right)x}
+\end{aligned}
 $$
