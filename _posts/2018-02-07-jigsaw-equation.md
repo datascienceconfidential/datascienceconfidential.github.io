@@ -22,8 +22,16 @@ I wondered if somewhere in between these two extremes, there was an optimum, at 
 
 Let us ignore the geometry of the situation completely, and assume we have a jigsaw puzzle with $N$ pieces, which is divided into $b$ sections, each of which consists of $n_i$ pieces. The pieces within each section are assumed to have the same colour or pattern, and the different sections are assumed to be distinguishable from each other.
 
-The sections can be permuted among themselves in $b!$ ways, and there are $n_i!$ ways of permuting the pieces in the $i^{th}$ section. So, altogether, the number of possible configurations is
+The sections can be permuted among themselves in $b!$ ways, and (ignoring orientations) there are $n_i!$ ways of permuting the pieces in the $i^{th}$ section. So, altogether, the number of possible configurations (or roughly, the amount of trial and error required) is
 
-$$ b! \prod_{i=1}^b n_i! $$
+$$  \left(\prod_{i=1}^b n_i!\right) b! $$
 
-and we would like to minimize this, subject to the condition $\sum_{i=1}^b n_i = N$. 
+and we would like to minimize this, subject to the condition $\sum_{i=1}^b n_i = N$.
+
+The two extreme cases are $b=1, n_1=N$, which corresponds to a blank picture, and $b=N, n_i=1$ for all $i$, which corresponds to randomly-coloured pieces. Both of these cases give a score of $N!$.
+
+To find a minimum in between, it is better to allow everything to be continuous and take the logarithm, so that we can define
+
+$$ \mathrm{complexity} = \sum_{i=1}^b \log \Gamma(n_i +1) + \log \Gamma (b+1) $$
+
+and we would like to minimize this subject to $\sum_{i=1}^b n_i =N$. 
