@@ -91,10 +91,26 @@ $$
 
 Now, it so happens that $f(t) = te^t$ has an inverse called $W$, and so using this so-called Lambert W-function, we can get
 
-$$ x = \frac{2N-1}{N} W\left(\frac{2\pi N(2N-1)}{e} \right) $$
+$$ x = \frac{N}{2N-1} W\left(\frac{2\pi N(2N-1)}{e} \right) $$
 
 which, recalling that $x=N/b$, gives our approximate solution to $\eqref{eq:1}$ as
 
 <div style="border: 1px solid black; padding:10px;">
-$$b = \frac{2N-1}{W(2\pi N(2N-1)/e)} \tag{2}\label{eq:2}$$
+$$b = \frac{2N-1}{W(2\pi e^{-1} N(2N-1))}. \tag{2}\label{eq:2}$$
 </div>
+
+How good is the approximation? Well, it looks pretty good graphically
+
+```r
+y2 <- y
+for (i in 1:5000) y2[i] <- (2*N[i]-1)/uniroot(function(b)b*exp(b) - 
+2*pi*exp(-1)*N[i]*(2*N[i]-1), c(0.1, N[i]))$root
+lines(N, y2, col="blue")
+```
+<div style="width:70%; margin:0 auto;">
+ <img src="/blog/images/2018-02/jigsaw_function_2.png" />
+</div>
+
+but it is a little off and, of course, we don't really need it, since we can solve $\eqref{eq:1}$ easily enough using the bisection method. (Still, I think it's nice to have a formula).
+
+
