@@ -22,9 +22,9 @@ I wondered if somewhere in between these two extremes, there was an optimum, at 
 
 Let us ignore the geometry of the situation completely, and assume we have a jigsaw puzzle with $N$ pieces, which is divided into $b$ sections, each of which consists of $n_i$ pieces. The pieces within each section are assumed to have the same colour or pattern, and the different sections are assumed to be distinguishable from each other.
 
-The sections can be permuted among themselves in $b!$ ways, and (ignoring orientations) there are $n_i!$ ways of permuting the pieces in the $i^{th}$ section. So, altogether, the number of possible configurations (or roughly, the amount of trial and error required) is
+The sections can be permuted among themselves in $b!$ ways, and (ignoring orientations) there are $n_i!$ ways of permuting the pieces in the $i^{th}$ section. So, altogether, the number of possible configurations (or roughly, the amount of trial and error required (or <i>thermodynamic probability</i>, as I believe it is called in statistical mechanics)) is
 
-$$  \left(\prod_{i=1}^b n_i!\right) b! $$
+$$ \left(\prod_{i=1}^b n_i!\right) b! $$
 
 and we would like to minimize this, subject to the condition $\sum_{i=1}^b n_i = N$.
 
@@ -70,7 +70,7 @@ plot(N, y, "l", ylab="b(N)", main="Graph of (1)", lwd=2)
  <img src="/blog/images/2018-02/jigsaw_function_1.png" />
 </div>
 
-I am particularly interested in the cases of a 1000-piece puzzle, for which $b=155.6$ and a 500-piece puzzle, for which $b=86.36$. This corresponds to sections of size 6.4 and 5.8 respectively, so our jigsaw puzzle should be divisible into blocks of aboue 6 pieces each. In terms of the picture, this would correspond to a picture which contains a large number of small and easily-distinguishable items or regions, in other words, something graphically "busy".
+I am particularly interested in the cases of a 1000-piece puzzle, for which $b=155.6$ and a 500-piece puzzle, for which $b=86.36$. This corresponds to sections of size 6.4 and 5.8 respectively, so our jigsaw puzzle should be divisible into blocks of about 6 pieces each. In terms of the picture, this would correspond to a picture which contains a large number of small and easily-distinguishable items or regions, in other words, something graphically "busy".
 
 I have not been able to find a way to simplify $\eqref{eq:1}$, but at least it is possible to find an approximate solution, depending on what counts as a solution.
 
@@ -96,10 +96,11 @@ $$ x = \frac{N}{2N-1} W\left(\frac{2\pi N(2N-1)}{e} \right) $$
 which, recalling that $x=N/b$, gives our approximate solution to $\eqref{eq:1}$ as
 
 <div style="border: 1px solid black; padding:10px;">
-$$b = \frac{2N-1}{W(2\pi e^{-1} N(2N-1))}. \tag{2}\label{eq:2}$$
+$$ b = \frac{2N-1}{W(2\pi e^{-1} N(2N-1))}. \tag{2}\label{eq:2} $$
 </div>
 
-How good is the approximation? Well, it looks pretty good graphically
+<br>
+How good is the approximation? Well, it looks pretty good graphically, in the sense that adding it in to the previous graph, in blue, it matches up quite well with the graph of $\eqref{eq:1}$.
 
 ```r
 y2 <- y
@@ -112,5 +113,4 @@ lines(N, y2, col="blue")
 </div>
 
 but it is a little off and, of course, we don't really need it, since we can solve $\eqref{eq:1}$ easily enough using the bisection method. (Still, I think it's nice to have a formula).
-
 
