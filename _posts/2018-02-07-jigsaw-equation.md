@@ -206,7 +206,7 @@ This diagram summarizes the process. Computing the complexity is really just mea
  <img src="/blog/images/2018-02/slide1.png" />
 </div>
 
-For the 1000-piece puzzle, here are the top ten images (meaning, the ten images with the lowest complexity values when $N=1000$ and $b=155$). Note: I am linking to the images, so they are likely to change or disappear over time.
+For the 1000-piece puzzle, here are the top ten images (meaning, the ten images with the lowest complexity values when $N=1000$ and $b=155$). Note: I am linking to the images, so they are likely to change or disappear over time. Notice that one of the images is actually a picture of a box rather than of the puzzle itself. This is a problem of course, but it did not seem worth doing extensive cleaning of the images, given the crudeness of the image analysis. 
 
 <div style="width:70%; margin:0 auto;">
 <div style="display: inline-block; padding:10px;">
@@ -232,7 +232,7 @@ For the 1000-piece puzzle, here are the top ten images (meaning, the ten images 
  </div>
 </div>
 
-Here are the top ten images for a 500-piece puzzle.
+Here are the top ten images for a 500-piece puzzle ($b=86$).
 
 <div style="width:70%; margin:0 auto;">
 <div style="display: inline-block;">
