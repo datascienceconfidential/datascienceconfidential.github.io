@@ -4,7 +4,7 @@ title:  "Jigsaw Equation"
 date:   2018-02-07
 published: true
 author: Richard
-categories: puzzle python mathematics
+categories: puzzle python mathematics r
 ---
 The picture below shows <a href="https://www.jigsawpuzzlesdirect.co.uk/prodpage.asp?prodid=5198"><i>Hidden Hideaway</i></a>, a 500-piece jigsaw puzzle published by Gibson's Games. In this post I propose to show, using nothing but some questionable mathematics and some even more questionable image processing, that <i>Hidden Hideaway</i> is, in some sense, the ultimate jigsaw puzzle. How? Read on!
 
@@ -205,3 +205,40 @@ This diagram summarizes the process. Computing the complexity is really just mea
 <div style="width:70%; margin:0 auto;">
  <img src="/blog/images/2018-02/slide1.png" />
 </div>
+
+For the 1000-piece puzzle, here are the top ten images. 
+
+<div style="width:70%; margin:0 auto;">
+<div class="image">
+<img src="https://www.jigsawpuzzlesdirect.co.uk/prodsmall/G3033.jpg" width="360" height="200" alt=""> 
+</div>
+<div class="image">
+<img src="https://www.jigsawpuzzlesdirect.co.uk/prodsmall/G8012.jpg" width="360" height="200" alt=""> 
+</div>
+<div class="image">
+<img src="https://www.jigsawpuzzlesdirect.co.uk/prodsmall/G6188.jpg" width="360" height="200" alt=""> 
+</div>
+<div class="image">
+<img src="https://www.jigsawpuzzlesdirect.co.uk/prodsmall/HOP426.jpg" width="360" height="200" alt=""> 
+</div>
+<div class="image">
+<img src="https://www.jigsawpuzzlesdirect.co.uk/prodsmall/RV19658.jpg" width="360" height="200" alt=""> 
+</div>
+<div class="image">
+<img src="https://www.jigsawpuzzlesdirect.co.uk/prodsmall/HOP1615.jpg" width="360" height="200" alt=""> 
+</div>
+<div class="image">
+<img src="https://www.jigsawpuzzlesdirect.co.uk/prodsmall/EG80000870.jpg" width="360" height="200" alt=""> 
+</div>
+<div class="image">
+<img src="https://www.jigsawpuzzlesdirect.co.uk/prodsmall/CL39393.jpg" width="360" height="200" alt=""> 
+</div>
+<div class="image">
+<img src="https://www.jigsawpuzzlesdirect.co.uk/prodsmall/G3108.jpg" width="360" height="200" alt=""> 
+</div>
+<div class="image">
+<img src="https://www.jigsawpuzzlesdirect.co.uk/prodsmall/G2211.jpg" width="360" height="200" alt=""> 
+</div>
+</div>
+
+Here are the images for the 500-piece puzzle.
