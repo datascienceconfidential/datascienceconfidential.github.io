@@ -120,7 +120,7 @@ Having determined what a good jigsaw puzzle ought to look like, I wanted to sear
 
 ### Step 1: Find some puzzles
 
-After some searching, I found a mail order site, <a href="https://www.jigsawpuzzlesdirect.co.uk/">Jigsaw Puzzles Direct/</a>, with a convenient page listing all of their jigsaw puzzles, with links to images. I am new to web scraping, but this seemed like a good place to start. I used the following code to make a list of links to all of the images.
+After some searching, I found a mail order site, <a href="https://www.jigsawpuzzlesdirect.co.uk/">Jigsaw Puzzles Direct</a>, with a convenient page listing all of their jigsaw puzzles, with links to images. I am new to web scraping, but this seemed like a good place to start. I used the following code to make a list of links to all of the images.
 
 ```python
 import re
@@ -171,7 +171,7 @@ puzz = im.resize((puzzle_width, puzzle_height))
 pixel_values = numpy.array(list(puzz.getdata())).reshape(n_pieces, 3)  
 ```
 
-I then took the first principal component of the RGB colours. This process converts each RGB pixel colour to a number, chosen in such a way that the variation is maximized.
+I then took the first principal component of the RGB colours. This process projects each RGB pixel colour to a one-dimensional line, chosen in such a way that the variance of the projections is maximized.
 
 ```python
 # get the first principal component of the RGB colours in the image
@@ -184,5 +184,24 @@ for i in range(n_pieces):
     out += fpc.tolist()[i]
 ```
 
-I then made a histogram of these numbers with the number of equally-spaced bins given by $\eqref{eq:1}$ (155 for a 1000-piece puzzle and 86 for a 500-piece puzzle). From this histogram, we get the count for each bin, and the complexity of the puzzle was taken to be the complexity of this vector  of counts.
+I then made a histogram of these values with the number of equally-spaced bins given by $\eqref{eq:1}$ (155 for a 1000-piece puzzle and 86 for a 500-piece puzzle). From this histogram, we get the count for each bin, and the complexity of the puzzle was taken to be the complexity of this vector of counts.
 
+```python
+def complexity(x):
+    """calculate the complexity of a vector x, using the formula
+    sum_i log (gamma(x[i] + 1)) + log(gamma(length(x)+1))"""
+    total = 0
+    for i in range(len(x)):
+        total += scipy.special.gammaln(x[i]+1)
+    total += scipy.special.gammaln(len(x)+1)
+    return total  
+
+# split into equal parts
+x = numpy.histogram(out, puzzle_sections)[0].tolist()
+complexity(x)
+```
+This diagram summarizes the process. Computing the complexity is really just measuring how close the peaks in the histogram are to being all the same height.
+
+<div style="width:70%; margin:0 auto;">
+ <img src="/blog/images/2018-02/slide1.png" />
+</div>
