@@ -36,7 +36,7 @@ $$ \mathrm{complexity} = \sum_{i=1}^b \log \Gamma(n_i +1) + \log \Gamma (b+1) $$
 
 which we would like to minimize subject to $\sum_{i=1}^b n_i =N$. 
 
-Notice that this is not a conventional calculus problem because $b$ is allowed to vary as well as the $n_i$. However, at a global minimum, regardless of the value of $b$, all the $n_i$ have to be equal. This is because if $n_i < n_j$ for some $j$, then there is some $\varepsilon$ with $n_i + \varepsilon < n_j + \varepsilon$ and then 
+Notice that this is not a conventional calculus problem because $b$ is allowed to vary as well as the $n_i$. However, at a global minimum, regardless of the value of $b$, all the $n_i$ have to be equal. This is because if $n_i < n_j$ for some $j$, then there is some $\varepsilon$ with $n_i + \varepsilon < n_j - \varepsilon$ and then 
 
 $$\log \Gamma (n_i + \varepsilon) + \log \Gamma(n_j - \varepsilon) = \log \Gamma (n_i) + \log \Gamma (n_j) + \varepsilon (\psi(n_i) - \psi(n_j)) + \varepsilon^2 \mathrm{ terms}$$
 
@@ -259,6 +259,8 @@ Here are the top ten images for a 500-piece puzzle ($b=86$).
 </div>
 
 The same images kept cropping up, even when I ran the algorithm with the wrong parameters. Probably, these are the images which have the most even spread of colours among all images considered, so perhaps there is not too much to be read into this. But, for what it's worth, <i>Hidden Hideaway</i> tends to come out at the top. As promised!
+
+(Recall once more what this means. The claim is that, out of all the pictures considered, the picture on <i>Hidden Hideaway</i> requires the least amount of trial and error to reconstruct when it is divided into a 1000 or 500-piece jigsaw). 
 
 ## Comments
 
