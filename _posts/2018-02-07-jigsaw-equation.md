@@ -209,16 +209,16 @@ This diagram summarizes the process. Computing the complexity is really just mea
 For the 1000-piece puzzle, here are the top ten images. 
 
 <div style="width:70%; margin:0 auto;">
-<img src="https://www.jigsawpuzzlesdirect.co.uk/prodsmall/G3033.jpg" /> 
-<img src="https://www.jigsawpuzzlesdirect.co.uk/prodsmall/G8012.jpg" />
-<img src="https://www.jigsawpuzzlesdirect.co.uk/prodsmall/G6188.jpg" />
-<img src="https://www.jigsawpuzzlesdirect.co.uk/prodsmall/HOP426.jpg" />
-<img src="https://www.jigsawpuzzlesdirect.co.uk/prodsmall/RV19658.jpg" /> 
-<img src="https://www.jigsawpuzzlesdirect.co.uk/prodsmall/HOP1615.jpg" />
-<img src="https://www.jigsawpuzzlesdirect.co.uk/prodsmall/EG80000870.jpg" /> 
-<img src="https://www.jigsawpuzzlesdirect.co.uk/prodsmall/CL39393.jpg" /> 
-<img src="https://www.jigsawpuzzlesdirect.co.uk/prodsmall/G3108.jpg" /> 
-<img src="https://www.jigsawpuzzlesdirect.co.uk/prodsmall/G2211.jpg" /> 
+<img src="https://www.jigsawpuzzlesdirect.co.uk/productssmall/G3033.jpg" /> 
+<img src="https://www.jigsawpuzzlesdirect.co.uk/productssmall/G8012.jpg" />
+<img src="https://www.jigsawpuzzlesdirect.co.uk/productssmall/G6188.jpg" />
+<img src="https://www.jigsawpuzzlesdirect.co.uk/productssmall/HOP426.jpg" />
+<img src="https://www.jigsawpuzzlesdirect.co.uk/productssmall/RV19658.jpg" /> 
+<img src="https://www.jigsawpuzzlesdirect.co.uk/productssmall/HOP1615.jpg" />
+<img src="https://www.jigsawpuzzlesdirect.co.uk/productssmall/EG80000870.jpg" /> 
+<img src="https://www.jigsawpuzzlesdirect.co.uk/productssmall/CL39393.jpg" /> 
+<img src="https://www.jigsawpuzzlesdirect.co.uk/productssmall/G3108.jpg" /> 
+<img src="https://www.jigsawpuzzlesdirect.co.uk/productssmall/G2211.jpg" /> 
 </div>
 
 Here are the images for the 500-piece puzzle.
