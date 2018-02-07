@@ -10,6 +10,12 @@
 			<link rel="icon" href="favicon.ico" />
 			<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
 			{% include mathjax_support %}
+			{% if page.header-img %}
+			    <meta property="og:image" content="{{ site.url }}/{{ page.header-img }}" />
+                        {% endif %}
+			{% if page.subtitle %}
+			    <meta property="og:description" content="{{ page.subtitle }}" />
+                        {% endif %}
 		</head>
 		
 		<body class="theme-base-0d sidebar-overlay">
