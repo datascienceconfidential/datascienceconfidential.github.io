@@ -1,6 +1,8 @@
 ---
 layout: post
 title:  "Jigsaw Equation"
+subtitle: "Armed with nothing but some crude image processing methods, a series expansion of the digamma function, and something very like statistical mechanics, join me in a quest to identify the ultimate jigsaw puzzle illustration!"
+header-img: "blog/images/2018-02/G3033.png"
 date:   2018-02-07
 published: true
 author: Richard
@@ -32,7 +34,7 @@ The two extreme cases are $b=1, n_1=N$, which corresponds to a blank picture, an
 
 To find a minimum in between, it is better to allow everything to be continuous and take the logarithm, so that we can define
 
-$$ \mathrm{complexity} = \sum_{i=1}^b \log \Gamma(n_i +1) + \log \Gamma (b+1) $$
+$$ \mathrm{complexity} = \sum_{i=1}^b \log \Gamma(n_i +1) + \log\Gamma (b+1) $$
 
 which we would like to minimize subject to $\sum_{i=1}^b n_i =N$. 
 
@@ -44,7 +46,7 @@ where $\psi$ is the digamma function. Because $\psi(n_i) < \psi(n_j)$ ($\psi$ is
 
 Therefore, we can assume all the $n_i$ are equal, and since they add up to $N$, we can put $n_i = N/b$ for all $i$. Then
 
-$$ \mathrm{complexity} = b \log \Gamma\left(\frac{N}{b} +1\right) + \log \Gamma (b+1) $$
+$$ \mathrm{complexity} = b \log \Gamma\left(\frac{N}{b} +1\right) + \log\Gamma (b+1) $$
 
 and now we can let $b$ vary and minimize this using calculus, which gives the equation
 
