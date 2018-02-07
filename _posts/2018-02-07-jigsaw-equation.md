@@ -114,3 +114,75 @@ lines(N, y2, col="blue")
 
 but it is a little off and, of course, we don't really need it, since we can solve $\eqref{eq:1}$ easily enough using the bisection method. (Still, I think it's nice to have a formula).
 
+## Application to real puzzles
+
+Having determined what a good jigsaw puzzle ought to look like, I wanted to search for real puzzles which are as close as possible to satisfying $\eqref{eq:1}$. Of course, it's not obvious how to do this, which is where the questionable image processing comes in.
+
+### Step 1: Find some puzzles
+
+After some searching, I found a mail order site, <a href="https://www.jigsawpuzzlesdirect.co.uk/">Jigsaw Puzzles Direct/</a>, with a convenient page listing all of their jigsaw puzzles, with links to images. I am new to web scraping, but this seemed like a good place to start. I used the following code to make a list of links to all of the images.
+
+```python
+import re
+import BeautifulSoup
+# get the urls of the images to be evaluated
+url = '''https://www.jigsawpuzzlesdirect.co.uk/jigsawchoice.asp?sort=&subpieces
+      =&subpicture=&subcharacter=&subage=&subartist=&submanufacturer=&assistantsubmit
+      =Find+your+perfect+puzzle%21'''
+response = requests.get(url)
+soup = BeautifulSoup.BeautifulSoup(response.content)
+images = soup.findAll('img')
+sources = [x['src'] for x in images]
+
+# use a regex to get the jpg files only (for the products)
+regex = re.compile(r'.*productssmall.*\.jpg')
+selected_files = filter(regex.search, sources)
+
+# convert everything to the large size image file format
+jpgs = []
+for i in range(len(selected_files)):
+    x = selected_files[i].encode('ascii', 'ignore')
+    #print(x)
+    x = str.replace(x, '/productssmall', 'https://www.jigsawpuzzlesdirect.co.uk/prodhuge')
+    x = str.replace(x, ' ', '')
+    jpgs +=[x]
+    
+# jpgs contains the urls for all the images whose complexity is to be evaluated
+```
+### Step 2: Process the images
+
+Having got these image files, I processed each of the images as follows. First, I divided each image into rectangles, keeping the ratio of height and width. (This is how it is done for real jigsaw puzzles; it is common for puzzles not to have the exact number of pieces which it says on the box). The following code fragments use various libraries, including PIL.
+
+```python
+im = Image.open(image_file)
+        
+# get width and height of image for re-scaling
+width, height = im.size
+puzzle_width = int(round(sqrt(n_pieces * width / height)))
+puzzle_height = int(round(sqrt(n_pieces * height / width)))
+```
+Next, the image is rescaled, so that there is one RGB pixel per puzzle piece. The colours of these pixels are stored in a numpy array.
+
+```python
+# resize to desired jigsaw size
+puzz = im.resize((puzzle_width, puzzle_height))
+        
+# pixel colours
+pixel_values = numpy.array(list(puzz.getdata())).reshape(n_pieces, 3)  
+```
+
+I then took the first principal component of the RGB colours. This process converts each RGB pixel colour to a number, chosen in such a way that the variation is maximized.
+
+```python
+# get the first principal component of the RGB colours in the image
+from sklearn.decomposition import PCA
+pca = PCA(n_components=1, svd_solver='full')
+pca.fit(pixel_values)
+fpc = pca.transform(pixel_values) # first principal component
+out = []
+for i in range(n_pieces):
+    out += fpc.tolist()[i]
+```
+
+I then made a histogram of these numbers with the number of equally-spaced bins given by $\eqref{eq:1}$ (155 for a 1000-piece puzzle and 86 for a 500-piece puzzle). From this histogram, we get the count for each bin, and the complexity of the puzzle was taken to be the complexity of this vector  of counts.
+
