@@ -206,7 +206,7 @@ This diagram summarizes the process. Computing the complexity is really just mea
  <img src="/blog/images/2018-02/slide1.png" />
 </div>
 
-For the 1000-piece puzzle, here are the top ten images (meaning, the ten images with the lowest complexity values when $N=1000$ and $b=155$).
+For the 1000-piece puzzle, here are the top ten images (meaning, the ten images with the lowest complexity values when $N=1000$ and $b=155$). Note: I am linking to the images, so they are likely to change or disappear over time.
 
 <div style="width:70%; margin:0 auto;">
 <div style="float:left; display: inline-block;">
@@ -235,16 +235,31 @@ For the 1000-piece puzzle, here are the top ten images (meaning, the ten images 
 Here are the top ten images for a 500-piece puzzle.
 
 <div style="width:70%; margin:0 auto;">
+<div style="float:left; display: inline-block;">
 <img src="https://www.jigsawpuzzlesdirect.co.uk/productssmall/G3033.jpg" /> 
+</div>div style="float:left; display: inline-block;">
 <img src="https://www.jigsawpuzzlesdirect.co.uk/productssmall/RV14695.jpg" />
+</div>div style="float:left; display: inline-block;">
 <img src="https://www.jigsawpuzzlesdirect.co.uk/productssmall/HOP1615.jpg" />
+</div>div style="float:left; display: inline-block;">
 <img src="https://www.jigsawpuzzlesdirect.co.uk/productssmall/RV19718.jpg" />
+</div>div style="float:left; display: inline-block;">
 <img src="https://www.jigsawpuzzlesdirect.co.uk/productssmall/G6188.jpg" /> 
+</div>div style="float:left; display: inline-block;">
 <img src="https://www.jigsawpuzzlesdirect.co.uk/productssmall/CL39393.jpg" />
+</div>div style="float:left; display: inline-block;">
 <img src="https://www.jigsawpuzzlesdirect.co.uk/productssmall/G3108.jpg" /> 
+</div>div style="float:left; display: inline-block;">
 <img src="https://www.jigsawpuzzlesdirect.co.uk/productssmall/RV19658.jpg" /> 
+</div>div style="float:left; display: inline-block;">
 <img src="https://www.jigsawpuzzlesdirect.co.uk/productssmall/G3089.jpg" /> 
+</div>div style="float:left; display: inline-block;">
 <img src="https://www.jigsawpuzzlesdirect.co.uk/productssmall/G6090.jpg" /> 
+</div>
 </div>
 
 The same images kept cropping up, even when I ran the algorithm with the wrong parameters. Probably, these are the images which have the most even spread of colours among all images considered, so perhaps there is not too much to be read into this. But, for what it's worth, <i>Hidden Hideaway</i> tends to come out at or near the top. As promised!
+
+## Comments
+
+It occurred to me that what I called complexity should probably be called entropy, because it is the logarithm of the number of possible configurations. This leads me to think that equations $\eqref{eq:1}$ and $\eqref{eq:2}$ could well have cropped up somewhere in statistical mechanics, but unfortunately I am not familiar enough with the subject to know where to look. Also, I understand that physicists usually want to maximize entropy, whereas I was trying to minimize it. 
