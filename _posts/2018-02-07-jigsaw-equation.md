@@ -206,7 +206,7 @@ This diagram summarizes the process. Computing the complexity is really just mea
  <img src="/blog/images/2018-02/slide1.png" />
 </div>
 
-For the 1000-piece puzzle, here are the top ten images. 
+For the 1000-piece puzzle, here are the top ten images (meaning, the ten images with the lowest complexity values when $N=1000$ and $b=155$).
 
 <div style="width:70%; margin:0 auto;">
 <img src="https://www.jigsawpuzzlesdirect.co.uk/productssmall/G3033.jpg" /> 
@@ -221,4 +221,19 @@ For the 1000-piece puzzle, here are the top ten images.
 <img src="https://www.jigsawpuzzlesdirect.co.uk/productssmall/G2211.jpg" /> 
 </div>
 
-Here are the images for the 500-piece puzzle.
+Here are the top ten images for a 500-piece puzzle.
+
+<div style="width:70%; margin:0 auto;">
+<img src="https://www.jigsawpuzzlesdirect.co.uk/productssmall/G3033.jpg" /> 
+<img src="https://www.jigsawpuzzlesdirect.co.uk/productssmall/RV14695.jpg" />
+<img src="https://www.jigsawpuzzlesdirect.co.uk/productssmall/HOP1615.jpg" />
+<img src="https://www.jigsawpuzzlesdirect.co.uk/productssmall/RV19718.jpg" />
+<img src="https://www.jigsawpuzzlesdirect.co.uk/productssmall/G6188.jpg" /> 
+<img src="https://www.jigsawpuzzlesdirect.co.uk/productssmall/CL39393.jpg" />
+<img src="https://www.jigsawpuzzlesdirect.co.uk/productssmall/G3108.jpg" /> 
+<img src="https://www.jigsawpuzzlesdirect.co.uk/productssmall/RV19658.jpg" /> 
+<img src="https://www.jigsawpuzzlesdirect.co.uk/productssmall/G3089.jpg" /> 
+<img src="https://www.jigsawpuzzlesdirect.co.uk/productssmall/G6090.jpg" /> 
+</div>
+
+The same images kept cropping up, even when I ran the algorithm with the wrong parameters. Probably, these are the images which have the most even spread of colours among all images considered, so perhaps there is not too much to be read into this. But, for what it's worth, <i>Hidden Hideaway</i> tends to come out at or near the top. As promised!
