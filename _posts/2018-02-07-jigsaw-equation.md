@@ -208,26 +208,26 @@ This diagram summarizes the process. Computing the complexity is really just mea
 
 For the 1000-piece puzzle, here are the top ten images (meaning, the ten images with the lowest complexity values when $N=1000$ and $b=155$).
 
-<div style="width:70%; margin:0 auto; float: left;">
-<div style="float:left;">
+<div style="width:70%; margin:0 auto;">
+<div style="float:left; display: inline-block;">
 <img src="https://www.jigsawpuzzlesdirect.co.uk/productssmall/G3033.jpg" /> 
-</div><div style="float:left;">
+</div><div style="display: inline-block;">
 <img src="https://www.jigsawpuzzlesdirect.co.uk/productssmall/G8012.jpg" />
- </div><div style="float:left;">
+ </div><div style="display: inline-block;">
 <img src="https://www.jigsawpuzzlesdirect.co.uk/productssmall/G6188.jpg" />
- </div><div style="float:left;">
+ </div><div style="display: inline-block;">
 <img src="https://www.jigsawpuzzlesdirect.co.uk/productssmall/HOP426.jpg" />
- </div><div style="float:left;">
+ </div><div style="display: inline-block;">
 <img src="https://www.jigsawpuzzlesdirect.co.uk/productssmall/RV19658.jpg" /> 
- </div><div style="float:left;">
+ </div><div style="display: inline-block;">
 <img src="https://www.jigsawpuzzlesdirect.co.uk/productssmall/HOP1615.jpg" />
- </div><div style="float:left;">
+ </div><div style="display: inline-block;">
 <img src="https://www.jigsawpuzzlesdirect.co.uk/productssmall/EG80000870.jpg" /> 
- </div><div style="float:left;">
+ </div><div style="display: inline-block;">
 <img src="https://www.jigsawpuzzlesdirect.co.uk/productssmall/CL39393.jpg" /> 
- </div><div style="float:left;">
+ </div><div style="display: inline-block;">
 <img src="https://www.jigsawpuzzlesdirect.co.uk/productssmall/G3108.jpg" /> 
- </div><div style="float:left;">
+ </div><div style="display: inline-block;">
 <img src="https://www.jigsawpuzzlesdirect.co.uk/productssmall/G2211.jpg" /> 
  </div>
 </div>
