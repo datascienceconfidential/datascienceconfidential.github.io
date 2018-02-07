@@ -258,7 +258,7 @@ Here are the top ten images for a 500-piece puzzle.
 </div>
 </div>
 
-The same images kept cropping up, even when I ran the algorithm with the wrong parameters. Probably, these are the images which have the most even spread of colours among all images considered, so perhaps there is not too much to be read into this. But, for what it's worth, <i>Hidden Hideaway</i> tends to come out at or near the top. As promised!
+The same images kept cropping up, even when I ran the algorithm with the wrong parameters. Probably, these are the images which have the most even spread of colours among all images considered, so perhaps there is not too much to be read into this. But, for what it's worth, <i>Hidden Hideaway</i> tends to come out at the top. As promised!
 
 ## Comments
 
