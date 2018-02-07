@@ -20,7 +20,7 @@ I wondered if somewhere in between these two extremes, there was an optimum, at 
 
 ## Model
 
-Let us ignore the geometry of the situation completely, and assume we have a jigsaw puzzle with $N$ pieces, which is divided into $b$ sections, each of which consists of $n_i$ pieces. The pieces within each section are assumed to have the same colour or pattern, and the different sections are assumed to be distinguishable from each other.
+Let us ignore the geometry of the situation completely, and assume we have a jigsaw puzzle with $N$ pieces, which is divided into $b$ sections, where the $i^{th}$ section consists of $n_i$ pieces. The pieces within each section are assumed to have the same colour or pattern, and the different sections are assumed to be distinguishable from each other.
 
 The sections can be permuted among themselves in $b!$ ways, and (ignoring orientations) there are $n_i!$ ways of permuting the pieces in the $i^{th}$ section. So, altogether, the number of possible configurations (or roughly, the amount of trial and error required (or <i>thermodynamic probability</i>, as I believe it is called in statistical mechanics)) is
 
@@ -260,7 +260,7 @@ Here are the top ten images for a 500-piece puzzle ($b=86$).
 
 The same images kept cropping up, even when I ran the algorithm with the wrong parameters. Probably, these are the images which have the most even spread of colours among all images considered, so perhaps there is not too much to be read into this. But, for what it's worth, <i>Hidden Hideaway</i> tends to come out at the top. As promised!
 
-(Recall once more what this means. The claim is that, out of all the pictures considered, the picture on <i>Hidden Hideaway</i> requires the least amount of trial and error to reconstruct when it is divided into a 1000 or 500-piece jigsaw). 
+(Recall once more what this means. The claim is that, out of all the pictures considered, the picture on <i>Hidden Hideaway</i> requires the least amount of trial and error to reconstruct when it is divided into a 1000 or 500-piece jigsaw. If trial and error is the least interesting aspect of assembling a jigsaw, then <i>Hidden Hideaway</i> is the most interesting puzzle).
 
 ## Comments
 
