@@ -22,13 +22,21 @@ I wondered if somewhere in between these two extremes, there was an optimum, at 
 
 ## Model
 
-Let us ignore the geometry of the situation completely, and assume we have a jigsaw puzzle with $N$ pieces, which is divided into $b$ sections, where the $i^{th}$ section consists of $n_i$ pieces. The pieces within each section are assumed to have the same colour or pattern, and the different sections are assumed to be distinguishable from each other.
+Let us assume we have a jigsaw puzzle with $N$ pieces, which is divided into $b$ sections or blocks, where the $i^{th}$ block consists of $n_i$ pieces. The pieces within each block are assumed to have the same colour or pattern, and the different blocks are assumed to be distinguishable from each other.
 
-The sections can be permuted among themselves in $b!$ ways, and (ignoring orientations) there are $n_i!$ ways of permuting the pieces in the $i^{th}$ section. So, altogether, the number of possible configurations (or roughly, the amount of trial and error required (or <i>thermodynamic probability</i>, as I believe it is called in statistical mechanics)) is
+Ignoring the geometry of the situation, let us treat the task of reconstructing the puzzle as arranging the pieces in a row. Assume we can quickly sort the pieces by colour, but we have to use trial and error to decide how to arrange pieces of the same colour, and also to decide how to arrange the blocks relative to each other 
+
+The blocks can be permuted among themselves in $b!$ ways, and (ignoring orientations) there are $n_i!$ ways of permuting the pieces in the $i^{th}$ block. So, altogether, the number of possible configurations (or roughly, the amount of trial and error required (or <i>thermodynamic probability</i>, as I believe it is called in statistical mechanics)) is
 
 $$ \left(\prod_{i=1}^b n_i!\right) b! $$
 
 and we would like to minimize this, subject to the condition $\sum_{i=1}^b n_i = N$.
+
+For example, in the diagram below, there are 3 blocks which can be arranged in $b!=6$ possible ways, and within each block, there are $5!=120$ ways of arranging the green pieces, $3!=6$ ways of arranging the blue pieces, and $4!=24$ ways of arranging the red pieces, giving a total of $6 \times 24 \times 120 \times 6$ possible arrangements.
+
+<div style="width:70%; margin:0 auto;"> 
+  <img src="/blog/images/2018-02/model_illustration.png" />
+</div>
 
 The two extreme cases are $b=1, n_1=N$, which corresponds to a blank picture, and $b=N, n_i=1$ for all $i$, which corresponds to randomly-coloured pieces. Both of these cases give a score of $N!$.
 
