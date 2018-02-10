@@ -11,15 +11,15 @@
 			<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
 			{% include mathjax_support %}
 			{% if page.header-img %}
-			    <meta property="og:image" content="{{ site.url }}/{{ page.header-img }}" />
+			    <meta prefix="og: http://ogp.me/ns#" property="og:image" content="{{ site.url }}/{{ page.header-img }}" />
                         {% endif %}
 			{% if page.subtitle %}
-			    <meta property="og:description" content="{{ page.subtitle }}" />
+			    <meta prefix="og: http://ogp.me/ns#" property="og:description" content="{{ page.subtitle }}" />
                         {% endif %}
 			{% if page.title %}
-			    <meta property="og:title" content="{{ page.title }}" />
+			    <meta prefix="og: http://ogp.me/ns#" property="og:title" content="{{ page.title }}" />
                         {% endif %}
-			<meta property="og:url" content="{{ site.url }}/{{ page.url }}" />
+			<meta prefix="og: http://ogp.me/ns#" property="og:url" content="{{ site.url }}/{{ page.url }}" />
 		</head>
 		
 		<body class="theme-base-0d sidebar-overlay">
