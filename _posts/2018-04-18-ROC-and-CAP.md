@@ -6,17 +6,26 @@ author: Richard
 categories: validation predictive-models ranking
 published: false
 ---
-Recent consulting work in the banking sector has led me to take a closer look at the ROC and CAP curves and their associated accuracy 
-measures, AUC and AR. I was rather surprised to learn that there is a simple relationship between these measures. However, it seems that
-it is also not quite as simple as people think.
+Recent consulting work in the banking sector has led me to take a closer look at the ROC and CAP curves and their associated accuracy measures, AUC and AR. I was rather surprised to learn that there is a simple relationship between these measures. However, it seems that it is also not quite as simple as people think.
+
+## Introduction
+
+The ROC and CAP curves measure the quality of a ranking or rating system. They are not defined for an arbitrary predictive model, but rather for models which output some kind of numerical score which is supposed to be predictive of some characteristic of interest. This means, for example, that a random forest or naive Bayes classifer can have an ROC curve, but a black-box classifier which merely produces a prediction will not have one.
+
+The application which I will have in mind in this post is credit scoring. A credit scorecard outputs a number called a credit score. Every borrower is assigned a credit score. Some borrowers are "bad", for example, those who default. It is hoped that the credit score will be related to the probability that a borrower is bad. The ROC and CAP curves provide a way to test this.
+
+## The ROC curve
+
+
 
 <canvas id="theCanvas" height="300 + 10*2" width="300 + 10*2"></canvas>
 
-<script type="text/javascript">var theCanvas = document.getElementById("theCanvas");var ctx = theCanvas.getContext("2d");
-/*ctx.beginPath();ctx.rect(20, 20, 150, 100);ctx.fillStyle = "red";ctx.fill();*/
-var n = 100;var scores = [];for (var i=1;i< n+1;i++){    scores.push(i);}var defaults = [];var nonDefaults = [];var goods = 0;var bads = 0;
-for (var i=1; i<n+1; i++){    var defaultProb = Math.random(); defaults.push(defaultProb < Math.exp(-0.02*Math.pow(scores[i-1], 1.1)) ? 1 : 0); if (defaults[i-1] > 0){     bads += 1;  nonDefaults.push(0); } else {     goods += 1;  nonDefaults.push(1);    }}// debugging checksconsole.log(defaults);console.log(nonDefaults);console.log(goods);console.log(bads);
-// ROC curvecumDefaults = [defaults[0]];for (i=1; i<n; i++){    cumDefaults.push(cumDefaults[i-1] + defaults[i]);}ROCy = [0];for (i=0; i<n; i++){    ROCy.push(cumDefaults[i]/bads);}console.log(ROCy);
+<script type="text/javascript">
+  var theCanvas = document.getElementById("theCanvas");
+  var ctx = theCanvas.getContext("2d");
+  var n = 100;var scores = [];for (var i=1;i< n+1;i++){scores.push(i);}var defaults = [];var nonDefaults = [];var goods = 0;var bads = 0;for (var i=1; i<n+1; i++){var defaultProb = Math.random(); defaults.push(defaultProb < Math.exp(-0.02*Math.pow(scores[i-1], 1.1)) ? 1 : 0); if (defaults[i-1] > 0){     bads += 1;  nonDefaults.push(0); } else {     goods += 1;  nonDefaults.push(1);    }}
+// ROC curve
+  cumDefaults = [defaults[0]];for (i=1; i<n; i++){    cumDefaults.push(cumDefaults[i-1] + defaults[i]);}ROCy = [0];for (i=0; i<n; i++){    ROCy.push(cumDefaults[i]/bads);}console.log(ROCy);
 cumNonDefaults = [nonDefaults[0]];for (i=1; i<n; i++){    cumNonDefaults.push(cumNonDefaults[i-1] + nonDefaults[i]);}ROCx = [0];for (i=0; i<n; i++){    ROCx.push(cumNonDefaults[i]/goods);}console.log(ROCx);
 // CAP curveCAPx = [0];for (i=1; i<n+1; i++){    CAPx.push(i/n);}var CAPy = ROCy;
 // plot ROC curve on canvasvar w = theCanvas.width - 20;var h = theCanvas.height - 20;
