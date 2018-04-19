@@ -3,8 +3,8 @@ layout: post
 title: "ROC versus CAP"
 date: 2018-04-18
 author: Richard
-categories: predictive-models r javascript
-published: false
+categories: predictive-models javascript
+published: true
 ---
 Recent consulting work in the banking sector has led me to take a closer look at the ROC and CAP curves and their associated accuracy measures, AUC and AR. I was rather surprised to learn that there is a simple relationship between these measures. However, it seems that it is also not quite as simple as people think.
 
@@ -41,11 +41,9 @@ In our example, by considering every possible cutoff, we get the following table
 | tpr            |    0 |     1/2 |     1/2 |     2/2 |     2/2 |  2/2 |
 | fpr            |    0 |       0 |     1/3 |     1/3 |     2/3 |  3/3 |
 
-and the ROC curve looks like this:
+and the ROC curve looks like this (the points are joined up to create a curve, for ease of visualization).
 
-<center><img src="/images/2018-04/ROC_example.png" /></center>
-
-### Plotting the ROC curve in R
+<center><img src="/blog/images/2018-04/ROC_example.png" /></center>
 
 ### Uses of the ROC curve
 
@@ -59,6 +57,12 @@ The AUC seems like quite a complicated measure, but actually it has a very simpl
 
 The highest possible value of the AUC is 1, and the lowest possible value in practice is 0.5, which corresponds to a ranking system with no discriminatory power. It is possible to have an AUC of less than 0.5, but in this case, the rankings can be reserved, to give an AUC greater than 0.5. 
 
+#### Gini Index
+
+Sometimes the Gini Index is used instead of the AUC. This is obtained by subtracting the area above the ROC curve from the area under the curve. Since the ROC curve fits into the unit square, the Gini Index satisfies the equation
+
+$$ \mathrm{Gini} = 2\mathrm{AUC} - 1.$$
+
 ## The CAP curve
 
 The CAP curve is much simpler to explain than the ROC curve. It is obtained by plotting the cumulative proportion of bads on the y-axis against the cumulative proportion of all cases on the x-axis. In the above example, it is computed like this.
@@ -69,14 +73,47 @@ The CAP curve is much simpler to explain than the ROC curve. It is obtained by p
 | proportion of bads            |    1/2 |       1/2 |     2/2 |     2/2 |     2/2 |    2/2 |
 | proportion of cases           |    1/6 |       2/6 |     3/6 |     4/6 |     5/6 |    6/6 |
 
-<center><img src="/images/2018-04/CAP_example.png" /></center>
+When plotting the CAP curve, note that the point $(0, 0)$ is also included.
+
+<center><img src="/blog/images/2018-04/CAP_example.png" /></center>
 
 ### Accuracy Ratio (AR)
 
+Like the ROC curve, the worst possible CAP curve is a 45 degree line, which will be the CAP curve of a random ordering of goods and bads. The best possible CAP curve would rank all the bads first, followed by all the goods. This would follow a straight line from $(0, 0)$ to $(b/n, 1)$ where $b$ is the number of bads and $n$ is the number of cases, followed by the line segment from $(b/n, 1)$ to $(1, 1)$.
+
+In pictures, the situation looks like this.
+
+<center><img src="/blog/images/2018-04/CAP_example_2.png" /></center>
+
+Let $AUCAP$ be the area under the CAP curve. Then the number $AUCAP - 1/2$ measures how much better the ranking system is than a random model, and the area under the blue curve, $(1 - \frac{b}{2n}) - 1/2$, is its maximum possible value. The Accuracy Ratio is defined to be
+
+$$ AR = \frac{AUCAP - 1/2}{1/2 - b/2n}.$$
+
+It has the advantage that it lies between 0 and 1. 
+
 ### Relationship between CAP curve and ROC curve
+
+You may notice that the CAP curve and ROC curve look very similar. In fact, they have the same values on the y-axis (cumulative proportion of bads) and when the CAP curve goes diagonally upwards with a slope of $b/n$, the ROC curve goes vertically upwards, like in this nifty animation.
 
 <canvas id="theCanvas" height="320" width="320" border="1px solid" style="display: block; margin: 0 auto;"></canvas>
 
 <script type="text/javascript" src="/blog/scripts/roc_animation.js"></script>
 
+The CAP curve has some advantages over the ROC curve.
+<ul>
+  <li> It is easier to explain.
+  <li> It is always a function (no vertical bits).
+  <li> AR lies between 0 and 1.
+</ul>
+
 ### Relationship between AR and AUC
+
+It is not surprising that AR and AUC are closely related. In fact, Appendix A of [this discussion paper by Engelmann, Hayden and Tasche](https://www.bundesbank.de/Redaktion/EN/Downloads/Publications/Discussion_Paper_2/2003/2003_10_01_dkp_01.pdf?__blob=publicationFile) shows that 
+
+$$ AR = 2AUC - 1, $$
+
+so that in fact the accuracy ratio is the same number as the Gini Index. Here is [another article by the same authors with a slicker proof](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.71.6921&rep=rep1&type=pdf).
+
+However, in practice there is one caveat. The result is only true if there are no ties in the ranking, because it is based on viewing the CAP as defined by the points $(n_{\le i}/n, b_{\le i}/b)$ as $i$ ranges over all possible scores, and $b_{\le i}$ is the number of bads with score $\le i$, and $n_{\le i}$ is the total number of cases with score $\le i$. 
+
+If the CAP curve is defined by plotting the proportion of cases on the x-axis (as in this post) then the relationship will no longer hold true, although in any sensible example it will be close enough for all practical purposes. It is worth being aware of this in case it gives rise to  awkward questions!
