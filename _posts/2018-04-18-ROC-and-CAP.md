@@ -43,4 +43,4 @@ and the ROC curve looks like this:
 
 <canvas id="theCanvas" height="320" width="320" border="1px solid"></canvas>
 
-<script type="text/javascript" src="blog/scripts/roc_animation.js"></script>
+<script type="text/javascript" src="/blog/scripts/roc_animation.js"></script>
