@@ -43,6 +43,8 @@ In our example, by considering every possible cutoff, we get the following table
 
 and the ROC curve looks like this:
 
+<center><img src="/images/2018-04/ROC_example.png" /></center>
+
 ### Plotting the ROC curve in R
 
 ### Uses of the ROC curve
@@ -66,6 +68,8 @@ The CAP curve is much simpler to explain than the ROC curve. It is obtained by p
 | bad                           |    1   |       0   |       1 |       0 |       0 |      0 |
 | proportion of bads            |    1/2 |       1/2 |     2/2 |     2/2 |     2/2 |    2/2 |
 | proportion of cases           |    1/6 |       2/6 |     3/6 |     4/6 |     5/6 |    6/6 |
+
+<center><img src="/images/2018-04/CAP_example.png" /></center>
 
 ### Accuracy Ratio (AR)
 
