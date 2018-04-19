@@ -97,12 +97,12 @@ You may notice that the CAP curve and ROC curve look very similar. In fact, they
 
 <canvas id="theCanvas" height="320" width="320" border="1px solid" style="display: block; margin: 0 auto;"></canvas>
 
-<script type="text/javascript" src="/blog/scripts/roc_animation.js"></script>
+<script type="text/javascript" src="/blog/scripts/2018-04/roc_animation.js"></script>
 
 The CAP curve has some advantages over the ROC curve.
 
 * It is easier to explain.
-* It is always a function (no vertical bits).
+* It is always the graph of a function (no vertical bits).
 * AR lies between 0 and 1.
 
 ## Relationship between AR and AUC
