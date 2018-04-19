@@ -4,7 +4,7 @@ title: "ROC versus CAP"
 date: 2018-04-18
 author: Richard
 categories: validation predictive-models r javascript
-published: true
+published: false
 ---
 Recent consulting work in the banking sector has led me to take a closer look at the ROC and CAP curves and their associated accuracy measures, AUC and AR. I was rather surprised to learn that there is a simple relationship between these measures. However, it seems that it is also not quite as simple as people think.
 
