@@ -4,7 +4,7 @@ title: "ROC versus CAP"
 date: 2018-04-18
 author: Richard
 categories: validation predictive-models r javascript
-published: true
+published: false
 ---
 Recent consulting work in the banking sector has led me to take a closer look at the ROC and CAP curves and their associated accuracy measures, AUC and AR. I was rather surprised to learn that there is a simple relationship between these measures. However, it seems that it is also not quite as simple as people think.
 
@@ -46,7 +46,15 @@ and the ROC curve looks like this:
 <script type="text/javascript">
   var theCanvas = document.getElementById("theCanvas");
   var ctx = theCanvas.getContext("2d");
-  var n = 100;var scores = [];for (var i=1;i< n+1;i++){scores.push(i);}var defaults = [];var nonDefaults = [];var goods = 0;var bads = 0;for (var i=1; i<n+1; i++){var defaultProb = Math.random(); defaults.push(defaultProb < Math.exp(-0.02*Math.pow(scores[i-1], 1.1)) ? 1 : 0); if (defaults[i-1] > 0){     bads += 1;  nonDefaults.push(0); } else {     goods += 1;  nonDefaults.push(1);    }}
+  var n = 100;
+  var scores = [];
+  for (var i=1;i< n+1;i++){
+      scores.push(i);}
+  var defaults = [];
+  var nonDefaults = [];
+  var goods = 0;
+  var bads = 0;
+  for (var i=1; i<n+1; i++){var defaultProb = Math.random(); defaults.push(defaultProb < Math.exp(-0.02*Math.pow(scores[i-1], 1.1)) ? 1 : 0); if (defaults[i-1] > 0){     bads += 1;  nonDefaults.push(0); } else {     goods += 1;  nonDefaults.push(1);    }}
 // ROC curve
   cumDefaults = [defaults[0]];for (i=1; i<n; i++){    cumDefaults.push(cumDefaults[i-1] + defaults[i]);}ROCy = [0];for (i=0; i<n; i++){    ROCy.push(cumDefaults[i]/bads);}console.log(ROCy);
 cumNonDefaults = [nonDefaults[0]];for (i=1; i<n; i++){    cumNonDefaults.push(cumNonDefaults[i-1] + nonDefaults[i]);}ROCx = [0];for (i=0; i<n; i++){    ROCx.push(cumNonDefaults[i]/goods);}console.log(ROCx);
