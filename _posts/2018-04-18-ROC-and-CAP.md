@@ -41,6 +41,6 @@ In our example, by considering every possible cutoff, we get the following table
 
 and the ROC curve looks like this:
 
-<canvas id="theCanvas" height="300 + 20" width="300 + 20" border="1px solid"></canvas>
+<canvas id="theCanvas" height="320" width="320" border="1px solid"></canvas>
 
-<script type="text/javascript" src="../scripts/roc_animation.js"></script>
+<script type="text/javascript" src="blog/scripts/roc_animation.js"></script>
