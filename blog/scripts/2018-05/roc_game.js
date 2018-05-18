@@ -42,7 +42,7 @@ var renderCanvas = function(ctx){
 
 	for (var i=0; i < goodx.length; i++){
 
-		if (Math.abs(goodx[i] - gunx*canvas.width/W) < speed/2 && randn() + a < threshold){
+		if (Math.abs(goodx[i] - gunx) < speed/2 && randn() + a < threshold){
 
 			// check whether shot down
 
@@ -59,14 +59,12 @@ var renderCanvas = function(ctx){
 
     for (var i=0; i < goodx.length; i++){		
 
-        drawPlane(goodx[i], 50, "green", 1);
+        drawPlane(goodx[i]*canvas.width/W, 50*canvas.height/H, "green", canvas.width/W);
 
-		if (goodx[goodx.length-1] > W){
+		if (goodx[goodx.length-1] > canvas.width){
 
 			goodx.pop();
-
 			lastGoods.push(0);
-
 			lastGoods.splice(0, 1);
 
 		}
@@ -103,13 +101,9 @@ var renderCanvas = function(ctx){
 		if (Math.abs(badx[i] - gunx) < speed/2 && randn() < threshold){
 
 			// check whether shot down
-
 			badx.splice(i, 1);
-
 			lastBads.push(1);
-
 			lastBads.splice(0, 1);
-
 			badExplosionTimer += speed*2;
 
 		}
@@ -120,16 +114,13 @@ var renderCanvas = function(ctx){
 
     for (var i=0; i < badx.length; i++){
 
-        drawPlane(badx[i], 160, "grey", 1);
+        drawPlane(badx[i]*canvas.width/W, 160*canavs.height/H, "grey", canvas.wdith/W);
 
 		if (badx[badx.length-1] > W){
 
 			badx.pop();
-
 			lastBads.push(0);
-
 			lastBads.splice(0, 1);
-
 		}
 
 		badx[i] += speed;
@@ -152,10 +143,8 @@ var renderCanvas = function(ctx){
 
 	if (goodExplosionTimer > 0){
 
-		drawExplosion(gunx, 50, 1);
-
+		drawExplosion(gunx*canvas.width/W, 50*canvas.height/H, canvas.width/W);
 		goodExplosionTimer -= 1;
-
 		barrelLength[0] = 25;
 
 	}
@@ -164,10 +153,8 @@ var renderCanvas = function(ctx){
 
 	if (badExplosionTimer > 0){
 
-		drawExplosion(gunx, 160, 1);
-
+		drawExplosion(gunx*canvas.width/W, 160*canvas.height/H, 1);
 		badExplosionTimer -= 1;
-
 		barrelLength[1] = 25;
 
 	}	
@@ -182,7 +169,7 @@ var renderCanvas = function(ctx){
 
 	
 
-	drawGun(gunx, barrelLength);
+	drawGun(gunx*canvas.width/W, barrelLength*canvas.height/H);
 
 
 
@@ -199,7 +186,7 @@ var renderCanvas = function(ctx){
 
 		for (var i=0; i < fireworks.length; i++){
 
-			drawExplosion(fireworks[i][0], fireworks[i][1], 2.5);
+			drawExplosion(fireworks[i][0]*canvas.width/W, fireworks[i][1]*canvas.height/H, 2.5*canvas.width/W);
 
 		}
 
@@ -215,7 +202,7 @@ var renderCanvas = function(ctx){
 
 		ctx.fillStyle = "white";
 
-		ctx.fillText("You win!!", 100, 300);
+		ctx.fillText("You win!!", 100*canvas.width/W, 300*canvas.height/H);
 
 		ctx.stroke();
 
