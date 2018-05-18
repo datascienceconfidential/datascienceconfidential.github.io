@@ -3,8 +3,11 @@ var ctx = canvas.getContext("2d");
 ctx.strokeStyle="black";
 
 var canvasContainer = document.getElementById("canvasContainer");
-canvas.width = canvasContainer.width;
-canvas.height = (520/600)*canvasContainer.width;
+var parent = canvasContainer;
+var wdt=parent.clientWidth-parseInt(parent.style.paddingLeft)-parseInt(parent.style.paddingRight);
+
+canvas.setAttribute('width',wdt+"px");
+canvas.height = (520/600)*canvas.width;
 
 var a = 1 + Math.random()*2
 
