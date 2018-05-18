@@ -4,7 +4,7 @@ ctx.strokeStyle="black";
 
 var canvasContainer = document.getElementById("canvasContainer");
 canvas.width = canvasContainer.width;
-canvas.height = (520/600)*canvas.width;
+canvas.height = (520/600)*canvasContainer.width;
 
 var a = 1 + Math.random()*2
 
@@ -65,7 +65,7 @@ var renderCanvas = function(ctx){
 
         drawPlane(goodx[i]*canvas.width/W, 50*canvas.height/H, "green", canvas.width/W);
 
-		if (goodx[goodx.length-1] > canvas.width){
+		if (goodx[goodx.length-1] > W){
 
 			goodx.pop();
 			lastGoods.push(0);
@@ -202,7 +202,7 @@ var renderCanvas = function(ctx){
 
 		ctx.save();
 
-		ctx.font = "100px Arial";
+		ctx.font = Math.floor(100*canvas.width/W) + "px Arial";
 
 		ctx.fillStyle = "white";
 
@@ -476,10 +476,10 @@ var drawROCCurve = function(ctx, ROCx, ROCy, lastGoods, lastBads){
 
 	ctx.fillStyle = "black";
 
-	ctx.font = "25px Arial";
+	ctx.font = Math.floor(25*xf) + "px Arial";
 
 	ctx.fillText("ROC Space", 20*xf, 290*yf);
-	ctx.font = "10px Arial";
+	ctx.font = Math.floor(10*xf) + "px Arial";
 	ctx.fillText("0", 10*xf, 510*yf);
 	ctx.fillText("1", 10*xf, 300*yf);
         ctx.fillText("1", 220*xf, 510*yf);
