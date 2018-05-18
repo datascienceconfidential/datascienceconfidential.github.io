@@ -2,6 +2,10 @@ var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 ctx.strokeStyle="black";
 
+var canvasContainer = document.getElementById("canvasContainer");
+canvas.width = canvasContainer.width;
+canvas.height = (520/600)*canvas.width;
+
 var a = 1 + Math.random()*2
 
 var goodx = [-50];
