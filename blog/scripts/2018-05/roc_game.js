@@ -114,7 +114,7 @@ var renderCanvas = function(ctx){
 
     for (var i=0; i < badx.length; i++){
 
-        drawPlane(badx[i]*canvas.width/W, 160*canavs.height/H, "grey", canvas.width/W);
+        drawPlane(badx[i]*canvas.width/W, 160*canvas.height/H, "grey", canvas.width/W);
 
 		if (badx[badx.length-1] > W){
 
