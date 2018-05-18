@@ -169,7 +169,7 @@ var renderCanvas = function(ctx){
 
 	
 
-	drawGun(gunx*canvas.width/W, barrelLength*canvas.height/H);
+	drawGun(gunx, barrelLength, canvas.width/W);
 
 
 
@@ -354,18 +354,16 @@ var drawExplosion = function(x, y, scale){
 
 
 
-var drawGun = function(gunx, barrelLength){
+var drawGun = function(gunx, barrelLength, scale){
 
 	ctx.fillStyle = "black";
-
+        var xf = canvas.width/W;
+	var yf = canvas.height/H;
 	//ctx.strokeStyle = "black";
 
-	ctx.fillRect(gunx-20, 250, 40, 10);
-
-	ctx.fillRect(gunx - 10, 250, 5, -barrelLength[0]);
-
-	ctx.fillRect(gunx + 5, 250, 5, -barrelLength[1]);
-
+	ctx.fillRect(gunx*xf -20*scale, 250*yf, 40*scale, 10*scale);
+	ctx.fillRect(gunx*xf - 10*scale, 250*yf, 5*scale, -barrelLength[0]*scale);
+	ctx.fillRect(gunx*xf + 5*scale, 250*yf, 5*scale, -barrelLength[1]*scale);
 }
 
 
