@@ -371,34 +371,23 @@ var drawGun = function(gunx, barrelLength, scale){
 
 var drawROCCurve = function(ctx, ROCx, ROCy, lastGoods, lastBads){
 
-	
-
 	var fpr = 0;
-
-    var	tpr = 0;
+	var tpr = 0;
 
 	for (var i=0; i < lastGoods.length; i++){
-
 		fpr += lastGoods[i];
-
 		tpr += lastBads[i];
-
-	}
+        }
 
 	fpr = fpr/lastBads.length;
-
-	tpr = tpr/lastGoods.length;
-
-
-
+        tpr = tpr/lastGoods.length;
 
 	var score = 0;
 
-    for (var i=0; i < lastGoods.length; i++){
+        for (var i=0; i < lastGoods.length; i++){
 
 		score += (lastGoods[i] == 1 ? 1 : 0);
-
-		score += (lastBads[i] == 0 ? 1 : 0);
+                score += (lastBads[i] == 0 ? 1 : 0);
 
 	}
 
@@ -436,24 +425,19 @@ var drawROCCurve = function(ctx, ROCx, ROCy, lastGoods, lastBads){
 	//console.log(ROCy);
 
 	
-
+        var xf = canvas.width/W;
+	var yf = canvas.height/H;
 	ctx.strokeStyle = "black";
-
 	ctx.lineWidth = 2;
-
-	ctx.strokeRect(20-2, 300-2, 200+2, 200+2);
-
-	
+	ctx.strokeRect((20-2)*xf, (300-2)*yf, (200+2)*xf, (200+2)*yf);
 
 	ctx.strokeStyle = "red";
-
-    ctx.beginPath();
-
-	ctx.moveTo(20, 500);
+	ctx.beginPath();
+	ctx.moveTo(20*xf, 500*yf);
 
 	for (var i = 0; i < ROCx.length; i++){
 
-		ctx.lineTo(ROCx[i]*200 + 20, -ROCy[i]*200 + 500);
+		ctx.lineTo((ROCx[i]*200 + 20)*xf, (-ROCy[i]*200 + 500)*yf);
 
 	}
 
@@ -461,13 +445,11 @@ var drawROCCurve = function(ctx, ROCx, ROCy, lastGoods, lastBads){
 
 	ctx.stroke();
 
-	
-
 	ctx.beginPath();
 
 	//ctx.beginPath();;
 
-	ctx.arc(ROCx[ROCx.length - 1]*200 + 20, -ROCy[ROCy.length - 1]*200 + 500, 5, 0, 2*Math.PI, true);
+	ctx.arc((ROCx[ROCx.length - 1]*200 + 20)*xf, (-ROCy[ROCy.length - 1]*200 + 500)*yf, 5*xf, 0, 2*Math.PI, true);
 
 	//ctx.closePath();
 
@@ -492,94 +474,84 @@ var drawROCCurve = function(ctx, ROCx, ROCy, lastGoods, lastBads){
 
 	ctx.font = "25px Arial";
 
-	ctx.fillText("ROC Space", 20, 290);
-
-	
-
+	ctx.fillText("ROC Space", 20*xf, 290*yf);
 	ctx.font = "10px Arial";
-
-	ctx.fillText("0", 10, 510);
-
-	ctx.fillText("1", 10, 300);
-
-    ctx.fillText("1", 220, 510);
-
-	
+	ctx.fillText("0", 10*xf, 510*yf);
+	ctx.fillText("1", 10*xf, 300*yf);
+        ctx.fillText("1", 220*xf, 510*yf);
 
 	ctx.strokeStyle="black";
-
-	
-
 }
 
 
 
 
 var drawTable = function(){
-
+        var xf = canvas.width/W;
+	var yf = canvas.height/H;
 	ctx.beginPath();
 
 	ctx.strokeStyle = "black";
 
-	ctx.moveTo(400, 500);
+	ctx.moveTo(400*xf, 500*yf);
 
-	ctx.lineTo(400, 300);
+	ctx.lineTo(400*xf, 300*yf);
 
 	
 
-	ctx.moveTo(490, 500);
+	ctx.moveTo(490*xf, 500*yf);
 
-	ctx.lineTo(490, 300);	
+	ctx.lineTo(490*xf, 300*yf);	
 
 	ctx.stroke();
 
 	
 
-	ctx.moveTo(580, 500);
+	ctx.moveTo(580*xf, 500*yf);
 
-	ctx.lineTo(580, 300);	
-
-	ctx.stroke();
-
-	
-
-	ctx.moveTo(340, 350);
-
-	ctx.lineTo(580, 350);
+	ctx.lineTo(580*xf, 300*yf);	
 
 	ctx.stroke();
 
 	
 
-	ctx.moveTo(340, 425);
+	ctx.moveTo(340*xf, 350*yf);
 
-	ctx.lineTo(580, 425);
-
-	ctx.stroke();
-
-	
-
-	ctx.moveTo(340, 500);
-
-	ctx.lineTo(580, 500);
+	ctx.lineTo(580*xf, 350*yf);
 
 	ctx.stroke();
 
 	
 
-	drawPlane(350, 380, "green", 0.5);
+	ctx.moveTo(340*xf, 425*yf);
 
-	drawPlane(350, 460, "grey", 0.5);
+	ctx.lineTo(580*xf, 425*yf);
+
+	ctx.stroke();
+
+	
+
+	ctx.moveTo(340*xf, 500*yf);
+
+	ctx.lineTo(580*xf, 500*yf);
+
+	ctx.stroke();
+
+	
+
+	drawPlane(350*xf, 380*yf, "green", 0.5*xf);
+
+	drawPlane(350*xf, 460*yf, "grey", 0.5*xf);
 
 	
 
 	ctx.fillStyle="black";
 
-	ctx.font = "20px Arial";
+	ctx.font = Math.floor(20*xf) + "px Arial";
 
-	ctx.fillText("Safe", 420, 330);
+	ctx.fillText("Safe", 420*xf, 330*yf);
 
-	ctx.fillText("Downed", 500, 330);
+	ctx.fillText("Downed", 500*xf, 330*yf);
 
 	
 
@@ -603,13 +575,13 @@ var drawTable = function(){
 
 	
 
-	ctx.fillText(lastGoods.length - sumLastGoods, 435, 390);
+	ctx.fillText(lastGoods.length - sumLastGoods, 435*xf, 390*yf);
 
-	ctx.fillText(sumLastGoods, 525, 390);
+	ctx.fillText(sumLastGoods, 525*xf, 390*yf);
 
-	ctx.fillText(lastBads.length - sumLastBads + "", 435, 465);
+	ctx.fillText(lastBads.length - sumLastBads + "", 435*xf, 465*yf);
 
-	ctx.fillText(sumLastBads + "", 525, 465);
+	ctx.fillText(sumLastBads + "", 525*xf, 465*yf);
 
 
 
