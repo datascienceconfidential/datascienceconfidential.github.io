@@ -157,7 +157,7 @@ var renderCanvas = function(ctx){
 
 	if (badExplosionTimer > 0){
 
-		drawExplosion(gunx*canvas.width/W, 160*canvas.height/H, 1);
+		drawExplosion(gunx*canvas.width/W, 160*canvas.height/H, canvas.width/W);
 		badExplosionTimer -= 1;
 		barrelLength[1] = 25;
 
