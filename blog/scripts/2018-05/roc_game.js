@@ -1,66 +1,34 @@
 var canvas = document.getElementById("canvas");
-
 var ctx = canvas.getContext("2d");
-
 ctx.strokeStyle="black";
-
-
-
 
 var a = 1 + Math.random()*2
 
-
-
-
 var goodx = [-50];
-
 var badx = [-50];
-
 var gunx = 500;
-
 var ROCx = [0];
-
 var ROCy = [0];
-
 var W = 600;
-
 var H = 520;
 
 var lastGoods = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
-
 var lastBads = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
-
 var speed = 5;
-
 var gunx = 400;
 
 var goodExplosionTimer = 0;
-
 var badExplosionTimer = 0;
-
 var threshold = 0;
-
 var barrelLength = [30, 30];
-
 var fireworks = [];
 
-
-
-
-//document.write(idealScore);
-
-// Standard Normal variate using Box-Muller transform.
-
+// Standard Normal variate using Box-Muller transform from StackOverflow
 function randn() {
-
     var u = 0, v = 0;
-
     while(u === 0) u = Math.random(); //Converting [0,1) to (0,1)
-
     while(v === 0) v = Math.random();
-
     return Math.sqrt( -2.0 * Math.log( u ) ) * Math.cos( 2.0 * Math.PI * v );
-
 }
 
 
@@ -69,27 +37,18 @@ function randn() {
 var renderCanvas = function(ctx){
 
 	ctx.fillStyle="white";
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        threshold = (slider.value/100)*(a + 4) + (1-slider.value/100)*(-4);
 
-	ctx.fillRect(0, 0, W, H);
+	for (var i=0; i < goodx.length; i++){
 
-	threshold = (slider.value/100)*(a + 4) + (1-slider.value/100)*(-4);
-
-	
-
-    for (var i=0; i < goodx.length; i++){
-
-		
-
-		if (Math.abs(goodx[i] - gunx) < speed/2 && randn() + a < threshold){
+		if (Math.abs(goodx[i] - gunx*canvas.width/W) < speed/2 && randn() + a < threshold){
 
 			// check whether shot down
 
 			goodx.splice(i, 1);
-
-			lastGoods.push(1);
-
+                        lastGoods.push(1);
 			lastGoods.splice(0, 1);
-
 			goodExplosionTimer += speed*2;
 
 		}
