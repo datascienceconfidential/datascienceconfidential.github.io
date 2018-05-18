@@ -3,7 +3,7 @@ var ctx = canvas.getContext("2d");
 ctx.strokeStyle="black";
 
 var canvasContainer = document.getElementById("canvasContainer");
-canvas.width = window.innerWidth;
+canvas.width = canvasContainer.offsetWidth;
 canvas.height = (520/600)*canvas.width;
 
 var a = 1 + Math.random()*2
