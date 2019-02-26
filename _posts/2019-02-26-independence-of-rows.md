@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "The mythical 97%"
+title: "A cautionary tale about SMOTE"
 date: 2019-02-26
 author: Richard
 categories: predictive-models
@@ -12,7 +12,7 @@ assumption that training examples are independent of one another.
 A few years ago, I was asked to evaluate a model which a colleague of mine built using 
 [SMOTE](https://en.wikipedia.org/wiki/Oversampling_and_undersampling_in_data_analysis). The model was a random forest, and SMOTE is
 a technique whereby rows are added to a data set in order to increase the incidence of a minority class (useful, in theory, in a two-class
-classification problem in which one class is very uncommon). The colleage noticed that the out-of-bag error indicated 97% classification
+classification problem in which one class is very uncommon). The colleague noticed that the out-of-bag error indicated 97% classification
 accuracy.
 
 In fact, when the model was trained on a subset of the training data and then used to classify the remaining, unseen, data, its accuracy
@@ -26,7 +26,7 @@ example which had been introduced using SMOTE.
 
 Here is an example of what can go wrong. The following code generates some completely random data in the form of a $100 \times 10$ matrix,
 and a target variable $y$. Then $X$ and $y$ are doubled, so that every row is duplicated. A random forest fitted to this garbage data has
-a classification accuracy of $80%$! 
+a classification accuracy of 80%! 
 
 ```python
 # Python version
@@ -71,7 +71,7 @@ pred <- predict(rf, test)
 sum(pred==test$y)/length(test$y)
 ```
 People make this mistake all the time, for example [here](https://www.kaggle.com/rahultej/tomek-links-smote-cv-99-96-to-100-recall). As
-for my story, my colleage didn't believe me and ended up presenting the 97% result at a conference, so at least there was a happy ending
+for my story, my colleague didn't believe me and ended up presenting the 97% result at a conference, so at least there was a happy ending
 for someone...
 
 Moral: the best way to assess a model is to repeat the entire training process on a random subset of your data, and evaluate on the held-out
