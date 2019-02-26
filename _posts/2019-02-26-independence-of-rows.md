@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "A cautionary tale about SMOTE"
+title: "A Cautionary Tale about SMOTE"
 date: 2019-02-26
 author: Richard
 categories: predictive-models python r
