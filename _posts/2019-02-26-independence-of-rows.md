@@ -3,7 +3,7 @@ layout: post
 title: "A cautionary tale about SMOTE"
 date: 2019-02-26
 author: Richard
-categories: predictive-models
+categories: predictive-models python r
 published: true
 ---
 Here is something that I have seen people get wrong often in machine learning: a lot of metrics for evaluating models only work on the
