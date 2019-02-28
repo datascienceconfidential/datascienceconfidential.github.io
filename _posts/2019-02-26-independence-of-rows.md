@@ -20,7 +20,7 @@ dropped to about 50%. It was no better than random guessing!
 
 Why did this happen? Well, the problem is that SMOTE adds rows to your data set which are based on linear combinations of existing rows. 
 In particular, the new rows are not independent of the existing rows. Out-of-bag error is a measure of the accuracy of a random forest 
-(or other ensemble of models) whereby models are evaluated by seeing how accuractely they predict examples which they did not see during
+(or other ensemble of models) whereby models are evaluated by seeing how accurately they predict examples which they did not see during
 training. But it is possible that the model could be trained on one of the new training examples, and then have to predict a very similar
 example which had been introduced using SMOTE.
 
