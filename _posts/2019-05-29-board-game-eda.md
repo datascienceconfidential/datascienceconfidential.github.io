@@ -27,3 +27,49 @@ My approach was to look for the cells containing an F_ or O_ (indicators which a
 complement of players) or open (more players can join)). Above each F_ or O_ is the game name, and below is the list of players. This 
 method will omit some games, such as Spirit Island in the above example, but generally works quite well.
 
+The sheets are read into R using the very nice `readxl` package and processed using the following code. The output of the function is a
+list indexed by the games played on each date, with the number of players (if it was given as a single number) and the player names (if
+a valid number of players was found). For some games, such as Puerto Rico in the above example, this method will not record the players
+who played the game, but this does not matter, since my main interest was in which games were played.
+
+```r
+# function for getting the info from a single sheet
+process_sheet <- function(sheet){
+  # sheet should be a data frame
+  
+  # find the cells which contain F_ or O_
+  full_open <- which(sheet=="F_" | sheet=="O_", arr.ind=T)
+  game_list <- list()
+  for (i in 1:nrow(full_open)){
+    #print(i)
+    idx <- full_open[i, ]
+    name_idx <- idx + c(-1, -1)
+    game_name <- sheet[name_idx[1], name_idx[2]]
+    z <- idx + c(0, -1)
+    
+    # number of players, if given
+    n_players <- as.numeric(gsub("Players", "", sheet[z[1], z[2]]))
+
+    # if number of players was given, create a list of player names
+    if (!is.na(n_players)){
+      player_names_idx <- matrix(rep(idx, n_players), nc=2, byrow=T) + cbind(1:n_players, -1)
+       player_names <- sheet[player_names_idx[1, 1], player_names_idx[1,2]]
+      for (i in 2:n_players){
+        player_names <- c(player_names, sheet[player_names_idx[i,1],
+                                            player_names_idx[i,2]])
+      }
+      player_names <- player_names[!is.na(player_names)]
+      
+      # if any player names were found, add them to this 
+      # recorded play
+      if (length(player_names) > 1){
+        game_list[[game_name]] <- list(n=n_players, player_names=player_names)
+      }
+    }
+  }
+  game_list
+}
+```
+
+After some further processing, the output was turned into a list of games played in each week, from which I obtained a matrix whose rows
+were the 63 weeks and whose columns were the games played. Even after some cleaning of the game names, there were still 289 recorded games.
