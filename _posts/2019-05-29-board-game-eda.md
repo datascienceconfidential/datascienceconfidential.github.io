@@ -130,4 +130,20 @@ par(mfrow=c(1,1))
  <img src="/blog/images/2019-05/logistic_plots.png" />
 </div>
 
-Terraforming Mars (a game which I have never actually played) is the only game which has remained perennially popular. However, it is not the only game with a positive coefficient of `t` in logistic regression. Any game played in the most recent week (week 66) will also have a positive coefficient, as a result of how logistic regression works. 
+Terraforming Mars (a game which I have never actually played) is the only game which has remained perennially popular. However, it is not the only game with a positive coefficient of `t` in logistic regression. Any game played in the most recent week (week 66) is also very likely to have a positive coefficient, because the logistic model will be swayed by the most recent result when there is not much data. 
+
+We can partially avoid this problem by only looking at games which have been played 3 or more times, of which there are 40. Looking at the probability of these games being played in the next week, the top 10 are as follows.
+
+| Game | Pr(played in week 67) |
+| ------------- | ------------- |
+| Terraforming Mars | 0.67 |
+| Pandemic Legacy Season 2  | 0.38 |
+| Coimbra | 0.27 |
+| Castles of Mad King Ludwig | 0.11 |
+|  Great Western Trail | 0.07 |
+| Scythe | 0.07 | 
+| Tramways | 0.05 |
+| Transatlantic | 0.05 |
+| Mystic Vale | 0.05 |
+| Orleans | 0.04 |
+
