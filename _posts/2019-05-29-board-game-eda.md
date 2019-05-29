@@ -69,5 +69,45 @@ The image below shows the matrix of games played by week, with games along the h
  <img src="/blog/images/2019-05/game_matrix.png" />
 </div>
 
-I was interested in ranking the remaining games by popularity. Simply counting the number of plays is not sufficient because we should also consider the amount of time which has elapsed since a game was last played. The plays of each game can be considered as a binary time series, and the simplest model for such a series is a logistic regression with time as the dependent variable.
+I was interested in ranking the remaining games by popularity. Simply counting the number of plays is not sufficient because we should also consider the amount of time which has elapsed since a game was last played. The plays of each game can be considered as a binary time series, and the simplest model for such a series is a logistic regression with time as the dependent variable. My idea was that the overall trend in the popularity of a game could be measured by the coefficient of time in the logistic regression, and the current popularity could be measured by the probability that it will be played next week.
 
+Each logistic regression starts from the first time a game was played, in order to make a fair comparison.
+
+```r
+n_weeks <- 66
+container <- rep(NA, ncol(game_matrix))
+names(container) <- colnames(game_matrix)
+pred_prob <- lr_slopes <- se_slopes <- se_pred <- container
+
+for (i in 1:ncol(game_matrix)){
+  x <- game_matrix[,i]
+  
+  # start at the first time the game was played
+  first <- which(x==1)[1]
+  x <- x[first:length(x)]
+  t <- first:n_weeks
+  model <- glm(x ~ t, family="binomial")
+  pred <- predict(model, data.frame(t=n_weeks+1), se.fit=T,
+                  type="response")
+  
+  # beta (coefficient of t) in logistic regression model
+  lr_slopes[i] <- coef(model)[2]
+  
+  # standard error of beta
+  se_slopes[i] <- sqrt(diag(vcov(model)))[2]
+  
+  # predicted probability of being played next time
+  pred_prob[i] <- pred$fit
+  
+  # standard error of the prediction
+  se_pred[i] <- pred$se.fit
+}
+```
+
+Note that many of the logistic regressions do not converge. These are precisely the ones for which a game was played in some consecutive number of weeks and at no other time, so that its time series of plays looks like `1 1 1 0 0 ... 0`. These give perfectly separable logistic regression data. As a special case, this includes all games which were only played once.
+
+We can visualize the popularity of the top six most played games over time.
+
+<div style="width:70%; margin:0 auto;">
+ <img src="/blog/images/2019-05/logistic_plots.png" />
+</div>
