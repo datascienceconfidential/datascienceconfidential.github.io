@@ -134,6 +134,7 @@ Terraforming Mars (a game which I have never actually played) is the only game w
 
 We can partially avoid this problem by only looking at games which have been played 3 or more times, of which there are 40. Looking at the probability of these games being played in the next week, the top 10 are as follows.
 
+<center>
 | Game | Pr(played in week 67) |
 | ------------- | ------------- |
 | Terraforming Mars | 0.67 |
@@ -146,4 +147,23 @@ We can partially avoid this problem by only looking at games which have been pla
 | Transatlantic | 0.05 |
 | Mystic Vale | 0.05 |
 | Orleans | 0.04 |
+ </center>
+ 
+The only ones of these which were actually played in week 67 were Terraforming Mars (twice!) and Coimbra, along with a different version of Pandemic, which doesn't count.
+ 
+Clearly, it doesn't make sense to build a separate model for each game, since there is a limit to the number of games which can be played in any given week, and therefore, if one game is played, it influences the probability that others are played. Thus, it would be more correct to model the joint distribution of the games that are played, as I did in my [Game of Thrones model](https://arxiv.org/abs/1409.5830).
+
+This can get very complicated, and does not seem appropriate for an exploratory analysis. However, it does suggest that it might be interesting to look at the number of games played per week. The number of games played per week has a surprisingly glaring breakpoint at week 31, with a mean of 10.6 games beforehand and a mean of 6 games afterwards.
+
+<div style="width:70%; margin:0 auto;">
+ <img src="/blog/images/2019-05/number_games.png" />
+</div>
+
+Before and after week 31, the number of games behaved like white noise, as is suggested by the following autocorrelation plots.
+
+<div style="width:70%; margin:0 auto;">
+ <img src="/blog/images/2019-05/autocorrelations.png" />
+</div>
+
+The number of /new/ games per week follows a similar pattern, with an average of 2.5 new games per week from week 31 onwards. As it happens, in week 67 two new games were played (Pandemic: Fall of Rome, and Musuem) along with two previously-played ones (Age of Steam and Egizia) and Terraforming Mars and Coimbra, as mentioned above.
 
