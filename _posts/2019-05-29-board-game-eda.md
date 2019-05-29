@@ -71,7 +71,7 @@ The image below shows the matrix of games played by week, with games along the h
 
 I was interested in ranking the remaining games by popularity. Simply counting the number of plays is not sufficient because we should also consider the amount of time which has elapsed since a game was last played. The plays of each game can be considered as a binary time series, and the simplest model for such a series is a logistic regression with time as the dependent variable. My idea was that the overall trend in the popularity of a game could be measured by the coefficient of time in the logistic regression, and the current popularity could be measured by the probability that it will be played next week.
 
-Each logistic regression starts from the first time a game was played, in order to make a fair comparison.
+Each logistic regression starts from the first time a game was played, in order to make a fair comparison between games.
 
 ```r
 n_weeks <- 66
@@ -108,6 +108,26 @@ Note that many of the logistic regressions do not converge. These are precisely 
 
 We can visualize the popularity of the top six most played games over time.
 
+```r
+par(mfrow=c(2,3))
+for (i in 1:6){
+  plot.ts(game_matrix[,i], axes=F, ylab="", main=colnames(game_matrix)[i])
+  x <- game_matrix[,i]
+  
+  # start at the first time the game was played
+  first <- which(x==1)[1]
+  x <- x[first:length(x)]
+  t <- first:n_weeks
+  model <- glm(x ~ t, family="binomial")
+  
+  pred <- predict(model, data.frame(t=t), type="response")
+  lines(t, pred, col="blue", lwd=3)
+}
+par(mfrow=c(1,1))
+```
+
 <div style="width:70%; margin:0 auto;">
  <img src="/blog/images/2019-05/logistic_plots.png" />
 </div>
+
+Terraforming Mars (a game which I have never actually played) is the only game which has remained perennially popular. However, it is not the only game with a positive coefficient of `t` in logistic regression. Any game played in the most recent week (week 66) will also have a positive coefficient, as a result of how logistic regression works. 
