@@ -1,10 +1,10 @@
 ---
 layout: post
 title: "Board Game Group EDA"
-date: 2019-05-29
+date: 2019-05-30
 author: Richard
 categories: predictive-models r exploratory-data-analysis time-series
-published: true
+published: false
 ---
 Until moving country recently, I was regularly attending a very well-organized local boardgame meetup. The people who run the group make a
 weekly list of the attendees and the games they played, all of which is stored in a publicly-accessible Google spreadsheet. They have been
