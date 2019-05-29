@@ -10,7 +10,7 @@ Until moving country recently, I was regularly attending a very well-organized l
 
 The spreadsheet has one sheet for each week of data. The individual sheets look like this (I have edited the names):
 
-<div style="width:95%; margin:0 auto;">
+<div style="width:100%; margin:0 auto;">
  <img src="/blog/images/2019-05/schedule_jan_9.png" />
 </div>
 
@@ -65,7 +65,7 @@ After some further processing, the output was turned into a list of games played
 
 The image below shows the matrix of games played by week, with games along the horizontal axis and time on the vertical axis (going downwards from week 1 to week 66). The games are ordered by decreasing number of plays. Most games are played once and then never seen again. This fate befell 201 of the 289 games, almost 70% of the total.
 
-<div style="width:70%; margin:0 auto;">
+<div style="width:100%; margin:0 auto;">
  <img src="/blog/images/2019-05/game_matrix.png" />
 </div>
 
@@ -126,7 +126,7 @@ for (i in 1:6){
 par(mfrow=c(1,1))
 ```
 
-<div style="width:70%; margin:0 auto;">
+<div style="width:100%; margin:0 auto;">
  <img src="/blog/images/2019-05/logistic_plots.png" />
 </div>
 
@@ -134,8 +134,6 @@ Terraforming Mars (a game which I have never actually played) is the only game w
 
 We can partially avoid this problem by only looking at games which have been played 3 or more times, of which there are 40. Looking at the probability of these games being played in the next week, the top 10 are as follows.
 
-<div style="width:70%; margin:0 auto;">
- 
 | Game | Pr(played in week 67) |
 | ------------- | ------------- |
 | Terraforming Mars | 0.67 |
@@ -149,21 +147,19 @@ We can partially avoid this problem by only looking at games which have been pla
 | Mystic Vale | 0.05 |
 | Orleans | 0.04 |
  
- </div>
- 
 The only ones of these which were actually played in week 67 were Terraforming Mars (twice!) and Coimbra, along with a different version of Pandemic, which doesn't count.
  
 Clearly, it doesn't make sense to build a separate model for each game, since there is a limit to the number of games which can be played in any given week, and therefore, if one game is played, it influences the probability that others are played. Thus, it would be more correct to model the joint distribution of the games that are played, as I did in my [Game of Thrones model](https://arxiv.org/abs/1409.5830).
 
 This can get very complicated, and does not seem appropriate for an exploratory analysis. However, it does suggest that it might be interesting to look at the number of games played per week. The number of games played per week has a surprisingly glaring breakpoint at week 31, with a mean of 10.6 games beforehand and a mean of 6 games afterwards.
 
-<div style="width:70%; margin:0 auto;">
+<div style="width:100%; margin:0 auto;">
  <img src="/blog/images/2019-05/number_games.png" />
 </div>
 
 Before and after week 31, the number of games behaved like white noise, as is suggested by the following autocorrelation plots.
 
-<div style="width:70%; margin:0 auto;">
+<div style="width:100%; margin:0 auto;">
  <img src="/blog/images/2019-05/autocorrelations.png" />
 </div>
 
