@@ -68,3 +68,6 @@ The image below shows the matrix of games played by week, with games along the h
 <div style="width:70%; margin:0 auto;">
  <img src="/blog/images/2019-05/game_matrix.png" />
 </div>
+
+I was interested in ranking the remaining games by popularity. Simply counting the number of plays is not sufficient because we should also consider the amount of time which has elapsed since a game was last played. The plays of each game can be considered as a binary time series, and the simplest model for such a series is a logistic regression with time as the dependent variable.
+
