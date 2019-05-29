@@ -135,6 +135,7 @@ Terraforming Mars (a game which I have never actually played) is the only game w
 We can partially avoid this problem by only looking at games which have been played 3 or more times, of which there are 40. Looking at the probability of these games being played in the next week, the top 10 are as follows.
 
 <center>
+ 
 | Game | Pr(played in week 67) |
 | ------------- | ------------- |
 | Terraforming Mars | 0.67 |
@@ -147,6 +148,7 @@ We can partially avoid this problem by only looking at games which have been pla
 | Transatlantic | 0.05 |
 | Mystic Vale | 0.05 |
 | Orleans | 0.04 |
+ 
  </center>
  
 The only ones of these which were actually played in week 67 were Terraforming Mars (twice!) and Coimbra, along with a different version of Pandemic, which doesn't count.
@@ -165,5 +167,5 @@ Before and after week 31, the number of games behaved like white noise, as is su
  <img src="/blog/images/2019-05/autocorrelations.png" />
 </div>
 
-The number of /new/ games per week follows a similar pattern, with an average of 2.5 new games per week from week 31 onwards. As it happens, in week 67 two new games were played (Pandemic: Fall of Rome, and Musuem) along with two previously-played ones (Age of Steam and Egizia) and Terraforming Mars and Coimbra, as mentioned above.
+The number of *new* games per week follows a similar pattern, with an average of 2.5 new games per week from week 31 onwards. As it happens, in week 67 two new games were played (Pandemic: Fall of Rome, and Musuem) along with two previously-played ones (Age of Steam and Egizia) and Terraforming Mars and Coimbra, as mentioned above.
 
