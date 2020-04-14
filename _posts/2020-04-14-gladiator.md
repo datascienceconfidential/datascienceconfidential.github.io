@@ -8,6 +8,9 @@ author: Richard
 categories: mathematics probability
 published: true
 ---
+<div style="width:50%; margin:0 auto;">
+ <img src="https://www.kindpng.com/picc/m/538-5389934_gladiator-image-ancient-rome-gladiators-drawing-hd-png.png" />
+</div>
 
 Recently the following remark was made by user ajacian81 on statistics question-and-answer site [crossvalidated](https://stats.stackexchange.com/questions/458585/mathematically-1-in-3-and-10-in-30-are-equal-what-about-in-probabilities).
 
@@ -15,7 +18,7 @@ Recently the following remark was made by user ajacian81 on statistics question-
 
 I became curious as to whether this is true, and if so, why?
 
-### Model
+## Model
 
 To begin with, we need a way of modelling the situation of a fight between two sides.
 
@@ -39,7 +42,7 @@ while ((a > 0) & (b > 0)){
 
 Simulations reveal that, in a 1 versus 2 battle with $a=1$, $b=2$, $p=0.5$, the weaker side wins just under 5% of the time, but in a 10 versus 20 battle, the weaker side has practically no chance of winning (see below) so ajacian81 was correct!
 
-#### The Survivors
+### The Survivors
 
 I next became interested in how many survivors there would be on the larger side at the end of the $a=10$, $b=20$, $p=0.5$ battle.
 
@@ -66,7 +69,7 @@ By a questionable calculation, I found that $X$ was approximately a $\mathrm{Poi
  <img src="/blog/images/2020-04/comparison.png" />
 </div>
 
-#### Round One
+### Round One
 
 When the battle starts with $a=b$, it is likely that there will be many more than $2$ rounds, so the above approximation is wrong. This led me to consider what happens if the battle is not fought to the death, but ends after one round, with the winning side being whoever has more gladiators left.
 
@@ -84,7 +87,7 @@ where $\Phi$ is the normal cdf.
 
 When $p=q$ and $a=2b$, we are in the situation of ajacian81 again, and the thing inside the $\Phi$ is a constant times $\sqrt{b}$. This confirms that the more fighters there are, the higher the probability of a win for the stronger side.
 
-#### The Tipping Point
+### The Tipping Point
 
 In general, the first round of the battle is decided by the expression
 
@@ -92,7 +95,7 @@ $$(1+p)a - (1+q)b$$
 
 in the sense that the sign of this expression determines which side is favoured to win the first round. For example, if $135$ gladiators with a hit probability of $0.4$ fight $100$ gladiators with a hit probability of $0.9$, both sides are more or less equally likely to have the majority of gladiators left after the first round. (However, if they fought to the death, then the $100$ gladiators would almost certainly win.)
 
-### Lanchester's Law
+## Lanchester's Law
 
 I would be surprised if this model had not been studied before, as it seems very natural and simple. The closest thing I could find is the deterministic version
 
