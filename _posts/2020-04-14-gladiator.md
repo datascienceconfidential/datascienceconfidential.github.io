@@ -8,7 +8,7 @@ author: Richard
 categories: mathematics probability
 published: true
 ---
-<div style="width:50%; margin:0 auto;">
+<div style="width:70%; margin:0 auto;">
  <img src="https://www.kindpng.com/picc/m/538-5389934_gladiator-image-ancient-rome-gladiators-drawing-hd-png.png" />
 </div>
 
@@ -63,7 +63,7 @@ $$b - \mathrm{Bin}(a, p) - X$$
 where $\mathrm{Bin}(a, p)$ is a binomial random variable, and $X$ is defined as $\mathrm{Bin}(a - \mathrm{Bin}(b, p), p)$ if
 $a - \mathrm{Bin}(b, p) > 0$, and $0$ otherwise.
 
-By a questionable calculation, I found that $X$ was approximately a $\mathrm{Poisson(\sqrt{5}/8\pi)}$ random variable.
+By a highly questionable calculation, I found that $X$ was approximately a $\mathrm{Poisson}(\sqrt{5/8\pi})$ random variable.
 
 <div style="width:70%; margin:0 auto;">
  <img src="/blog/images/2020-04/comparison.png" />
