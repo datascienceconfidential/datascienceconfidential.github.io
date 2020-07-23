@@ -14,11 +14,11 @@ Here's an example from the first page of Google results for "confidence interval
 
 >Descriptive statistics on variables measured in a sample of a n=3,539
 participants are shown below.
-
-|Characteristic|n|Sample Mean|Standard Deviation (s)|
-|---|---|---|---|
-|Systolic Blood Pressure|3,534|127.3|19.0|
-
+>
+>|Characteristic|n|Sample Mean|Standard Deviation (s)|
+>|---|---|---|---|
+>|Systolic Blood Pressure|3,534|127.3|19.0|
+>
 >Because the sample is large, we can generate a 95% confidence interval for systolic blood pressure using the following formula:
 >
 >$$\overline{X} \pm t\frac{s}{\sqrt{n}}$$
@@ -29,7 +29,7 @@ participants are shown below.
 >
 >So the confidence interval is $(126.7,127.9)$.
 >
->A point estimate for the true mean systolic blood pressure in the 4 population is 127.3, and we are 95% confident that the true mean is between 126.7 and 127.9.
+>A point estimate for the true mean systolic blood pressure in the population is 127.3, and we are 95% confident that the true mean is between 126.7 and 127.9.
 
 Now, this is all calculated correctly according to the books. Where I object is the final sentence.
 
