@@ -25,7 +25,7 @@ participants are shown below.
 >
 >The $Z$ value for 95% confidence is $Z=1.96$. Substituting the sample statistics and the $Z$ value for 95% confidence, we have
 >
->$$127.3 \pm 2.96\frac{19.0}{\sqrt{3534}}$$
+>$$127.3 \pm 1.96\frac{19.0}{\sqrt{3534}}$$
 >
 >So the confidence interval is $(126.7,127.9)$.
 >
