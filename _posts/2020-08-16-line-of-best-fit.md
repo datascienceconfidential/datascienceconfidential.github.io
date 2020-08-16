@@ -16,13 +16,13 @@ It's correct, so why do I have a problem with this? Well, it's simply that there
 
 Recall what regression is. It's a predictive model. In the simplest case, we have a variable $x$ and we want to predict another variable $y$. We do this by finding a function
 
-$$\hat{y} = f(x)$$
+$$ \hat{y} = f(x) $$
 
 which gives our predicted value $\hat{y}$ of $y$ given a value of $x$. This predicted value of $y$ will not in general be the same as the actual value of $y$.
 
 If we did things in the opposite order, trying to predict $x$ given $y$, we would have another function $g$
 
-$$\hat{x} = g(y)$$
+$$ \hat{x} = g(y) $$
 
 and it's clear that there's no reason why we would expect that $g = f^{-1}$. They might be close, but they won't be the same unless we can make a perfect prediction.
 
@@ -34,15 +34,15 @@ A natural way of doing this might be to fit a bivariate normal distribution via 
 
 An alternative might be to find the line which minimizes the orthogonal distances of points to itself. That is, instead of minimizing
 
-$$\sum_{i=1}^n (y_i - (a + bx_i))^2$$
+$$ \sum_{i=1}^n (y_i - (a + bx_i))^2 $$
 
 you would minimize
 
-$$\sum_{i=1}^n \mathrm{dist}((x_i, y_i), y = a + bx)$$
+$$ \sum_{i=1}^n \mathrm{dist}((x_i, y_i), y = a + bx) $$
 
 which leads to the idea of *orthogonal regression*. The slope of the resulting line is simply
 
-$$\sqrt{\sum_{i=1}^n (x_i - \overline{x})^2 + (y_i - \overline{y})^2}.$$
+$$ \sqrt{\sum_{i=1}^n (x_i - \overline{x})^2 + (y_i - \overline{y})^2}. $$
 
 I thought I had never used this in practice, until I found out that it's actually the same as taking the first principal component, which is indeed an extremely useful data reduction technique.
 
