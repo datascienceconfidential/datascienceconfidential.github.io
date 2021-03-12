@@ -6,7 +6,7 @@ header-img: ""
 date: 2021-03-12
 author: Richard
 categories: statistics
-published: false
+published: true
 ---
 Before PCA as a tool for data exploration, I often like to apply a transformation to squash feature values and remove outliers. This usually results in PCA producing a nice, evenly-spaced point cloud with fewer outliers, which can be helpful for visualization.
 
