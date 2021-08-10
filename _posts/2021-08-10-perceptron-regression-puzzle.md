@@ -38,6 +38,12 @@ The first step is to write a precise problem statement.
 
 The question asks for a straight line $\hat{y}=mx+c$, and it's clear that it is a kind of linear regression. The difference is that, instead of a single $y$ value for each $x$, there are two $y$-values, $y_{lo}$ and $y_{hi}$.
 
+Here is an example of the set-up.
+
+<div style="width:70%; margin:0 auto;">
+ <img src="/blog/images/2021-08/example1.png" />
+</div>
+
 The question asks for a linear error, but I expected that, if this was meant to be a generalization of linear regression, squared error was actually required. So I decided to answer the following question.
 
 Given $x_i, y_{i, lo}, y_{i, hi}$, $1 \le i \le n$, $y_{i, lo} < y_{i, hi}$, find $m$ and $c$ which minimize
@@ -48,9 +54,36 @@ Because the unknowns appear in the Kronecker delta, I can't see a way to solve t
 
 ## Step 2
 
+It is desired to find a line which minimizes the sum of the squares of the blue distances in the following figure.
+
+<div style="width:70%; margin:0 auto;">
+ <img src="/blog/images/2021-08/example2.png" />
+</div>
+
 After plotting some examples with $y_{i, lo}$ and $y_{i, hi}$ in different colours, I realized that this can be interpreted as finding a decision boundary between two data sets.
 
 Namely, one data set is $\{ (x_i, y_{i, lo}) \}$ and the other is $\{ (x_i, y_{i, hi}) \}$. We need to find a straight line which separates these if possible. If not, then we need to find a straight line which minimizes the error.
+
+As an explicit example, suppose we have the following table of values of $x$, $y_lo$ and $y_hi$.
+
+| x | y_lo | y_hi |
+| --- | --- | --- |
+| 1 | 0 | 4  |
+| 2 | -1 | 1 |
+| 3 | 3  | 4 |
+
+Define a new data set by 
+
+| a | b | z |
+| --- | --- | --- |
+| 1 | 0 | -1  |
+| 2 | -1 | -1 |
+| 3 | 3  | -1 |
+| 1 | 4  | 1  |
+| 2 | 1  | 1  |
+| 3 | 4 |  1  |
+
+Then we want to find a way to separate the points $\{(a,b)\}$ in the two classes defined by $z$, which can be done, for example by using logistic regression. In our case, we want to find a particular separating line which minimizes our error function.
 
 ## Step 3
 
@@ -74,7 +107,7 @@ and the update is $(m, c) \mapsto (m, c) - \lambda \nabla f$ where $\lambda$ is 
 
 The perceptron can be implemented in the following way. It is written in terms of points $\{ (a_i, b_i) \}$ and targets $\{ y_i \}$ with $y_i \in \{-1, 1\}$. This implementation checks whether each of the cardinal directions produces an increase in the error to decide whether a local minimum has been reached.
 
-'''{r}
+```{r}
 vertical_perceptron <- function(a, b, y, 
                                 learning_rate=1,
                                 discount_factor = 0.9,
@@ -155,25 +188,28 @@ vertical_perceptron <- function(a, b, y,
   }
   betas
 }
-'''
+```
 
 The solution to the original problem is then
 
-'''{r}
-find_line <- function(x, y_lo, y_hi){
+```{r}
+find_line <- function(x, y_lo, y_hi, extra_args=list() ){
+
   # x : vector of x-values
   # y_lo : vector of y_lo values, same length as x
-  # y_hi : vector of y_hi values, same length as x
+  # y_hi : vector of y_hi values, same length as 
+  # extra_args : a list of arguments to vertical_perceptron()
   
   a <- c(x, x)
   b <- c(y_lo, y_hi)
   z <- rep(c(-1, 1), each=length(x))
-  betas <- vertical_perceptron(a, b, z)
+  betas <- do.call(vertical_perceptron, c(list(a=a, b=b, y=z),
+                                          extra_args))
   
   # final line is y = betas[1] + betas[2]*x
   betas
 }
-'''
+```
 
 ## Step 5
 
@@ -188,9 +224,3 @@ This means that (in the case where there is no line between $y_{lo}$ and $y_{hi}
 Although this solution is much simpler, it might be more computationally intensive than the perceptron in the case where there are a lot of points, since you need to search through $2^{2n}$ subsets of the $2n$ points, so I still think the perceptron approach is better. 
 
 But it seems likely that there is a cleverer way to search through the possible subsets of the points, which would reduce the problem to doing a bunch of linear regressions.
-
-
-
- 
-
-
