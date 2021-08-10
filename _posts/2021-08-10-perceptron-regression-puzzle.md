@@ -113,7 +113,7 @@ and the update is $(m, c) \mapsto (m, c) - \lambda \nabla f$ where $\lambda$ is 
 
 ## Step 4
 
-The perceptron can be implemented in the following way. It is written in terms of points $\{ (a_i, b_i) \}$ and targets $\{ y_i \}$ with $y_i \in \{-1, 1\}$. This implementation checks whether each of the cardinal directions produces an increase in the error to decide whether a local minimum has been reached.
+The perceptron can be implemented in the following way. It is written in terms of points $\{ (a_i, b_i) \}$ and targets $\{ y_i \}$ with $y_i \in \{ -1, 1 \}$. This implementation checks whether each of the cardinal directions produces an increase in the error to decide whether a local minimum has been reached.
 
 ```r
 vertical_perceptron <- function(a, b, y, 
