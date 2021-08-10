@@ -66,7 +66,7 @@ Namely, one data set is $\{ (x_i, y_{i, lo}) \}$ (the red points) and the other 
 
 As an explicit example, suppose we have the following table of values of $x$, $y_lo$ and $y_hi$.
 
-<div style="width:30%; margin:0 auto;">
+<span style="width:30%; margin:0 auto;">
  
 | x | y_lo | y_hi |
 | --- | --- | --- |
@@ -74,11 +74,11 @@ As an explicit example, suppose we have the following table of values of $x$, $y
 | 2 | -1 | 1 |
 | 3 |  3  | 4 |
  
- </div>
+ </span>
 
 Define a new data set by 
 
-<div style="width:30%; margin:0 auto;">
+<span style="width:30%; margin:0 auto;">
  
 | a | b | z |
 | --- | --- | --- |
@@ -89,7 +89,7 @@ Define a new data set by
 | 2 | 1  | 1  |
 | 3 | 4 |  1  |
  
- </div>
+ </span>
 
 Then we want to find a way to separate the points $\{(a_i,b_i)\}$ in the two classes defined by $z$, which can be done, for example by using logistic regression. In our case, we want to find a particular separating line which minimizes our error function.
 
@@ -103,7 +103,7 @@ This is almost what we want, because a misclassified point is precisely a point 
 
 The error function to be minimized becomes
 
-$$f(m, c) = \sum_{i \mathrm{ misclassified}} (mx_i + c - y_i)^2$$
+$$f(m, c) = \sum_{i \textrm{ misclassified}} (mx_i + c - y_i)^2$$
 
 where the sum is over the misclassified points. The gradient is
 
