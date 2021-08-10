@@ -67,16 +67,19 @@ Namely, one data set is $\{ (x_i, y_{i, lo}) \}$ (the red points) and the other 
 As an explicit example, suppose we have the following table of values of $x$, $y_lo$ and $y_hi$.
 
 <div style="width:30%; margin:0 auto;">
+ 
 | x | y_lo | y_hi |
 | --- | --- | --- |
 | 1 |  0 | 4  |
 | 2 | -1 | 1 |
 | 3 |  3  | 4 |
+ 
  </div>
 
 Define a new data set by 
 
 <div style="width:30%; margin:0 auto;">
+ 
 | a | b | z |
 | --- | --- | --- |
 | 1 | 0 | -1  |
@@ -85,6 +88,7 @@ Define a new data set by
 | 1 | 4  | 1  |
 | 2 | 1  | 1  |
 | 3 | 4 |  1  |
+ 
  </div>
 
 Then we want to find a way to separate the points $\{(a_i,b_i)\}$ in the two classes defined by $z$, which can be done, for example by using logistic regression. In our case, we want to find a particular separating line which minimizes our error function.
