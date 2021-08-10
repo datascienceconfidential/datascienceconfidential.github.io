@@ -6,7 +6,7 @@ header-img: ""
 date: 2021-08-10
 author: Richard
 categories: statistics linear-regression r neural-networks
-published: false
+published: true
 ---
 
 I was recently asked to solve a linear regression problem for a friend of the wife of a colleague. The problem statement, shared via Whatsapp, was as follows.
@@ -62,15 +62,15 @@ It is desired to find a line which minimizes the sum of the squares of the blue 
 
 After plotting some examples with $y_{i, lo}$ and $y_{i, hi}$ in different colours, I realized that this can be interpreted as finding a decision boundary between two data sets.
 
-Namely, one data set is $\{ (x_i, y_{i, lo}) \}$ and the other is $\{ (x_i, y_{i, hi}) \}$. We need to find a straight line which separates these if possible. If not, then we need to find a straight line which minimizes the error.
+Namely, one data set is $\{ (x_i, y_{i, lo}) \}$ (the red points) and the other is $\{ (x_i, y_{i, hi}) \}$ (the green points). We need to find a straight line which separates these if possible. If not, then we need to find a straight line which minimizes the error.
 
 As an explicit example, suppose we have the following table of values of $x$, $y_lo$ and $y_hi$.
 
 | x | y_lo | y_hi |
 | --- | --- | --- |
-| 1 | 0 | 4  |
+| 1 |  0 | 4  |
 | 2 | -1 | 1 |
-| 3 | 3  | 4 |
+| 3 |  3  | 4 |
 
 Define a new data set by 
 
@@ -83,7 +83,7 @@ Define a new data set by
 | 2 | 1  | 1  |
 | 3 | 4 |  1  |
 
-Then we want to find a way to separate the points $\{(a,b)\}$ in the two classes defined by $z$, which can be done, for example by using logistic regression. In our case, we want to find a particular separating line which minimizes our error function.
+Then we want to find a way to separate the points $\{(a_i,b_i)\}$ in the two classes defined by $z$, which can be done, for example by using logistic regression. In our case, we want to find a particular separating line which minimizes our error function.
 
 ## Step 3
 
