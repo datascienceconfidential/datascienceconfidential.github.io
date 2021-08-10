@@ -64,9 +64,9 @@ After plotting some examples with $y_{i, lo}$ and $y_{i, hi}$ in different colou
 
 Namely, one data set is $\{ (x_i, y_{i, lo}) \}$ (the red points) and the other is $\{ (x_i, y_{i, hi}) \}$ (the green points). We need to find a straight line which separates these if possible. If not, then we need to find a straight line which minimizes the error.
 
-As an explicit example, suppose we have the following table of values of $x$, $y_lo$ and $y_hi$.
+As an explicit example, suppose we have the following table of values of $x$, $y_{lo}$ and $y_{hi}$.
 
-<span style="width:30%; margin:0 auto;">
+<div style="width:30%; margin:0 auto;" markdown="1">
  
 | x | y_lo | y_hi |
 | --- | --- | --- |
@@ -74,11 +74,11 @@ As an explicit example, suppose we have the following table of values of $x$, $y
 | 2 | -1 | 1 |
 | 3 |  3  | 4 |
  
- </span>
+ </div>
 
 Define a new data set by 
 
-<span style="width:30%; margin:0 auto;">
+<div style="width:30%; margin:0 auto;" markdown="1">
  
 | a | b | z |
 | --- | --- | --- |
@@ -89,7 +89,7 @@ Define a new data set by
 | 2 | 1  | 1  |
 | 3 | 4 |  1  |
  
- </span>
+ </div>
 
 Then we want to find a way to separate the points $\{(a_i,b_i)\}$ in the two classes defined by $z$, which can be done, for example by using logistic regression. In our case, we want to find a particular separating line which minimizes our error function.
 
