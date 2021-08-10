@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Giles Gardam solved Kaplansky's Conjecture"
+title: "Giles Gardam settled Kaplansky's Conjecture"
 subtitle: ""
 header-img: ""
 date: 2021-03-23
