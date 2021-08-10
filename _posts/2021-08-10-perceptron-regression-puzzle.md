@@ -66,14 +66,17 @@ Namely, one data set is $\{ (x_i, y_{i, lo}) \}$ (the red points) and the other 
 
 As an explicit example, suppose we have the following table of values of $x$, $y_lo$ and $y_hi$.
 
+<div style="width:30%; margin:0 auto;">
 | x | y_lo | y_hi |
 | --- | --- | --- |
 | 1 |  0 | 4  |
 | 2 | -1 | 1 |
 | 3 |  3  | 4 |
+ </div>
 
 Define a new data set by 
 
+<div style="width:30%; margin:0 auto;">
 | a | b | z |
 | --- | --- | --- |
 | 1 | 0 | -1  |
@@ -82,6 +85,7 @@ Define a new data set by
 | 1 | 4  | 1  |
 | 2 | 1  | 1  |
 | 3 | 4 |  1  |
+ </div>
 
 Then we want to find a way to separate the points $\{(a_i,b_i)\}$ in the two classes defined by $z$, which can be done, for example by using logistic regression. In our case, we want to find a particular separating line which minimizes our error function.
 
@@ -95,7 +99,7 @@ This is almost what we want, because a misclassified point is precisely a point 
 
 The error function to be minimized becomes
 
-$$f(m, c) = \sum_{i \mathrm{misclassified}} (mx_i + c - y_i)^2$$
+$$f(m, c) = \sum_{i \mathrm{ misclassified}} (mx_i + c - y_i)^2$$
 
 where the sum is over the misclassified points. The gradient is
 
@@ -107,7 +111,7 @@ and the update is $(m, c) \mapsto (m, c) - \lambda \nabla f$ where $\lambda$ is 
 
 The perceptron can be implemented in the following way. It is written in terms of points $\{ (a_i, b_i) \}$ and targets $\{ y_i \}$ with $y_i \in \{-1, 1\}$. This implementation checks whether each of the cardinal directions produces an increase in the error to decide whether a local minimum has been reached.
 
-```{r}
+```r
 vertical_perceptron <- function(a, b, y, 
                                 learning_rate=1,
                                 discount_factor = 0.9,
@@ -192,7 +196,7 @@ vertical_perceptron <- function(a, b, y,
 
 The solution to the original problem is then
 
-```{r}
+```r
 find_line <- function(x, y_lo, y_hi, extra_args=list() ){
 
   # x : vector of x-values
