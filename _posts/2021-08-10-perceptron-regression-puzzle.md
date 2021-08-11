@@ -221,7 +221,7 @@ find_line <- function(x, y_lo, y_hi, extra_args=list() ){
 
 ## Step 5
 
-While working through an example with $x = (1, 2, 3), y_{lo} = (0, -1, 3), y_{hi} = (4, 1, 4)$, I realised that the solution is suspiciously close to $y = -4/3 + (3/2)x$. This made me think that there must be a closed-form solution, which in turn led me to realise that the solution will always be a regression line through a subset of the points.
+While working through an example with $x = (1, 2, 3), y_{lo} = (0, -1, 3), y_{hi} = (4, 1, 4)$, I realised that the solution is suspiciously close to $y = -5/3 + (3/2)x$. This made me think that there must be a closed-form solution, which in turn led me to realise that the solution will always be a regression line through a subset of the points.
 
 This is simply because the optimisation being peformed is locally the same as taking the regression line through a subset of the points (as long as there is at least one nonzero term). The points in question are simply those which appear with a nonzero term in the error function
 
