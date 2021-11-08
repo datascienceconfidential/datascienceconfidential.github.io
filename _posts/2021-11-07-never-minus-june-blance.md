@@ -20,3 +20,16 @@ Searching for more data, I tossed the titles of all James Bond novels and short 
 
 I decided that it would be a good idea to have some way to measure the distance between an output string and the titles of all existing Bond films. For this purpose, I decided to use the Levenshtein distance. For the existing 25 titles, I measured the average Levenshtein distance from all previous films, to see whether they really are getting less original over time.
 
+<img src="../blog/images/2021-11/levenshtein_distances.png"></img>
+
+The results were not conclusive, but I did decide to judge future models by looking for those which consistently generate titles which are about distance 15-16 from existing Bond film titles.
+
+For example, I trained a model for one epoch, and then adjusted the temperature parameter (which controls the randomness of the output) in such a way that it generated texts which were on average distance 16 from existing Bond film titles. This resulted in original output, but it was not quite Bond enough. Nobody is going to pay to watch "Goldar" or "The Fit of Another Bonogs".
+
+I tried training models for a different set of epochs and temperatures, but after a single epoch, there isn't really a difference between the models any more. Everything is controlled by the temperature. Set it too low, and you get boring titles like "Die Man" and "er. No Moonraker". Set it too high, and you get more fanciful titles like "Never Minus June Blance" and "The Red Tright".
+
+My final experiment generated plausible titles such as "Blood Fine" and "Double or Death", but these nuggets had to be picked out from less sensible alternatives such as "The Aivencial Tenditop".
+
+Perhaps the moral of the story is that these neural text generation models really need a human at the other end to make sense of them? Alternatively, I could go beyond Bond and add titles of other thrillers into the dataset to see whether I can generate better output. 
+
+Research continues.
