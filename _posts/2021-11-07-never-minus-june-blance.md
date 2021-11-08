@@ -4,7 +4,7 @@ title: "Never Minus June Blance"
 date: 2021-11-07
 author: Richard
 categories: deep-learning nlp python
-published: false
+published: true
 ---
 I haven't yet seen the new James Bond film <i>No Time to Die</i> but I noticed that its title sounds rather generic and uninspired. It feels almost as if all of the good James Bond film titles have already been taken. This led me to wonder whether there are underlying patterns in the titles of James Bond films, and whether it would be possible to use a computer to generate new examples.
 
@@ -20,7 +20,9 @@ Searching for more data, I tossed the titles of all James Bond novels and short 
 
 I decided that it would be a good idea to have some way to measure the distance between an output string and the titles of all existing Bond films. For this purpose, I decided to use the Levenshtein distance. For the existing 25 titles, I measured the average Levenshtein distance from all previous films, to see whether they really are getting less original over time.
 
-<img src="../blog/images/2021-11/levenshtein_distances.png"></img>
+<div style="width:70%; margin:0 auto;">
+ <img src="/blog/images/2021-11/levenshtein_distances.png" />
+</div>
 
 The results were not conclusive, but I did decide to judge future models by looking for those which consistently generate titles which are about distance 15-16 from existing Bond film titles.
 
