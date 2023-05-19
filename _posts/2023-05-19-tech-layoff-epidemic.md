@@ -15,7 +15,7 @@ The basic idea is to extract data from an online layoff tracker at [layoffs.fyi]
 The graph of layoffs by company looks like this:
 
 <div style="width:70%; margin:0 auto;">
- <img src="/blog/images/2023-05/data-all.png" />
+ <img src="/blog/images/2023-05/data_all.png" />
 </div>
 
 and the fitted model looks like this:
