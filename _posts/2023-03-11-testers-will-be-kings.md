@@ -3,7 +3,7 @@ layout: post
 title: "Testers will be Kings"
 date: 2023-03-11
 author: Richard
-categories: AI chatgpt
+categories: ai chatgpt
 published: true
 ---
 Everyone is excited about ChatGPT. Unfortunately, I haven't had a chance to try it out yet because it's not available here, but it seems quite clear that it's going to be a world-changing technology.
