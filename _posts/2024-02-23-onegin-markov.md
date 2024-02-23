@@ -6,6 +6,9 @@ author: Richard
 categories: nlp llm
 published: true
 ---
+<div style="width:70%; margin:0 auto;">
+ <img src="../blog/images/2024/eugene-onegin-face-mask-deepai-org.jpg" />
+</div>
 Last year, the [tech job market was very weak](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4442475), so I took the opportunity to do a one-year position in academia, providing statistical support for some research projects in the health sector. It was a pretty interesting experience overall. The best thing about being back in academia was the opportunity to attend many seminars in different fields, and also a very interesting local conference. To explain the worst thing about being back in academia, let me give a few examples.
 
 Yesterday I attended a seminar about *Evgeny Onegin*. In case you are not familiar with this work, it's a novel in verse by Alexander Pushkin and is considered to be one of the greatest works of Russian literature. From the point of view of a statistician, the poem is particularly interesting because it was actually the first ever source of training data for a large language model! [In 1913](https://www.americanscientist.org/article/first-links-in-the-markov-chain), Andrei Markov decided to compile the first 20000 characters of the poem and count, by hand, the number of times a consonant was followed by a vowel, a consonant by a consonant, a vowel by a vowel, and a vowel by a consonant. He found that the vowels and consonants are not independent, but tend to alternate. This study is often cited as the first observation of mathematical patterns in language.
