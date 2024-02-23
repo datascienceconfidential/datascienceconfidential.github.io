@@ -7,7 +7,7 @@ categories: nlp llm
 published: true
 ---
 <div style="width:70%; margin:0 auto;">
- <img src="../blog/images/2024/eugene-onegin-face-mask-deepai-org.jpg" />
+ <img src="/blog/images/2024/eugene-onegin-face-mask-deepai-org.jpg" />
 </div>
 Last year, the [tech job market was very weak](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4442475), so I took the opportunity to do a one-year position in academia, providing statistical support for some research projects in the health sector. It was a pretty interesting experience overall. The best thing about being back in academia was the opportunity to attend many seminars in different fields, and also a very interesting local conference. To explain the worst thing about being back in academia, let me give a few examples.
 
