@@ -32,7 +32,7 @@ In 2018, shortly before leaving New Zealand, I met an academic who had just been
 	
 At the time, I thought being *proud* of not knowing something was an exclusively New Zealand thing. After all, we're traditionally a very egalitarian country, and [people are wary of being seen as too pretentious](https://en.wikipedia.org/wiki/Tall_poppy_syndrome). But I don't think that anymore. I think that it's a global problem. I think that academics, the people who are supposed to spend their lives learning and knowing things, have reached the point where they will openly boast about not knowing things. And I think that's very dangerous!  
 	
-Obviously, the news from academia has been bad for some time. Most recently, there's the shocking revival of campus antisemitism, which led to the resignation of the presidents of Harvard and UPenn. But this was my first chance to see how things are up close. And I didn't like it. I didn't like seeing students being yelled at for being two minutes late to a meeting. I didn't like finding an error in the code for a paper, and then being told:
+Obviously, the news from academia has been bad for some time. Most recently, there's the shocking revival of campus antisemitism, which led to the resignation of the presidents of Harvard and UPenn. But this was my first chance to see how things are up close. And I didn't like it. I didn't like seeing students being yelled at for being two minutes late to a meeting. I didn't like finding an error in the code for a published paper, and then being told:
 
 > Oh yeah, there might be some mistakes. I wrote that paper in two weeks.
 	
