@@ -14,31 +14,31 @@ Anyway, the speaker was a poet and the seminar wasn't really about large languag
 
 At the end of the seminar, someone naturally asked him whether he had read the poem in Russian. His answer was quite striking.
 
-	No, I'm not interested in doing that. I'm not interested at all.
+> No, I'm not interested in doing that. I'm not interested at all.
 
 It seemed odd to me that someone who was prepared to read 12 different translations of a famous poem would not be interested in the original at all. Not even a little tiny bit curious about why the poem became so famous? Not even willing to listen to a single line? It's the closest I've ever come across to a real-life equivalent of ["Shakespeare sounds better in the original Klingon"](https://tvtropes.org/pmwiki/pmwiki.php/Main/InTheOriginalKlingon).
 
 I was reminded of the response I received when I tried to organise an interdisciplinary project. These are things which university people always say they are very interested in, right up until someone comes up with a realistic idea for one, and then they get extremely defensive. I had an idea for a way to apply copulas to mortality modelling. The response from the health people was:
 
-	I always avoid discussing theories of mathematics or statistics.
+> I always avoid discussing theories of mathematics or statistics.
 	
 and from the copula people:
 
-	Interesting, but then conceptually not new.
+> Interesting, but then conceptually not new.
 	
 In 2018, shortly before leaving New Zealand, I met an academic who had just been hired from Princeton as a Professor of Philosophy. I had been reading a little philosophy, and I asked her whether she could explain Spinoza to me, because I didn't really understand what he was all about. She replied with great pride:
 
-	I haven't read anything published before 1970.
+> I haven't read anything published before 1970.
 	
 At the time, I thought being *proud* of not knowing something was an exclusively New Zealand thing. After all, we're traditionally a very egalitarian country, and [people are wary of being seen as too pretentious](https://en.wikipedia.org/wiki/Tall_poppy_syndrome). But I don't think that anymore. I think that it's a global problem. I think that academics, the people who are supposed to spend their lives learning and knowing things, have reached the point where they will openly boast about not knowing things. And I think that's very dangerous!  
 	
 Obviously, the news from academia has been bad for some time. Most recently, there's the shocking revival of campus antisemitism, which led to the resignation of the presidents of Harvard and UPenn. But this was my first chance to see how things are up close. And I didn't like it. I didn't like seeing students being yelled at for being two minutes late to a meeting. I didn't like finding an error in the code for a paper, and then being told:
 
-	Oh yeah, there might be some mistakes. I wrote that paper in two weeks.
+> Oh yeah, there might be some mistakes. I wrote that paper in two weeks.
 	
 I didn't like to witness a student getting feedback which contradicted earlier feedback from the same person and being told:
 
-	You can't expect me to remember everything I said!
+> You can't expect me to remember everything I said!
 
 I didn't like that the people who were doing all this were the same people who thought it was a good idea to make everybody stay indoors for two years, wrecking the economy (and, incidentally, the tech job market). Before I witnessed how these people behaved, I really believed that this decision had been debated at length by wise experts. Now I know that it was probably taken by a single person at the top of some demented academic pecking order who wanted to maximise the number of [Quality-adjusted life years](https://en.wikipedia.org/wiki/Quality-adjusted_life_year) on their Excel sheet. Debate doesn't really seem to be a thing in academia any more. Which makes me sad. 
 
