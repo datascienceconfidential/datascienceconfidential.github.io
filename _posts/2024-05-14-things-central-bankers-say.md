@@ -1,15 +1,15 @@
 ---
 layout: post
 title:  "Things Central Bankers Say"
-subtitle: ""
-header-img: "Analysing the content of central bank speeches"
+subtitle: "Analysing the content of central bank speeches"
+header-img: "/blog/images/2024/quarterly_similarity.png"
 date:   2024-05-14
 published: true
 author: Richard
 categories: python nlp
 ---
 # Introduction
-Wondering how the economy came to be so messed up, I looked for clues by reading Liauqat Ahamed's remarkable book <a href="https://en.wikipedia.org/wiki/Lords_of_Finance">*Lords of Finance*</a>. It looks like rather a daunting read, but actually the writing style makes it incredibly accessible and entertaining. The main topic of the book is how central bankers (especially in the US, UK, France and Germany) led the world into the Great Depression by making a series of bad-but-locally-understandable decisions. (aside: It also gave me the impression that the global economy is permanently having some sort of crisis; that some hidden principle like the <a href="https://en.wikipedia.org/wiki/Hairy_ball_theorem">Hairy Ball Theorem</a> is in play, and it's actually not possible to make everything everywhere run smoothly at the same time. A thought that is either disturbing or comforting, depending on your viewpoint.)
+Wondering how the economy came to be so messed up, I looked for clues by reading Liaquat Ahamed's remarkable book <a href="https://en.wikipedia.org/wiki/Lords_of_Finance">*Lords of Finance*</a>. It looks like rather a daunting read, but actually the writing style makes it incredibly accessible and entertaining. The main topic of the book is how central bankers (especially in the US, UK, France and Germany) led the world into the Great Depression by making a series of bad-but-locally-understandable decisions. (aside: It also gave me the impression that the global economy is permanently having some sort of crisis; that some hidden principle like the <a href="https://en.wikipedia.org/wiki/Hairy_ball_theorem">Hairy Ball Theorem</a> is in play, and it's actually not possible to make everything everywhere run smoothly at the same time. A thought that is either disturbing or comforting, depending on your viewpoint.)
 
 It's hard to get an insight into what central bankers are thinking, but the Bank of International Settlements publishes a <a href="https://www.bis.org/cbspeeches/index.htm">data set of Central Bank Speeches</a> which can now be downloaded via the <a href="https://www.bis.org/innovation/bis_open_tech_gingado.htm">gingado</a> library. Since I am very interested in applying machine learning to central banking, this suggested some some natural questions.
 
@@ -26,7 +26,9 @@ To compare speeches, I used cosine similarity. For each quarter from 1997Q1 to 2
 </div>
 The figure changes with different model runs because, like LLMs and some other neural network models, doc2vec has no way to seed the random number generator to make the output reproducible. However, the main features of the plot remain the same. There are big peaks in 2020Q2 (when everyone was talking about covid; the term COVID-19 was coined in February 2020) and 2022Q1 (when everybody was talking about the Russian invasion of Ukraine). The most interesting feature of the plot is the dip between 2011 and 2019.
 
-I was only able to find statistics on annual (not quarterly) world GDP growth. Comparing it to the annual similarity of central bank speeches, I found that there was essentially no correlation. On the other hand, there was rather a strong correlation between speech similarity and interest rates, but this is probably just because the period 1997-2024 included an episode of extremely low rates, and this coincided roughly with the period 2011-2019. The reason why the speeches are dissimilar during this period is probably because central bankers did not agree on what to do. For example, the Federal Reserve started quantitative easing in 2008, whereas the Eurozone was very reluctant to follow suit and did not start quantitative easing until after the <a href="https://www.economist.com/the-economist-explains/2014/08/20/how-jackson-hole-became-such-an-important-economic-talking-shop">Jackson Hole Consensus of 2014.</a>. Interestingly, this "consensus" does not show up as in increase in speech similarity on the chart.
+I wanted to look at GDP growth and speech similarity. I was only able to find statistics on annual (not quarterly) world GDP growth. Comparing it to the annual similarity of central bank speeches, I found that there was essentially no correlation. 
+
+On the other hand, there was rather a strong correlation between speech similarity and interest rates, but this is probably just because the period 1997-2024 included an episode of extremely low rates, and this coincided roughly with the period 2011-2019. The reason why the speeches are dissimilar during this period is probably because central bankers did not agree on what to do. For example, the Federal Reserve started quantitative easing in 2008, whereas the Eurozone was very reluctant to follow suit and did not start quantitative easing until after the <a href="https://www.economist.com/the-economist-explains/2014/08/20/how-jackson-hole-became-such-an-important-economic-talking-shop">Jackson Hole Consensus of 2014</a>. Interestingly, this "consensus" does not show up as in increase in speech similarity on the chart.
 
 Overall, I would say that during an urgent crisis, central bankers tend to say the same things (which is not surprising) but during a slow-motion crisis, they tend not to. I expect that if you did a similar study on central bank speeches in the 1920s, you might see a similar dip in speech similarity while the world was slowly sliding towards the abyss.
 
