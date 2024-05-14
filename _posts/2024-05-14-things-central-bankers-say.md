@@ -46,7 +46,7 @@ I used some projection techniques to try and visualise the speeches. One possibl
 <div style="width:80%; margin:0 auto;">
  <img src="/blog/images/2024/PCA.png" />
 </div>
-The speeches form a blob with no obvious structure at all. If you look carefully, you can see that the non-EU countries (including the UK, which did not leave the EU until 2016) tend to be more likely to be on the periphery, but that's about it. The overall conclusion seems to be that there is a lot more diversity in speeches over time than between countries.
+The speeches form a blob with no obvious structure at all. If you look carefully, you can see that the non-EU countries (including the UK, which did not leave the EU until 2020) tend to be more likely to be on the periphery, but that's about it. The overall conclusion seems to be that there is a lot more diversity in speeches over time than between countries.
 
 # Conclusions
 - Central bankers say similar things when there is some sort of urgent global crisis or event (such as the outbreak of COVID-19). This is not surprising at all, because they are all talking about the crisis.
