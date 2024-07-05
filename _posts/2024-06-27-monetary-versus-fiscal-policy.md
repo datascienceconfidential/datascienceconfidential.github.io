@@ -19,7 +19,7 @@ Central Banks have two main ways of intervening in the economy (called *monetary
 
 In order to get up to speed with developments in economics, I read a book from the turn of the century called *New Ideas from Dead Economists* by Todd G. Buchholz. It was rather enlightening. It turns out that the idea of stopping recessions by government spending (known as *fiscal policy* rather than pyramid-building) which was described in the Croome book is based on Keynesian economics. Since *Introduction to Money* was published, another economic school emerged called Monetarism. Led by Milton Friedman, the monetarists proclaimed that the government was more-or-less powerless to influence the economy, and instead it was the central bank who had a duty to end recessions by expanding the money supply.
 
-To cut a long story short, nowadays people believe that both Keynesianism and Monetarism are somewhat correct, and fiscal and monetary policy are both neccessary to keep the economy functioning.
+To cut a long story short, nowadays people believe that both Keynesianism and Monetarism are somewhat correct, and fiscal and monetary policy are both necessary to keep the economy functioning.
 
 However, after some thought, it seemed to me that there's rather a big difference between the two. If the government launches a pyramid-building programme, it needs to get the money from somewhere. Either it needs to use money which it has raised from taxation, or it needs to borrow money by issuing bonds. Once it has the money, it can hire people to build the pyramids. Those people spend the money and it starts to move around the economy, hopefully stimulating it.
 
@@ -27,7 +27,7 @@ On the other hand, if the central bank carries out open-market operations, it bu
 
 Basically, it seemed to me that fiscal policy, very broadly speaking, attempts to stimulate the economy by making poor people richer, whereas monetary policy (more specifically, asset purchasing) tends to make rich people richer. And perhaps, I thought, that could be the reason for the rise in inequality which we seem to be seeing in western societies?
 
-But perhaps this is nonsense? I investigated further by [looking at the respository of central bank speeches](https://datascienceconfidential.github.io/python/nlp/2024/05/14/things-central-bankers-say.html) at the Bank of International Settlements. It turns out that the [BIS recently published a report](https://www.bis.org/publ/arpdf/ar2024e2.htm#fn_45) which covers the years 2000-2024 in some detail, bringing the economic picture up to date. And, indeed, there is some concern that loose monetary policy is causing inequality.
+But perhaps this is nonsense? I investigated further by [looking at the repository of central bank speeches](https://datascienceconfidential.github.io/python/nlp/2024/05/14/things-central-bankers-say.html) at the Bank of International Settlements. It turns out that the [BIS recently published a report](https://www.bis.org/publ/arpdf/ar2024e2.htm#fn_45) which covers the years 2000-2024 in some detail, bringing the economic picture up to date. And, indeed, there is some concern that loose monetary policy is causing inequality.
 
 In fact, I found a [2021 speech](https://www.bis.org/review/r211123f.pdf) given by ECB official Isabel Schnabel which covered these exact points! Here are some quotes:
 
