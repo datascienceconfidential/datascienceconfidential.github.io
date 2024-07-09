@@ -2,7 +2,7 @@
 layout: post
 title: "Monetary versus Fiscal Policy"
 subtitle: ""
-header-img: ""
+header-img: "/blog/images/2024/robinhoodandfriartuck.png"
 date: 2024-06-27
 author: Richard
 categories: economics
