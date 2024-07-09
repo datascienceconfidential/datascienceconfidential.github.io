@@ -9,7 +9,7 @@ categories: economics
 published: true
 ---
 <div style="width:70%; margin:0 auto;">
- <img src="/blog/images/2024/robinhoodandfriartuck.jpg" />
+ <img src="/blog/images/2024/robinhoodandfriartuck.png" />
 </div>
 After a [recent experience studying covid](https://datascienceconfidential.github.io/nlp/llm/2024/02/23/onegin-markov.html), I have become very interested in the economic fallout of the pandemic. My economic education to date mainly consisted of reading various old books, particularly *Introduction to Money* by the excellent (and thoroughly forgotten) author and economist Honor Croome. Writing in 1956, Croome gives an overview of the nature of money and explains that, in times of crisis, governments should stimulate the economy by spending money on anything at all, even if that means, in her words, "building pyramids".
 
