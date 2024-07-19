@@ -8,6 +8,9 @@ author: Richard
 categories: python ai llm
 published: true
 ---
+<center><div style="width:50%; margin:0 auto;">
+ <img src="/blog/images/2024/post_img_small.png" />
+</div></center>
 The job market, which [I predicted was going to improve by early 2024](https://datascienceconfidential.github.io/bayesian/2023/05/19/tech-layoff-epidemic.html), is [worse than ever right now](https://datascienceconfidential.github.io/bayesian/2024/03/19/layoffs-revisited.html). But maybe polishing up my LinkedIn profile will help? I decided to take a new profile photo, but I was unable to decide whether it was an improvement over the old one. How to make a choice? We're told that AI is supposed to be capable of doing all our jobs, so perhaps it can help me?
 
 What I want is some sort of tool which allows me to upload a photo and get a measure of how appropriate it is for LinkedIn. I didn't see any obvious way to do this with the tools available to me, but a [langchain video](https://www.youtube.com/watch?v=UoUS6F7Jfos) on converting a photo to speech gave me an idea. I thought that I could adapt their method to convert a photo to a sentiment score. The basic workflow is:
