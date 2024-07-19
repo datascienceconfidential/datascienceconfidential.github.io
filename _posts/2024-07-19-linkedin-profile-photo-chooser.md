@@ -22,7 +22,7 @@ For example, let's say that you look grumpy in your profile photo. The image rec
 
 Here is the code to convert an image to text:
 
-```Python
+```python
 from transformers import pipeline
 from langchain import LLMChain, PromptTemplate
 from langchain import HuggingFaceHub
@@ -44,7 +44,7 @@ It works fine. For example, it correctly recognises this photo of a penguin (by 
  <img src="/blog/images/2024/4701062X2A1697 King Penguin bol.jpg" />
 </div></center>
 
-```Python
+```python
 img_path = r"https://nzbirdsonline.org.nz/sites/all/files/2X2A1697%20King%20Penguin%20bol.jpg"
 description = img2text(img_path)
 description
@@ -56,7 +56,7 @@ description
 
 Here, you need your own [huggingface token](https://huggingface.co/docs/hub/en/security-tokens). I had to change the code from the video slightly because langchain has been updated in the meantime.
 
-```Python
+```python
 repo_id = "tiiuae/falcon-7b-instruct"
 
 hf_token = MY_TOKEN
@@ -81,7 +81,7 @@ def generate_story(scenario, llm):
 
 And here's how it works.
 
-```Python
+```python
 story = generate_story(description, llm)
 story
 
@@ -90,13 +90,13 @@ story
 
 ## Step 3: Analyse the sentiment of the story
 
-```Python
+```python
 sentiment_pipeline = pipeline("sentiment-analysis", model="distilbert/distilbert-base-uncased-finetuned-sst-2-english", device=0)
 ```
 
 Evaluated on the penguin story:
 
-```Python
+```python
 sentiment_pipeline(story)
 # [{'label': 'POSITIVE', 'score': 0.9955536723136902}]
 ```
@@ -107,7 +107,7 @@ So the conclusion is that this is a positive penguin photo.
 
 I put the code together into a function.
 
-```Python
+```python
 def image_sentiment(img_path):
   description = img2text(img_path)
   story = generate_story(description, llm)
@@ -124,21 +124,21 @@ def image_sentiment(img_path):
 
 My current profile photo:
 
-```Python
+```python
 image_sentiment("current_linkedin_profile_photo.jpg")
 # 0.9998325109481812
 ```
 
 The challenger, `headshot3.jpg`:
 
-```Python
+```python
 image_sentiment("headshot3.jpg")
 # -0.9957653284072876
 ```
 
 The current photo wins! I was very surprised that it didn't like my "power pose", so I decided to dig deeper.
 
-```Python
+```python
 imgfile = "headshot3.jpg"
 img = Image.open(imgfile) 
 description = img2text(img)
