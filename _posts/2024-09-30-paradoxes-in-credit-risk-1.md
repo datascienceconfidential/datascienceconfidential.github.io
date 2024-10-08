@@ -18,7 +18,7 @@ In this series, I want to describe a collection of paradoxical things which migh
 Simpson's Paradox arises when you have a population which is divided into two groups. Some statistic appears to suggest one conclusion when you look at the two groups together, but the opposite conclusion if you look at the groups individually. This paradox is usually presented in the form of a two-way table, but it's even easier to understand if you think of it in terms of linear regression, like in the following picture.
 
 <div style="width:70%; margin: 0 auto">
-<img src='/blog/images/2024/simpsons_paradox_example.png" />
+<img src='/blog/images/2024/simpson_paradox_example.png" />
 </div>
 
 Here, imagine that we have two products that are sold to two different groups of people. One group (in blue) generally has lower income and the other group (in orange) generally has higher income. There are more defaults in the orange group, perhaps because we have sold them a riskier product (for example, a loan with a higher prinicpal and a longer term).
