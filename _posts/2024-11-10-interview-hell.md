@@ -25,9 +25,7 @@ as the ideal number of interviews.
 Perhaps it's better to think like an economist and consider the marginal cost of the $k^{th}$ interview. The cost of interview $k+1$ is $C(1-p)^{k+1} + c(k+1)$ and the cost of interview $k$ is $C(1-p)^k + ck$. Subtracting one from the other yields the marginal cost
 $c - Cp(1-p)^k.$
 The company will stop interviewing when this reaches zero, so we get $Cp(1-p)^k = c$ which gives
-$$
-k =  \frac{1}{\log(1-p)} \log \left( \frac{c}{Cp} \right)\tag{1}\label{eq:1}
-$$
+$$k =  \frac{1}{\log(1-p)} \log \left( \frac{c}{Cp} \right)\tag{1}\label{eq:1}$$
 as the ideal number of interviews.
 
 This function is increasing in $C/c$, which makes sense because you would expect to need more interviews if making the wrong hire was more expensive (for example, if hiring for a senior position or if hiring in a country with strong labour laws.) It is decreasing in $p$, which means that fewer interviews are required if the company is better at detecting bad candidates. But does it give sensible output?
@@ -54,13 +52,9 @@ Now suppose you have already done $k$ interviews and not been hired. What can yo
 Let's assume you are a "good" candidate from the point of view of the company, so you *will* eventually get hired, it's just a question of how many more rounds of interviews it takes. You've already done $k$ of them. Since you weren't hired yet, the marginal cost of the last interview must be negative, so
 $$c < Cp(1-p)^k$$
 which establishes an upper bound for $p$. If $p_0$ is such that $c = Cp_0(1-p_0)^k$ then $p \le p_0$. You will get hired after the next interview if $c \ge Cp(1-p)^{k+1}$, so if $p_1$ is the solution to $c = Cp_1(1-p_1)^{k+1}$ then you will get hired after one more interview if $p_0 \le p \le p_1$. The probability of this is
-$$
-1 - \frac{\int_0^{p_1} f(p) dp}{\int_0^{p_0} f(p) dp. \tag{2}\label{eq:2}
-$$
-What about the expected number of interviews? Assuming you are a "good" candidate from the point of view of the company, you will need to keep interviewing until you have done the number of interviews given by Equation \eqref{eq:1}. Since this depends on $p$, you must integrate over the possible values of $p$ to get your expected number $E$ of remaining interviews  
-$$
-E = -k + \frac{\int_0^{p_0} f(p) \frac{1}{\log(1-p)}\log\left(\frac{c}{Cp}\right) dp}{\int_0^{p_0} f(p) dp \tag{3}\label{eq:3}
-$$ 
+$$1 - \frac{\int_0^{p_1} f(p) dp}{\int_0^{p_0} f(p) dp.\tag{2}\label{eq:2}$$
+What about the expected number of interviews? Assuming you are a "good" candidate from the point of view of the company, you will need to keep interviewing until you have done the number of interviews given by Equation $\eqref{eq:1}$. Since this depends on $p$, you must integrate over the possible values of $p$ to get your expected number $E$ of remaining interviews  
+$$E = -k + \frac{\int_0^{p_0} f(p) \frac{1}{\log(1-p)}\log\left(\frac{c}{Cp}\right) dp}{\int_0^{p_0} f(p) dp\tag{3}\label{eq:3}$$ 
 ## Should I agree to one more interview?
 Let's put in some numbers. Suppose you only have the patience for one more interview. Suppose your credence about $p$ is given by a beta distribution with a mode of $0.77$. Let's take it to be $\mathrm{Beta}(2, 1.3)$. Suppose hiring a bad candidate has the same cost to the company as $500$ interviews, so that $c=1$ and $C=500$. Then the following R code calculates the probability of getting an offer after one more interview.
 ```r
@@ -113,6 +107,6 @@ It therefore should come as no surprise that the expected number of interviews r
 </div>
 
 ### The Punchline
-But why is there no red line in the second figure? What happens if you start with a uniform credence about $p$? Well, I'm glad you asked! In this case, the integral in Equation \eqref{eq:3} diverges. That means that it doesn't have a finite value. Your expected number of interviews remaining until you are hired is $E = \infty$. Although the interview process will end, on average it will be so long that, as you learn more and more about how bad the company is at doing interviews, it will effectively take forever. You are trapped in a never-ending interview hell.
+But why is there no red line in the second figure? What happens if you start with a uniform credence about $p$? Well, I'm glad you asked! In this case, the integral in Equation $\eqref{eq:3}$ diverges. That means that it doesn't have a finite value. Your expected number of interviews remaining until you are hired is $E = \infty$. Although the interview process will end, on average it will be so long that, as you learn more and more about how bad the company is at doing interviews, it will effectively take forever. You are trapped in a never-ending interview hell.
 
 Thanks for reading! And don't have nightmares...
