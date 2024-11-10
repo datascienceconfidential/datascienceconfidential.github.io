@@ -61,7 +61,7 @@ Let's assume you are a "good" candidate from the point of view of the company, s
 
 $$c < Cp(1-p)^k$$
 
-which establishes an upper bound for $p$. If $p_0$ is such that $c = Cp_0(1-p_0)^k$ then $p \le p_0$. You will get hired after the next interview if $c \ge Cp(1-p)^{k+1}$, so if $p_1$ is the solution to $c = Cp_1(1-p_1)^{k+1}$ then you will get hired after one more interview if $p_0 \le p \le p_1$. The probability of this is
+which establishes an upper bound for $p$. If $p_0$ is such that $c = Cp_0(1-p_0)^k$ then $p \le p_0$. You will get hired after the next interview if $c \ge Cp(1-p)^{k+1}$, so if $p_1$ is the solution to $c = Cp_1(1-p_1)^{k+1}$ then you will get hired after one more interview if $p_1 \le p \le p_0$. The probability of this is
 
 $$1 - \frac{\int_0^{p_1} f(p) dp}{\int_0^{p_0} f(p) dp}.\tag{2}\label{eq:2}$$
 
