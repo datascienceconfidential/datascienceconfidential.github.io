@@ -12,9 +12,9 @@ It's Hallowe'en; that time of year when LinkedIn is full of photos of the recrui
 
 I've recently been studying the [Solow Model of economic growth](https://en.wikipedia.org/wiki/Solow%E2%80%93Swan_model) and I'm impressed by how much interesting information can be dervied from a simple model, even before any real data has been put into it. Can we do the same for job interviews? Is there a reason why companies demand that candidates attend so many interviews? If you're in the middle of an interview process and the company requests one more interview, what should you do? Read on to find out!
 # The Model
-Suppose a company is interviewing a single candidate. The candidate may be bad or good from the point of view of the company. The cost of hiring a bad candidate is $C$ and the cost of hiring a good candidate is $0$. The purpose of the interview process is to detect whether the candidate is bad. Let $p_i$ be the probability that interview $i$ detects a bad candidate. For simplicity, we'll assume that all the interviews are independent and that the $p_i$ are all equal to a constant value $p$. 
+Suppose a company is interviewing a single candidate. The candidate may be bad or good from the point of view of the company. The cost of hiring a bad candidate is $C$ and the cost of hiring a good candidate is $0$. The purpose of the interview process is to detect whether the candidate is bad. Let $p_i$ be the probability that interview $i$ detects a bad candidate. For simplicity, we'll assume that all the interviews are independent and that the $p_i$ are all equal to a constant value $p$. The idea is that, after $k$ interviews, the probability that the candidate is bad is $(1-p)^k$.
 
-Suppose that it costs the company $c$ to do an interview. Then the expected cost of doing $k$ interviews is
+Suppose that it costs the company $c$ to do an interview. Then the expected cost of hiring a candidate after $k$ interviews is
 
 $$E[\text{cost}] = C(1-p)^k + kc$$
 
