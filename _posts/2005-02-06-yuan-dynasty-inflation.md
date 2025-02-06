@@ -36,10 +36,10 @@ $$p = v + m - y$$
 
 for some constant $v$. To account for the fact that monetary expansion sometimes occurred without causing inflation (for example in 1310) assume that $p$ and $y$ adjust slowly to their "correct" values, and that there can be measurement error. To be precise, assume that the observed $p_t$ and $y_t$ follow a process of the form
 
-$$\begin{align}
+$$\begin{align*}
 p_{t+1} &= (1-\lambda) p_t + \lambda (v + m_t - y_t) + \varepsilon_t\\
 y_{t+1} &= (1-\beta) y_t + \beta (v + m_t - p_t) + \varepsilon_t'
-\end{align}$$
+\end{align*}$$
 
 with $0 \le \lambda, \beta \le 1$ and $\varepsilon_t, \varepsilon_t'$ are identically-distributed measurement errors which occur independently at each time $t$ and follow a normal distribution with a mean of $0$ and a common variance $\sigma^2$. 
 
@@ -68,6 +68,7 @@ However, it's also clear from the historical record that their currency did even
 
 Anyway, whatever the conclusions, it's really interesting to have access to data on a pre-modern experiment with fiat money!
 
+___________________________
 
 <a name="myfootnote1">1</a>: At this point, the obvious question is why the Great Wall didn't keep them out? That's because the north of China had already been conquered by the Jin, who were another Mongolian people. The Jin did indeed have a wall, but it wasn't what we nowadays recognise as the Great Wall (that was built later, by the Ming) and it wasn't enough to stop the Mongols, who defeated the Jin in 1211 at the intriguingly-named [Battle of the Badger's Mouth](https://en.wikipedia.org/wiki/Battle_of_Yehuling).
 
