@@ -30,7 +30,7 @@ $$M \propto PY \tag{1}\label{eq:1}$$
 
 where $M$ is the nominal money stock, $Y$ is population and $P$ is the price level.
 # Model
-In the following, let $m = \log(M)$, $p = \log(P)$, and $y = \log(Y)$. From ($\eqref{eq:1}$) there should be a relationship of the form
+In the following, let $m = \log(M)$, $p = \log(P)$, and $y = \log(Y)$. From $\eqref{eq:1}$ there should be a relationship of the form
 
 $$p = v + m - y$$
 
