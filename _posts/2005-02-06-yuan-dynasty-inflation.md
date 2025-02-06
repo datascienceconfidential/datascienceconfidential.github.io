@@ -52,7 +52,7 @@ The model was fitted using a Gibbs sampler. The graph below shows 90% credible i
 The posterior distributions of $\beta$ and $\lambda$ show that in general $\lambda$ was larger than $\beta$, which makes sense since you would expect that output would be slower to adjust than prices.
 
 <div style="width:70%; margin:0 auto;">
- <img src="/blog/images/2025/yuan_beta_lambda.png">
+ <img src="/blog/images/2025/yuan_beta_lambda2.png">
 </div>
 
 # Hyperinflation?
