@@ -18,7 +18,7 @@ After taking over China, the Yuan<sup>[3](#myfootnote3)</sup> quickly absorbed C
 
 According to Richard von Glahn's book <i>Fountain of Fortune: Money and Monetary Policy in China, 1000-1700</i>, by 1361 the paper money had become valueless. The usual narrative is that excessive money printing had caused hyperinflation, just like in Germany in the early 1920s and Zimbabwe in the 2000s. In their paper, Guan et al use a regression model to conclude that wars were the main factor which tended to lead to excessive issuance of money.
 # The Data
-The graphs below show<sup>[1](#myfootnote4)</sup> the nominal paper money stock, population and CPI in the period considered by Guan et al. The money stock is calculated under the assumption that the nominal money stock decreases by 10 percent each year. The CPI is one of several inflation measures constructed by Guan et al (see Figure 6 in their paper).
+The graphs below show<sup>[4](#myfootnote4)</sup> the nominal paper money stock, population and CPI in the period considered by Guan et al. The money stock is calculated under the assumption that the nominal money stock decreases by 10 percent each year. The CPI is one of several inflation measures constructed by Guan et al (see Figure 6 in their paper).
 
 <div style="width:70%; margin:0 auto;">
  <img src="/blog/images/2025/yuan_plots.png" />
@@ -56,7 +56,7 @@ The posterior distributions of $\beta$ and $\lambda$ show that in general $\lamb
 </div>
 
 # Hyperinflation?
-The reason why I did all this modelling was to see whether it was really plausible that the economy of Yuan China experienced hyperinflation (defined as inflation of 50% or more *per month*). If we suppose that the amount of new money created in the year after the data ends was at its maximum historical value, it's possible to get a distribution of the expected rate of inflation for the next year.
+The reason why I did all this modelling was to see whether it was really plausible that the economy of Yuan China experienced hyperinflation (defined as inflation of 50% or more *per month*). If we suppose that the amount of new money created in the year after the data ends was at its maximum historical value, it's possible to get a distribution of the expected rate of inflation for the next year (note that this is *per year*, not per month!).
 
 <div style="width:70%; margin:0 auto;">
  <img src="/blog/images/2025/yuan_inflation.png">
