@@ -11,13 +11,13 @@ categories: economics r
 In this post, I would like to draw attention to a very interesting data set collected by Guan, Palma and Wu as part of the [replication package](https://www.openicpsr.org/openicpsr/project/194606/version/V1/view) for their paper [The rise and fall of paper money in Yuan China, 1260-1368](https://onlinelibrary.wiley.com/doi/10.1111/ehr.13305). The paper describes inflation, money and prices during the Yuan Dynasty era in China.
 
 First, a little historical background.
-# The Yuan Dynasty
+## The Yuan Dynasty
 The immediate predecessors of the Yuan were the Song Dynasty, who ruled China from 960 to the 1270s. The Yuan Dynasty started out as Mongols (the descendants of [Genghis Khan](https://en.wikipedia.org/wiki/Genghis_Khan)) who came from Mongolia<sup>[1](#myfootnote1)</sup>. They waged a bitter 44-year war against the Song, eventually driving them into roughly the area of modern-day Hong Kong<sup>[2](#myfootnote2)</sup>, where the last Song emperor was finally defeated at the Battle of Yamen.
 
 After taking over China, the Yuan<sup>[3](#myfootnote3)</sup> quickly absorbed Chinese culture. The Song had been very technologically advanced, and the Yuan adopted many of their innovations, including paper money. At first, the paper money was exchangeable for silver. From 1276, the money was not fully backed by silver and, in 1310, the government began to issue pure fiat money, just like we use today.
 
 According to Richard von Glahn's book <i>Fountain of Fortune: Money and Monetary Policy in China, 1000-1700</i>, by 1361 the paper money had become valueless. The usual narrative is that excessive money printing had caused hyperinflation, just like in Germany in the early 1920s and Zimbabwe in the 2000s. In their paper, Guan et al use a regression model to conclude that wars were the main factor which tended to lead to excessive issuance of money.
-# The Data
+## The Data
 The graphs below show<sup>[4](#myfootnote4)</sup> the nominal paper money stock, population and CPI in the period considered by Guan et al. The money stock is calculated under the assumption that the nominal money stock decreases by 10 percent each year. The CPI is one of several inflation measures constructed by Guan et al (see Figure 6 in their paper).
 
 <div style="width:70%; margin:0 auto;">
@@ -29,7 +29,7 @@ I was particularly interested in whether anything interesting could be said abou
 $$M \propto PY \tag{1}\label{eq:1}$$
 
 where $M$ is the nominal money stock, $Y$ is population and $P$ is the price level.
-# Model
+## Model
 In the following, let $m = \log(M)$, $p = \log(P)$, and $y = \log(Y)$. From $\eqref{eq:1}$ there should be a relationship of the form
 
 $$p = v + m - y$$
@@ -55,7 +55,7 @@ The posterior distributions of $\beta$ and $\lambda$ show that in general $\lamb
  <img src="/blog/images/2025/yuan_beta_lambda2.png">
 </div>
 
-# Hyperinflation?
+## Hyperinflation?
 The reason why I did all this modelling was to see whether it was really plausible that the economy of Yuan China experienced hyperinflation (defined as inflation of 50% or more *per month*). If we suppose that the amount of new money created in the year after the data ends was at its maximum historical value, it's possible to get a distribution of the expected rate of inflation for the next year (note that this is *per year*, not per month!).
 
 <div style="width:70%; margin:0 auto;">
