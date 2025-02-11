@@ -43,7 +43,7 @@ y_{t+1} &= (1-\beta) y_t + \beta (v + m_t - p_t) + \varepsilon_t'
 
 with $0 \le \lambda, \beta \le 1$ and $\varepsilon_t, \varepsilon_t'$ are identically-distributed measurement errors which occur independently at each time $t$ and follow a normal distribution with a mean of $0$ and a common variance $\sigma^2$. 
 
-The model was fitted using a Gibbs sampler. The graph below shows 90% credible intervals for the true value of the CPI $P_t = \exp(p_t)$ for each year in the data.
+The model was fitted using a Gibbs sampler<sup>[5](#myfootnote5)</sup>. The graph below shows 90% credible intervals for the true value of the CPI $P_t = \exp(p_t)$ for each year in the data.
 
 <div style="width:70%; margin:0 auto;">
  <img src="/blog/images/2025/yuan_gibbs_results.png">
@@ -77,3 +77,5 @@ ___________________________
 <a name="myfootnote3">3</a>: Confusingly, the dynasty shares its name 元 (both in English and Chinese) with the name of China's modern-day currency.
 
 <a name="myfootnote4">4</a>: This post is the first time I have used the ggplot R package in my own work and, as you can see, I'm new to it. I still don't see how it's superior to base graphics, although it has [really good documentation](https://ggplot2.tidyverse.org/).
+
+<a name="myfootnote5">5</a>: Edit: The full R script for this model is a bit long to include in the post, so (after tidying it up a bit and fixing some bugs) I put it in a [Github repo](https://github.com/rtrvale/yuan_inflation).
