@@ -8,6 +8,9 @@ published: true
 author: Richard
 categories: python
 ---
+<div style="width:70%; margin:0 auto;">
+ <img src="/blog/images/2025/snake.png" />
+</div>
 If you want to get started with machine learning and data science in Python, one easy option is to use [Google Colab](https://colab.google/). But pretty soon you'll want to install Python locally so that you can easily use your own data. Many older tutorials recommend installing [Anaconda](https://www.anaconda.com/), which is a Python distribution aimed at data scientists which includes some useful libraries and gives you an easy way to manage packages and environments.
 
 However, Anaconda is no longer a good way to go. Why? Because Anaconda has changed its terms of service twice in the last few years. each time [becoming more restrictive](https://www.cdotrends.com/story/4173/anaconda-threatens-legal-action-over-licensing-terms). (I don't know why businesses are allowed to change their terms of service and then "go after" companies for violating the new terms, but apparently they are. It seems like nobody cares about reputational risk any more?) As of writing, it's only legal to use Anaconda if you are working in a company with less than 200 employees. Later on, this might be changed to 100, or zero. There's no way of knowing. So it's better to steer clear.
@@ -52,8 +55,11 @@ Save the file somewhere as `jupyter.bat`. You can create a batch file with any c
 However you do it, once you have your `jupyter.bat` file, right click on it and select Show more options > Create shortcut. Then move the shortcut onto your desktop. When you double click on the shortcut, a command window should open, and then Jupyter Lab will start. The `pause` command ensures that the command window stays open while Jupyter Lab is running.
 
 If you want to make your shortcut look pretty, you can download an icon file (with `.ico` extension) and go to Properties > Shortcut > Change icon.
-
+<div style="width:20%; margin:0 auto;">
+ <img src="/blog/images/2025/jupyter_icon.png" />
+</div>
 Now you have something to click on and launch Jupyter.
+
 ## Using VS Code
 If you prefer to use Visual Studio Code rather than Jupyter lab, you need to install the Python and Jupyter extensions for VS Code, and these need to be installed *after* installing Python (you can always remove and add them again if necessary).
 
