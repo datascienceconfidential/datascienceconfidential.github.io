@@ -139,13 +139,16 @@ which some authors write as $E_0[\sum_{t=0}^\infty \log(C_t)]$ and others as $E_
 We can eliminate $Y_t$ and $I_t$ from the equations to reduce our model to the following problem
 
 $$\text{max } E_t\left[\sum_{\tau=t}^\infty \beta^{\tau-t}\log(C_\tau) \right]$$
+
 subject to (for all $t$)
+
 $$\begin{align*}
 K_{t+1} &= A_t K_t^\alpha - C_t + (1-\delta)K_t\\
 \log A_{t+1} &= \rho \log A_t + \sigma_A \varepsilon_t\\
 \varepsilon_t &\sim N(0, 1)
 \end{align*}
 $$
+
 There are two ways of making progress on this problem. Both of them require some functional analysis to make fully rigorous. The right approach is to solve the Bellman Equation, but the approach taken by all the textbooks and lecture notes is to use Lagrange multipliers. 
 
 Unfortunately we need to find some way to deal with the pesky expectation operator. Let's pretend that there are some large finite number of possible paths of the random shocks, and denote each such path by $s$. Let $\pi(s)$ be the probability of path $s$. Then we want to maximise 
@@ -164,7 +167,7 @@ $$\mathcal{L} = \log(C_t) + \lambda_t(A_tK_t^\alpha -C_t + \\(1-\delta)K_t - K_{
 -C_{t+1}(s) + (1-\delta)K_{t+1} - K_{t+2}(s) ) + \cdots
 $$
 
-where $\lambda_t$ and $\pi(s)\lambda_{t+1}(s)$ are Lagrange multipliers, and the dots represent more terms which don't involve $C_t$ or $K_{t+1}$.
+where $\lambda_t$ and $\beta\pi(s)\lambda_{t+1}(s)$ are Lagrange multipliers, and the dots represent more terms which don't involve $C_t$ or $K_{t+1}$.
 
 Setting the derivative to zero with respect to $C_t$ yields
 
@@ -262,6 +265,7 @@ a & b & c\\
 {a}_t
 \end{matrix}\right]
 $$
+
 where $a, b$ and $c$ are given by the following gnarly expressions
 
 $$
@@ -307,7 +311,9 @@ D = \left[
 0 & 0 & 0.882
 \end{matrix}
 \right]$$
+
 and
+
 $$
 Q = \left[
 \begin{matrix}
@@ -317,6 +323,7 @@ Q = \left[
 \end{matrix}
 \right]
 $$
+
 which means that
 
 $$w_t := 1.027c_t - 0.562k_t - 0.545 a_t$$
