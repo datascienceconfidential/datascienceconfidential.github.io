@@ -4,7 +4,7 @@ title: "How the DSGE sausage is made"
 subtitle: "Learning about DSGE models by coding one up from scratch"
 description: "Complete code for solving and estimating a basic DSGE model using hand calculation, with equivalent Dynare and gEcon code for comparison"
 header-img: "/blog/images/2025/dsge_post_title_image.png"
-date: 2025-04-29
+date: 2025-04-28
 author: Richard
 categories: economics r
 published: true
