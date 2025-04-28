@@ -917,7 +917,9 @@ This leaves the question of why [some people don't seem to like or trust DSGE mo
 It's not clear that this is necessarily better. You might say that the DSGE approach is looking at the average behaviour of a large number of people and assuming that they collectively behave optimally, but is it true that a large number of people with different utility functions each making decisions for themselves would act to maximise their collective utility? [Perhaps it is](https://johnhcochrane.blogspot.com/2023/07/new-york-times-on-hank-and-questions.html). That's supposed to be one of the [lessons of economics](https://en.wikipedia.org/wiki/The_Fable_of_the_Bees), right? But is it true that individual people really behave optimally? Behavioural economists would say no. And also, if you treat the collective utility of everyone as the only number of interest, then you can't calculate any statistics about inequality, which is something which I happen to be interested in.<sup>[4](#myfootnote4)</sup>
 
 Concerns of this sort led economists to develop extensions of DSGE models which do allow different types of agents. The most famous are the Heterogeneous Agent New Keynesian<sup>[5](#myfootnote5)</sup> or HANK models. HANK models can't be fitted using the methods we used in our example, but there are other approaches, which I'm hoping to find out about.
-___________________________
+
+______________
+
 
 ## Footnotes
 
