@@ -134,7 +134,7 @@ There is a representative agent in the economy who seeks to consume just the rig
 
 $$E_t\left[\sum_{\tau=t}^\infty \beta^{\tau-t}\log(C_\tau) \right]$$
 
-which some authors write as $E_0[\sum_{t=0}^\infty \log(C_t)]$ and others as $E_t[\sum_{t=0}^\infty \log(C_t)]$, both of which I found quite confusing.
+which some authors write as $E_0[\sum_{t=0}^\infty \beta^t\log(C_t)]$ and others as $E_t[\sum_{t=0}^\infty \beta^t\log(C_t)]$, both of which I found quite confusing.
 
 (An important point which took me a while to understand is that $C_t$ is chosen given all the information up to time $t$. Then the next value of the shock $\varepsilon_{t+1}$ is revealed, and $C_{t+1}$ is chosen on the basis of this new knowledge. The $\{C_t\}$ aren't chosen all at once. In the language of optimal control theory, this is a *closed loop* rather than an *open loop* problem.)
 
