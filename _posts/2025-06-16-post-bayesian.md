@@ -18,13 +18,13 @@ A recent seminar introduced me to a new kind of statistical inference called pos
 
 One flavour of post-Bayesian inference is based on the notion of a <i>Gibbs Posterior</i>.
 
-To motivate the Gibbs Posterior, first consider the usual Bayesian inference for a (possibly vector-valued) parameter $\theta$. You have a prior $\pi(\theta)$, a data set $y$, and a model which relates the two. The likelihood of your model is a function $L(y | \theta)$. You perform inference by getting the posterior distribution $\pi'(\theta)$, which is proportional to the prior times the likelihood
+To motivate the Gibbs Posterior, first consider the usual Bayesian inference for a (possibly vector-valued) parameter $\theta$. You have a prior $\pi(\theta)$, a data set $y$, and a model which relates the two. The likelihood of your model is a function $L(y \vert \theta)$. You perform inference by getting the posterior distribution $\pi'(\theta)$, which is proportional to the prior times the likelihood
 
-$$\pi'(\theta) \propto \pi(\theta)L(y | \theta).$$
+$$\pi'(\theta) \propto \pi(\theta)L(y \vert \theta).$$
 
 Often your model assumes that the data are obtained as an independent identically-distributed random sample of size $n$ from some probability distribution. If $p$ is the density of this distrbution, then the likelihood has the form
 
-$$L(y | \theta) = \prod_{i=1}^n p(y_i | \theta)$$
+$$L(y \vert \theta) = \prod_{i=1}^n p(y_i \vert \theta)$$
 
 and the posterior distribution may be written
 
@@ -32,7 +32,7 @@ $$\pi'(\theta) \propto \pi(\theta)e^{-\ell(y , \theta)}$$
 
 where
 
-$$\ell(y, \theta) = -\sum_{i=1}^n \log p(y_i | \theta) \tag{1}\label{eq:1}$$
+$$\ell(y, \theta) = -\sum_{i=1}^n \log p(y_i \vert \theta) \tag{1}\label{eq:1}$$
 
 is the negative log-likelihood. Now, a Gibbs Posterior is a generalization of this. Instead of the negative log-likelihood, you can take some other loss function $\ell$ and define the Gibbs Posterior with respect to $\ell$ as
 
