@@ -158,7 +158,9 @@ Post-Bayesianism looks really interesting to me. Generalized Bayes can potential
 Maybe not. The problem is that academia is mostly focussed on building models (I recall the [friendly advice I got](https://datascienceconfidential.github.io/bayesian/2024/03/19/layoffs-revisited.html) last time I tried to write a paper about prediction). If the purpose of academic papers is to impress people with your model-building skills, then is a new method of inference which assumes that your model could be wrong likely to become popular, even if gives better results? Why would someone whose job is dependent on publishing papers which show off their models want to acknowledge that their model might not be the cat's pyjamas?<sup><a name="myfootnote4">5</a></sup>
 
 Still, there can be no doubt that the post-Bayesian point of view shows that Bayesian inference, ABC, the method of moments, and other ways of fitting models to data are secretly the same thing. I think that's really neat, and I'm looking forward to learning more about it!
+
 ______________
+
 
 ## Footnotes
 
