@@ -79,7 +79,7 @@ legend("topleft", lty=c(1,1), col=c("black", "red"), legend=c("full sample",
 ```
 
 <div style="width:70%; margin: 0 auto">
-<img src="/blog/images/2025/roc_curves_ttd.png"></img>
+<img src="/blog/images/2025/roc_curves_ttd.png" />
 </div>
 
 Clearly the model's performance degrades when it's fitted to the through-the-door sample. Note that this doesn't always happen. Here are some ROC curves we get by running the whole process with a few different random seeds.
