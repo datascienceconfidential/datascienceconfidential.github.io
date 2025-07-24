@@ -12,7 +12,7 @@ This material was presented in a Lunch & Learn session of the New Zealand Statis
 
 # Introduction
 
-I want to discuss what the job market is like, both from the point of view of candidates and hiring managers. Those who haven't searched for a job for a while might be surprised to learn what the job search is like nowadays. Those who are currently searching for a job might like to know that they are not alone, but also to understand *why* companies treat candidates the way they do. Why do they ghost you? Why do they make you do so many interview rounds? Hopefully this talk will give you some of the answers.
+I want to discuss what the job market is like, both from the point of view of candidates and from the point of view of hiring managers. Those who haven't searched for a job for a while might be surprised to learn what the job search is like nowadays. Those who are currently searching for a job might like to know that they are not alone, but also to understand *why* companies treat candidates the way they do. Why do they ghost you? Why do they make you do so many interview rounds? Hopefully this talk will give you some of the answers.
 
 What we're going to cover is:
 
@@ -51,9 +51,9 @@ There are a few reasons why people might advertise ghost jobs.
 
 Probably the most obvious one is that many jurisdictions *force* jobs to be advertised. An example in New Zealand is the [Public Service Act 2020](https://www.legislation.govt.nz/act/public/2020/0040/latest/LMS219506.html). If you create a job for your nephew, you have to advertise it, even if you have no intention of hiring anybody else. I've been on both sides of this. I've applied for ghost jobs in the past, but I've also had a job created for me to which I then applied. Presumably other people took the time to write a CV and cover letter, but had no chance of getting the job. Nevertheless, the job still had to be advertised because the rules said so.
 
-A second reason why a company might post a ghost job is to fulfil a KPI. For example, it might be desirable to have a high rate of rejected applicants. This is something which US universities and colleges like to boast about. It sounded very strange to me when I first heard about it, but the idea is to make the university look more exclusive. A similar measure is sometimes used to evaluate HR teams. If you want a high reject rate, what better than to advertise a job that doesn't exist? Then the reject rate will be 100%!
+A second reason why a company might post a ghost job is to fulfil a KPI. For example, it might be desirable to have a high rate of rejected applicants. This is something which US universities and colleges [like to boast about](https://www.usnews.com/best-colleges/rankings/lowest-acceptance-rate). It sounded very strange to me when I first heard about it, but the idea is to make the college look more exclusive. A similar measure is sometimes used to evaluate HR teams. If you want a high reject rate, what better than to advertise a job that doesn't exist? Then the reject rate will be 100%!
 
-Another nefarious reason for advertising ghost jobs is to intimidate current employees, for example by posting a job with a lowball salary range, so that they don't engage in wage bargaining. And it gets even worse. Some people think that companies post ghost jobs in order to make it look like they are growing, purely to manipulate their stock price. (Of course, this last reason only applies to publically-traded companies.)
+Another nefarious reason for advertising ghost jobs is to intimidate current employees, for example by posting a job with a lowball salary range, so that your employees don't engage in wage bargaining. And it gets even worse. Some people think that companies post ghost jobs in order to make it look like they are growing, purely to manipulate their stock price. (Of course, this last reason only applies to publically-traded companies.)
 
 # 2. Applicant Tracking Systems
 
@@ -63,7 +63,7 @@ Let's suppose you have applied for a job and you have got past the first hurdle;
 
 Why do they make you do this? From the HR point of view, the fact that the ATS is difficult to use is a feature rather than a bug. Is this because HR hates you? No! It's simply because the volume of applicants is too high. It's easier than ever to apply for a job and you can apply from anywhere in the world. According to Seek, one of the online job platforms in New Zealand, [applications rose by 32% from 2023-34](https://www.seek.co.nz/about/news/article/seek-nz-employment-report-december).
 
-HR teams are facing a fire hose of applicants, many with perfectly-tailored CVs. Anything which reduces the volume of applicants is helpful. So for these companies, it's actually helpful that the ATS forces you to retype your entire CV. Some people will inevitably give up, and that's fewer CVs that HR has to screen.
+HR teams are facing a fire hose of applicants, many with perfectly-tailored CVs. Anything which reduces the volume of applicants is helpful. So for these companies, it's actually helpful that the ATS forces you to retype your entire CV. Some people will inevitably give up, and that's fewer CVs that HR has to screen. (From an economic point of view, think of it as increasing the cost of applying for the job. The cost is expressed in terms of time rather than money, but it's still a cost.)
 
 The ATS also enables HR to implement knock-out factors. For example, if you're in the wrong country you can be automatically disqualified. Of course, this also opens up the possibility of discrimination by age, gender, race, and any number of other charactistics. Does this happen? Almost certainly. More on that below.
 
