@@ -26,7 +26,7 @@ A good example is the case of [Brittany Pietsch](https://www.bbc.com/worklife/ar
 
 # Shareholder Value
 
-The principal of shareholder value, also known as the [Friedman Doctrine](https://en.wikipedia.org/wiki/Friedman_doctrine) after Milton Friedman[^1], states that the objective of every business is to maximise the profits of its shareholders. This controversial idea has become dogma in the corporate world in the last 40 years, and has led to upper management being paid largely in stock and (especially) stock options. The idea is that the job of the CEO is to make the stock price rise, no matter what. One way of motivating the CEO to do this is to tie total compensation to the stock price. Didn't make the stock price rise this quarter? Tough luck, your options are worthless!
+The principal of shareholder value, also known as the [Friedman Doctrine](https://en.wikipedia.org/wiki/Friedman_doctrine) after Milton Friedman<sup>[1](#myfootnote1), states that the objective of every business is to maximise the profits of its shareholders. This controversial idea has become dogma in the corporate world in the last 40 years, and has led to upper management being paid largely in stock and (especially) stock options. The idea is that the job of the CEO is to make the stock price rise, no matter what. One way of motivating the CEO to do this is to tie total compensation to the stock price. Didn't make the stock price rise this quarter? Tough luck, your options are worthless!
 
 Tradtionally, layoffs are supposed to depress the stock price, because they indicate that a firm is not doing well. But these days this [no longer seems to be the case](https://www.businessinsider.com/tech-layoffs-stock-market-reaction-meta-spotify-wall-street-investors-2024-2). An announcement of layoffs might *increase* the stock price. In the corporate world, *Revenue per employee* is becoming an increasingly popular metric to compare firms against each other. The fewer the employees, the bigger the number.
 
@@ -41,9 +41,9 @@ I call this strategy *wash hiring* because it's analogous to the situation in th
  <center><p style="font-size:10;">Daniel Drew, Wikipedia</p></center>
 </div>
 
-Are modern-day corporate CEOs doing the same with human lives? Quite possibly. Some firms practice *stack ranking* (or *rank and yank* as Jack Welch[^2] called it) in which the bottom x percent of employees are sacrificed in a regular round of layoffs. Wash hires are more or less the same thing only without the ranking part.
+Are modern-day corporate CEOs doing the same with human lives? Quite possibly. Some firms practice *stack ranking* (or *rank and yank* as Jack Welch<sup>[2](#myfootnote2) called it) in which the bottom x percent of employees are sacrificed in a regular round of layoffs. Wash hires are more or less the same thing only without the ranking part.
 
-If firms are really doing this, is there any problem with it? It has the potential to do a great deal of economic damage. If people are afraid of random layoffs, they are likely to increase their precautionary saving and not be as productive (since they need to spend time making sure that they are prepared for a job search.) As Ha-Joon Chang explains in [23 Things They Don't Tell You about Capitalism](https://en.wikipedia.org/wiki/23_Things_They_Don%27t_Tell_You_About_Capitalism), Thing 10, there are hidden costs to job insecurity which don't usually show up in economic models[^3].
+If firms are really doing this, is there any problem with it? It has the potential to do a great deal of economic damage. If people are afraid of random layoffs, they are likely to increase their precautionary saving and not be as productive (since they need to spend time making sure that they are prepared for a job search.) As Ha-Joon Chang explains in [23 Things They Don't Tell You about Capitalism](https://en.wikipedia.org/wiki/23_Things_They_Don%27t_Tell_You_About_Capitalism), Thing 10, there are hidden costs to job insecurity which don't usually show up in economic models<sup>[3](#myfootnote3).
 
 # AI Replacement
 
@@ -53,7 +53,7 @@ So what happens if you replace people with AI? Can this also lead to a cycle of 
 
 ## A Capital Allocation Model
 
-Suppose a firm has a fixed stock $K$ of capital and produces output according to the Cobb-Douglas production function[^4]
+Suppose a firm has a fixed stock $K$ of capital and produces output according to the Cobb-Douglas production function<sup>[4](#myfootnote4)
 
 $$Y = A K^\alpha L^{1-\alpha}.$$
 
@@ -61,7 +61,7 @@ Suppose the firm is a price taker in the labour market (i.e. workers can be hire
 
 $$L^* = K((1-\alpha)A/w)^{1/\alpha}.$$
 
-Now suppose someone invents an AI and the firm has the option to hire AI labour instead. The AI demands a wage of $0$, so of course the firm will replace all the human labour by AI. But as data scientists, we know that AI models will degrade over time due to data drift. Therefore, assume that the AI labour $U_t$ satisfies an equation of the form[^5]
+Now suppose someone invents an AI and the firm has the option to hire AI labour instead. The AI demands a wage of $0$, so of course the firm will replace all the human labour by AI. But as data scientists, we know that AI models will degrade over time due to data drift. Therefore, assume that the AI labour $U_t$ satisfies an equation of the form<sup>[5](#myfootnote5)
 
 $$U_{t+1} = (1-\delta)U_t + bL_t$$
 
@@ -124,23 +124,25 @@ Could something like this occur in the real world? Well, there is some evidence 
 
 # Conclusion
 
-So there you are; two possible reasons why you would expect to see cycles of hiring and firing in the labour market. The idea of wash hires is appealing but it only makes sense for publicly-traded firms[^6]. The idea of AI replacement is certainly realistic, and also terrifying.
+So there you are; two possible reasons why you would expect to see cycles of hiring and firing in the labour market. The idea of wash hires is appealing but it only makes sense for publicly-traded firms<sup>[6](#myfootnote6). The idea of AI replacement is certainly realistic, and also terrifying.
 
 Some economists have written papers about the possible impact of AI on the labour market, for example [this paper by Pascal Stiefenhofer](https://arxiv.org/pdf/2502.07050). But the research tends to focus on where we will end up, not so much on how we will get there in the short run. 
 
 It looks like it could be a bumpy ride!
+
 ___________________________
 
-[^1] The following quote comes from [a Youtube interview with Joseph Stiglitz](https://www.youtube.com/watch?v=YViLHG0X0F0)
+
+<a name="myfootnote1">1</a>: The following quote comes from [a Youtube interview with Joseph Stiglitz](https://www.youtube.com/watch?v=YViLHG0X0F0)
 
 > I wrote a paper explaining why firms maximising their stock market value would not lead to the general wellbeing of society. [...] About the same time, Milton Friedman was writing a very influential article which was published in the New York Times Magazine about why firms *should* maximise their stock market value. I got invited to the University of Chicago to give a talk on my paper. [...] After the seminar we were sitting outside the seminar room and he said "Joe. You're wrong." I said: "Milt. Tell me where I made a mistake in my analysis." He said : "Joe. You're wrong. I know shareholder maximisation is optimal. It's good for society". I said: "I've worked very hard to show that *you're* wrong. Just explain to me where in my analysis I made a mistake," and he said: "Joe. You're wrong." And it was very clear at that point that he'd become an idealogue. He had very strong beliefs and couldn't engage in an analytic exercise. He was very bright, very congenial, a really very nice guy. Very committed to his ideology.
 
-[^2] Welch, as boss of General Electric, was one of the most controversial and most successful exponents of shareholder value which he later, in a 2009 interview with the *Financial Times*,  called ["The dumbest idea in the world."](https://www.ft.com/content/294ff1f2-0f27-11de-ba10-0000779fd2ac)
+<a name="myfootnote2">2</a>: Welch, as boss of General Electric, was one of the most controversial and most successful exponents of shareholder value which he later, in a 2009 interview with the *Financial Times*,  called ["The dumbest idea in the world."](https://www.ft.com/content/294ff1f2-0f27-11de-ba10-0000779fd2ac)
 
-[^3] A [1979 model of Jovanovic](https://python.quantecon.org/jv.html) considers how much effort a worker should devote to their job search versus their current job. Clearly, if you expect to be fired without cause at any moment, you might as well put in minimal effort on your current job and devote all your time to learning skills which might help you in your next job.
+<a name="myfootnote3">3</a>: A [1979 model of Jovanovic](https://python.quantecon.org/jv.html) considers how much effort a worker should devote to their job search versus their current job. Clearly, if you expect to be fired without cause at any moment, you might as well put in minimal effort on your current job and devote all your time to learning skills which might help you in your next job.
 
-[^4] The Cobb-Douglas function may not be an appropriate model for an individual firm, but the conclusion would be similar for any reasonable choice of production function.
+<a name="myfootnote4">4</a>: The Cobb-Douglas function may not be an appropriate model for an individual firm, but the conclusion would be similar for any reasonable choice of production function.
 
-[^5] Again, the exact equation is not important. We just require that the quality of the AI declines over time if there is no human labour to maintain it or to generate new training data for it.
+<a name="myfootnote5">5</a>: Again, the exact equation is not important. We just require that the quality of the AI declines over time if there is no human labour to maintain it or to generate new training data for it.
 
-[^6] My personal experience has been the opposite. The last time I felt like I had a reasonably secure job was when I was working for a publicly-traded firm, whereas subsequent jobs in privately-held companies have never felt particularly secure. But this might just be due to overall economic conditions. 
+<a name="myfootnote6">6</a>: My personal experience has been the opposite. The last time I felt like I had a reasonably secure job was when I was working for a publicly-traded firm, whereas subsequent jobs in privately-held companies have never felt particularly secure. But this might just be due to overall economic conditions. 
