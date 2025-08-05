@@ -38,7 +38,7 @@ I call this strategy *wash hiring* because it's analogous to the situation in th
 
 <div style="width:75%; margin:0 auto;">
  <img src="/blog/images/2025/Daniel_Drew_1872.jpg" />
- <center><p style="font-size:10;">Daniel Drew, Wikipedia</p></center>
+ <center><p style="font-size : 10px;">Daniel Drew, Wikipedia</p></center>
 </div>
 
 Are modern-day corporate CEOs doing the same with human lives? Quite possibly. Some firms practice *stack ranking* (or *rank and yank* as Jack Welch<sup>[2](#myfootnote2) called it) in which the bottom x percent of employees are sacrificed in a regular round of layoffs. Wash hires are more or less the same thing only without the ranking part.
