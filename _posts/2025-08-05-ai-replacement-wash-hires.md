@@ -2,7 +2,7 @@
 layout: post
 title: "AI Replacement and Wash Hires"
 subtitle: "What could be causing cycles of hiring and firing in the labour market?"
-header-img: ""
+header-img: "/blog/images/2025/capital_allocation_example.png"
 date: 2025-08-05
 author: Richard
 categories: ai economics r
