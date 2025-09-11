@@ -11,7 +11,7 @@ published: true
 This post is about the Netflix game show [*Million Dollar Secret*](https://en.wikipedia.org/wiki/Million_Dollar_Secret). The show is a stripped-down version of another popular show, [*The Traitors*](https://en.wikipedia.org/wiki/The_Traitors_(British_TV_series)) which in turn is a televised version of the social deduction game [*Mafia*](https://en.wikipedia.org/wiki/Mafia_(party_game)), also known as *Werewolf*.
 
 <div style="width:85%; margin:0 auto;">
- <img src="/blog/images/2025/millionare_werewolf.png" />
+ <img src="/blog/images/2025/millionaire_werewolf.png" />
 </div>
 
 I used to play *Werewolf* regularly when I lived in Canada. I was *terrible* at it but it was a lot of fun. A few academic papers have been written about the game, but it's difficult to model because the modeller needs to make a lot of assumptions about the motives of the players.
