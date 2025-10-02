@@ -5,7 +5,7 @@ subtitle: "How much did the railroad boom contribute to the growth of 19th centu
 header-img: "/blog/images/2025/2d_growth_example.png"
 date: 2025-10-02
 author: Richard
-categories: economics r fermi-estimation
+categories: economics r javascript fermi-estimation
 published: true
 ---
 This post is about economic growth in a region in which labour is free to move around.
