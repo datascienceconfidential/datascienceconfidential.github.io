@@ -16,7 +16,7 @@ A book called [*The Price of Time*](https://www.amazon.com/Price-Time-Real-Story
 
 # Model
 
-The model takes place on a domain $\Omega \subset \mathbb{R}^n$. At each point $x \in \Omega$ and each time $t$, there is a quantity of capital $K(x,t)$ and labour $L(x,t)$. There is a production function $F$ describing how more capital is produced from labour and capital. I will assume that $F$ is the same everywhere. In other words, there's a factory of sorts at every point of $\Omega$.
+The model takes place on a domain $\Omega \subset \mathbb{R}^n$. At each point $x \in \Omega$ and each time $t$, there is a quantity of capital $K(x,t)$ and labour $L(x,t)$. There is a production function $F$ describing how more capital is produced from labour and capital. I will assume that $F$ is the same everywhere. In other words, there's an industry of sorts at every point of $\Omega$.
 
 ## Motion of Capital
 
@@ -66,6 +66,8 @@ If you run the model on a grid and start by drawing labour and capital from a un
     <canvas id="CanvasL" width="320" height="320" style="border:1px solid black;display: block; margin: 0 auto;"></canvas>
 </div>
 
+<br><br>
+
 Here. I used the Cobb-Douglas production function with $TFP = 1$ and $\alpha = 1/3$. Capasso et al chose to use a different production function. The choice of Cobb-Douglas means that growth is unlimited and eventually the spatial distribution of capital and labour will become uniform. I'm really interested in the rate of growth of aggregate output $Y$ where
 
 $$Y(t) = \int_\Omega Y(x, t) dx.$$
@@ -83,6 +85,8 @@ You can add transportation to the model by adding connections between nodes whic
 <div>
     <canvas id="CanvasRailway" width="320" height="320" style="border:1px solid black;display: block; margin: 0 auto;"></canvas>
 </div>
+
+<br><br>
 
 <script>
 function draw_matrix(M, canvas, clear=true,
@@ -147,7 +151,7 @@ function frame(){
     let logY = 0;
     model1 = update(model1);
     draw_matrix(model1.K, document.getElementById("CanvasK"));
-    draw_matrix(model1.L, document.getElementById("CanvasL"), clear=true, rgb="224, 210, 100");
+    draw_matrix(model1.L, document.getElementById("CanvasL"), clear=true, rgb="255, 50, 50");
     
     let N = model1.N;
     for (let i=0; i<N; i++){
@@ -280,7 +284,7 @@ That all seems quite reasonable, but the fact that the numbers come out nicely h
 
 It turns out that the choice of grid size in the above example is just enough to make it very likely that two nodes will become connected in such a way that there is a big boost to growth. If you make the grid larger, then the number of possible random connections grows so large that this becomes less likely to happen. The reason why random infrastructure seems to be boosting growth is because we've set things up in such a way that random infrastructure is likely to be useful just  by chance.
 
-This sort-of shows that my original idea was wrong. I had the idea that adding random connections to this model might make it easier for labour to move around and thus to reach areas with a large amount of capital. But in fact, if you put in semi-realistic numbers, the random connections only help if there's a large chance that they happen to be built in the right places. So my initial idea of showing that vanity projects or ``railways to nowhere" can contribute to economic growth is probably wrong.
+This sort-of shows that my original idea was wrong. I had the idea that adding random connections to this model might make it easier for labour to move around and thus to reach areas with a large amount of capital. But in fact, if you put in semi-realistic numbers, the random connections only help if there's a large chance that they happen to be built in the right places. So my initial idea of showing that vanity projects or "railways to nowhere" can contribute to economic growth is probably wrong.
 
 However, I still think this model is quite interesting and could be used for other things. That's all for today! I'm off to see whether I can sell my labour to the owner of some capital.
 
