@@ -2,7 +2,7 @@
 layout: post
 title: "Adding random transport links to a 2D growth model"
 subtitle: "How much did the railroad boom contribute to the growth of 19th century America?"
-header-img: ""
+header-img: "/blog/images/2025/2d_growth_example.png"
 date: 2025-10-02
 author: Richard
 categories: economics r fermi-estimation
@@ -28,7 +28,7 @@ where $Y(x,t) = F(K(x,t), L(x,t))$ is output. Here, $e$ is the (exogenous) coeff
 
 This is a version of the heat equation. If $F = 0$ then capital will slowly diffuse through the domain $\Omega$ until the value of $K$ is the same everywhere, like in the following picture.
 
-<script src="migration.js"></script>
+<script src="/blog/scripts/2025/migration.js"></script>
 
 <div>
     <canvas id="gridCanvas" width="320" height="320" style="border:1px solid black;display: block; margin: 0 auto;"></canvas>
@@ -282,7 +282,7 @@ It turns out that the choice of grid size in the above example is just enough to
 
 This sort-of shows that my original idea was wrong. I had the idea that adding random connections to this model might make it easier for labour to move around and thus to reach areas with a large amount of capital. But in fact, if you put in semi-realistic numbers, the random connections only help if there's a large chance that they happen to be built in the right places. So my initial idea of showing that vanity projects or ``railways to nowhere" can contribute to economic growth is probably wrong.
 
-However, I still think this model is quite interesting and could be used for other things. That's all for today! I'm off to see whether I can sell my labour to the owner of some capital. In the meantime, please consider clicking the button below. You could be the first!
+However, I still think this model is quite interesting and could be used for other things. That's all for today! I'm off to see whether I can sell my labour to the owner of some capital.
 
 ___________________________
 
