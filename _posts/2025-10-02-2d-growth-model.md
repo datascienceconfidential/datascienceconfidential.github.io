@@ -147,7 +147,7 @@ function frame(){
     let logY = 0;
     model1 = update(model1);
     draw_matrix(model1.K, document.getElementById("CanvasK"));
-    draw_matrix(model1.L, document.getElementById("CanvasL"), rgb="224, 210, 100");
+    draw_matrix(model1.L, document.getElementById("CanvasL"), clear=true, rgb="224, 210, 100");
     
     let N = model1.N;
     for (let i=0; i<N; i++){
@@ -163,8 +163,8 @@ function frame(){
     let maxy = 10000000;
     let maxits = 500;
     //draw_line(logY, CanvasYLine, 500, 100);
-    let w = 400;
-    let h = 400;
+    let w = 320;
+    let h = 320;
     ctxr.lineTo(time_counter/maxits * w, h-logY/maxy * h);
     ctxr.moveTo(time_counter/maxits * w, h-logY/maxy * h);
     ctxr.stroke();
