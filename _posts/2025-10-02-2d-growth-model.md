@@ -40,7 +40,7 @@ In the Capasso et al model, labour diffuses in the same way as capital. But what
 
 Let's assume that labour is paid its marginal product $w(x,t) = \frac{\partial F}{\partial L}$ and that it moves in the direction of increasing $w$, so we have something like
 
-$$\frac{\partial L}{\partial t}(x,t) = m\nabla \cdot (L(x,t)\nabla w(x,t))(1+g)$$
+$$\frac{\partial L}{\partial t}(x,t) = m\nabla \cdot (L(x,t)\nabla w(x,t)) + gL(x,t)$$
 
 where $m$ is a diffusion coefficient and $g$ is an exogenous growth rate. In other words, a proportion $m$ of the labour force will migrate in the direction in which the wages are highest.
 
