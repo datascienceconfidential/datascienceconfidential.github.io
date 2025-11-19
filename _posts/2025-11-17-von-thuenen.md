@@ -21,7 +21,7 @@ This post, then, is all about what $\sqrt{ap}$ is, why Thünen thought it was im
 There's a short biography of von Thünen in [a 1969 paper by Dickinson](https://www.jstor.org/stable/2229798). He was a wealthy landowner who ran an estate under near-mediaeval conditions, but who also cared deeply about the welfare of his employees. His book *Der isolierte Staat* was the fruit of long years of patiently gathering data and reasoning about economics from first principles. 
 
 <div style="width:70%; margin:0 auto;">
- <img src="von_thuenen_portrait.png" />
+ <img src="/blog/images/2025/von_thuenen_portrait.png" />
 </div>
 
 An [article by Blaug](https://markblaug.wordpress.com/wp-content/uploads/2012/11/theeconomicsofjohannvonthunen.pdf) provides a reader's guide to *Der isolierte Staat* (described as a "formless monster"). The first volume was published in 1826 and the second posthumously in 1850. There is also a third volume published in 1863. It's the [second volume](https://archive.org/details/thunenderisoliertestaat/mode/2up) which contains the famous $\sqrt{ap}$ formula for the natural wage. I worked through a few chapters of the book and found it to be surprisingly readable. It's clear that the author wants to be understood. He often writes down a formula, then immediately gives a numerical example, then continues with further reasoning. He doesn't omit any steps. Nevertheless, it's not always clear what he's getting at. Fortunately an [1895 article by H. L. Moore](https://www.jstor.org/stable/1883581?seq=1) explains the main ideas.
