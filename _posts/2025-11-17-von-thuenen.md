@@ -20,7 +20,7 @@ This post, then, is all about what $\sqrt{ap}$ is, why Thünen thought it was im
 
 There's a short biography of von Thünen in [a 1969 paper by Dickinson](https://www.jstor.org/stable/2229798). He was a wealthy landowner who ran an estate under near-mediaeval conditions, but who also cared deeply about the welfare of his employees. His book *Der isolierte Staat* was the fruit of long years of patiently gathering data and reasoning about economics from first principles. 
 
-<div style="width:70%; margin:0 auto;">
+<div style="width:60%; margin:0 auto;">
  <img src="/blog/images/2025/von_thuenen_portrait.png" />
 </div>
 
@@ -80,24 +80,24 @@ $$\frac{f(K_1, L_1) - rK_1-aL_1-yL_1}{L_0 + \frac{rK_0 + aL_0}{y}}$$
 
 Following von Thünen we can maximise this and get
 
-```math
+$$
 -L_1\left(L_0 + \frac{rK_0+aL_0}{y}\right) + \\
 -(f(K_1, L_1) - rK_1-aL_1-yL_1)\left(-\frac{(rK_0 + aL_0)}{y^2}\right) = 0
-```
+$$
 
 which yields
 
-```math
+$$
 -L_0L_1y^2 -2L_1(rK_0 +aL_0)y + \\
 (rK_0+aL_0)(f(K_1,L_1)-rK_1-aL_1) = 0
-```
+$$
 
 and
 
-```math
+$$
 y = \frac{-(rK_0+aL_0)}{L_0} \pm \\
 \sqrt{\frac{(rK_0+aL_0)^2}{L_0^2} + \frac{(rK_0+aL_0)}{L_0L_1}(f(K_1,L_1)-rK_1-aL_1)}.
-```
+$$
 
 To make progress, note that the factor
 
