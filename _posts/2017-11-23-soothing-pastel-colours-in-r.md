@@ -26,7 +26,7 @@ usually work with rgb values, in which a colour is described by a triple of red,
 0 to 1. In HSV, colours are arranged on a cylinder as in the following picture from the Wikiepdia page.
 
 <div style="width:40%; margin:0 auto;">
- <img src="https://upload.wikimedia.org/wikipedia/commons/0/0d/HSV_color_solid_cylinder_alpha_lowgamma.png" title="By SharkD CC BY-SA 3.0 license"/>
+ <img src="https://en.wikipedia.org/wiki/HSL_and_HSV#/media/File:HSV_color_solid_cylinder_saturation_gray.png" title="By SharkD CC BY-SA 3.0 license"/>
 </div>
 
 It seems that pastellizing a colour will be a simple task. First, convert from rgb to HSV. Second, decrease the saturation. Third, 
