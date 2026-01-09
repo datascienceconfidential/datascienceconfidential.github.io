@@ -30,7 +30,7 @@ It seems like this question has no answer. But actually there's a simple heurist
 
 Consider a classification problem in which the input is a data point $x$ contained in some metric space (i.e. a set equipped with a notion of distance) $(X, d)$, and the output is a classification into one of $M$ classes. The classifier is evaluated by the percentage of data points which it classifies correctly (the *accuracy*). If $A$ is the accuracy then $R = 1-A$ is called the *error rate*.
 
-The *Bayes Rate* $R^*$ for the problem is defined to be the best possible accuracy which any classifier could have. Why isn't $R^*$ just 100%? That's because the same point might appear in more than one class! See the example below.
+The *Bayes Rate* $R^\ast$ for the problem is defined to be the best possible accuracy which any classifier could have. Why isn't $R^\ast$ just 100%? That's because the same point might appear in more than one class! See the example below.
 
 Suppose a data set $\mathcal{X}$ is given. It consists of some points $x_i \in X$ and the corresponding classes $\theta_i$. We want to use the data set $\mathcal{X}$ to build a classifier.
 
@@ -38,7 +38,7 @@ The *1-Nearest Neighbour* or *1-NN* classifier is the classifier $C$ which simpl
 
 The theorem which [Cover and Hart proved in 1967](https://isl.stanford.edu/~cover/papers/transIT/0021cove.pdf) is that the error rate $R$ of the 1-NN classifier satisfies
 
-$$R^* \le R \le 2R^*$$
+$$R^\ast \le R \le 2R^\ast$$
 
 asymptotically as the number of data points in $\mathcal{X}$ goes to $\infty$, and provided that the points in $\mathcal{X}$ are an iid sample from some distribution.
 
@@ -108,9 +108,9 @@ If you run the whole script again with the same seed but with `N=10000` points i
 
 ## Practical Use
 
-There are two ways to use this in practice. First, suppose that you are presented with a data set and build a quick and dirty classifier using 1-NN and achieve an accuracy of 80%. Then the error rate $R$ of the 1-NN classifier is 20% and the Cover-Hart Theorem tells you that the Bayes rate $R^* \ge R/2$, so the Bayes rate cannot be less than 10%, which means that you can't expect to achieve an accuracy of better than 90% using some other algorithm. This might be a helpful guide to how much time you should spend trying to build a better classifier. In practice, the quick and dirty classifier you build will be something other than 1-NN<sup>1</sup>, and it usually has better performance than 1-NN, so this can actually be a useful way to estimate the Bayes rate on a new data set.
+There are two ways to use this in practice. First, suppose that you are presented with a data set and build a quick and dirty classifier using 1-NN and achieve an accuracy of 80%. Then the error rate $R$ of the 1-NN classifier is 20% and the Cover-Hart Theorem tells you that the Bayes rate $R^\ast \ge R/2$, so the Bayes rate cannot be less than 10%, which means that you can't expect to achieve an accuracy of better than 90% using some other algorithm. This might be a helpful guide to how much time you should spend trying to build a better classifier. In practice, the quick and dirty classifier you build will be something other than 1-NN<sup>1</sup>, and it usually has better performance than 1-NN, so this can actually be a useful way to estimate the Bayes rate on a new data set.
 
-Secondly, suppose that you are presented with a classification algorithm with an accuracy of 95%. Then you can estimate that the Bayes rate $R^*$ is at most 5%, because $R^*$ is the lowest possible error rate among all classifiers. This means that the error rate of a 1-NN classifier $R$ cannot be more than 10%. But that means that a 1-NN classifier would have given you 90% accuracy. Since the 1-NN classifier is just another name for "look at the data", you could already achieve 90% accuracy by looking at the data alone without building your fancy model. In other words, the data is doing $90/95 = 94.7%$ of the work!<sup>2</sup>
+Secondly, suppose that you are presented with a classification algorithm with an accuracy of 95%. Then you can estimate that the Bayes rate $R^\ast$ is at most 5%, because $R^\ast$ is the lowest possible error rate among all classifiers. This means that the error rate of a 1-NN classifier $R$ cannot be more than 10%. But that means that a 1-NN classifier would have given you 90% accuracy. Since the 1-NN classifier is just another name for "look at the data", you could already achieve 90% accuracy by looking at the data alone without building your fancy model. In other words, the data is doing $90/95 = 94.7%$ of the work!<sup>2</sup>
 
 ## Problems with the Cover-Hart Theorem
 
@@ -144,6 +144,6 @@ One more thing. Suppose we did find ourselves in a world in which a government w
 I think that would be hilarious.
 ___________________________
 
-[^1] By the way, the 1-NN classifier is one of the very few classifiers which outputs just a class without any notion of the strength of class membership, so you can't define an [AUC](https://datascienceconfidential.github.io/predictive-models/javascript/2018/04/18/ROC-and-CAP.html) for it. This is one of the classifiers which suffers from the so-called *class imbalance problem*, which they ask about in every data science interview. In pratice, class imbalance is never really a problem because nobody compares classifiers by using accuracy alone.
+[1] By the way, the 1-NN classifier is one of the very few classifiers which outputs just a class without any notion of the strength of class membership, so you can't define an [AUC](https://datascienceconfidential.github.io/predictive-models/javascript/2018/04/18/ROC-and-CAP.html) for it. This is one of the classifiers which suffers from the so-called *class imbalance problem*, which they ask about in every data science interview. In pratice, class imbalance is never really a problem because nobody compares classifiers by using accuracy alone.
 
-[^2] Of course, this might not be the full story. For one thing, you will probably be interested in other metrics besides accuracy. For another, your algorithm might have other advantages over the 1-NN classifier, such as coming up with predictions more quickly.
+[2] Of course, this might not be the full story. For one thing, you will probably be interested in other metrics besides accuracy. For another, your algorithm might have other advantages over the 1-NN classifier, such as coming up with predictions more quickly.
