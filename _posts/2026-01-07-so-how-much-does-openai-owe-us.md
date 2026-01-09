@@ -70,7 +70,7 @@ N <- 100
 df_train <- data.frame(x = c(rnorm(N/2, 1, 1), rnorm(N/2, -1, 1)), y = rep(c(1, 0), each=N/2))
 ```
 
-The following function classifies a point using the nearest neighbour with the metric being $d(x, y) = |x-y|$.
+The following function classifies a point using the nearest neighbour with the metric being $d(x, y) = \lvert x-y \rvert$.
 
 ```r
 classify_point <- function(x, df){
@@ -142,7 +142,9 @@ In the case of LLMs, assuming that they really are able to replace people in the
 One more thing. Suppose we did find ourselves in a world in which a government was choosing to tax AI companies based on the above formula. Then we could reach a bizarre scenario in which, in order to avoid tax, the AI companies would be competing to make the ratio $(2A-1)/A$ as small as possible. This would mean that, instead of boasting about the accuracy of their models on self-chosen benchmarks, these firms would find themselves in a paradoxical race to claim that their accuracy was as *low* as possible. 
 
 I think that would be hilarious.
+
 ___________________________
+
 
 [1] By the way, the 1-NN classifier is one of the very few classifiers which outputs just a class without any notion of the strength of class membership, so you can't define an [AUC](https://datascienceconfidential.github.io/predictive-models/javascript/2018/04/18/ROC-and-CAP.html) for it. This is one of the classifiers which suffers from the so-called *class imbalance problem*, which they ask about in every data science interview. In pratice, class imbalance is never really a problem because nobody compares classifiers by using accuracy alone.
 
