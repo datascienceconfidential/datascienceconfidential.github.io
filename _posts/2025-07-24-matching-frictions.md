@@ -7,6 +7,7 @@ date: 2025-07-24
 author: Richard
 categories: economics
 published: true
+citable: true
 ---
 This material was presented in a Lunch & Learn session of the New Zealand Statistical Association on 23 July 2025.
 

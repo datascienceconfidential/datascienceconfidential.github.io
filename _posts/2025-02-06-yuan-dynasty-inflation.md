@@ -7,6 +7,7 @@ date:   2025-02-06
 published: true
 author: Richard
 categories: economics r
+citable: true
 ---
 In this post, I would like to draw attention to a very interesting data set collected by Guan, Palma and Wu as part of the [replication package](https://www.openicpsr.org/openicpsr/project/194606/version/V1/view) for their paper [The rise and fall of paper money in Yuan China, 1260-1368](https://onlinelibrary.wiley.com/doi/10.1111/ehr.13305). The paper describes inflation, money and prices during the Yuan Dynasty era in China.
 

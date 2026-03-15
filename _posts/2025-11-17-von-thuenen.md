@@ -7,6 +7,7 @@ date: 2025-11-17
 author: Richard
 categories: economics r
 published: true
+citable: true
 ---
 Johann Heinrich von Thünen (1783-1850) was a German agronomist, agricultural reformer, and textbook author. If you look his name up on the internet, you'll find that he is best remembered for his model of land use, which seems to have made its way onto the Advanced Placement Geography syllabus in the United States. However, this wasn't always the case. [In a 1955 essay](https://www.jstor.org/stable/2551184), George Stigler wrote:
 

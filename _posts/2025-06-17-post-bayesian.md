@@ -7,6 +7,7 @@ date:   2025-06-17
 published: true
 author: Richard
 categories: statistics r
+citable: true
 ---
 A recent seminar introduced me to a new kind of statistical inference called post-Bayesianism. It has its [own website](https://postbayes.github.io/seminar/), seminar series, Youtube videos and, most importantly, a cool name<sup>[1](#myfootnote1)</sup>. Will it catch on? I don't know, but I think it's interesting, and the aim of this post is to explain why I think so.
 
