@@ -8,6 +8,7 @@ date: 2025-04-28
 author: Richard
 categories: economics r
 published: true
+citable: true
 ---
 ## Introduction
 

@@ -7,6 +7,7 @@ date: 2024-11-08
 author: Richard
 categories: economics r fermi-estimation
 published: true
+citable: true
 ---
 It's Hallowe'en; that time of year when LinkedIn is full of photos of the recruiters who ghosted you dressed up as ghosts. But ghosting isn't the only bad thing about the modern-day job market. Another plague on job seekers is the [endless rounds of interviews](https://www.bbc.com/worklife/article/20240402-return-of-never-ending-job-interviews) which companies put people through. A common scenario is that you do several interviews, only to be asked to do one more, and then one more, and then... One job seeker was even [interviewed 29 times](https://slate.com/human-interest/2023/05/how-many-job-interviews-too-many.html) for a single position. Needless to say, she didn't get it.
 

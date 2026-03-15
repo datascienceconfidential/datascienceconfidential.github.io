@@ -7,6 +7,7 @@ date: 2025-08-05
 author: Richard
 categories: ai economics r
 published: true
+citable: true
 ---
 I'm going to discuss some horrifying ideas in this post, so let's begin with some good news!
 

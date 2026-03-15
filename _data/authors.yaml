@@ -1,10 +1,12 @@
 - id: Richard
-  name: Richard
+  name: Richard Vale
+  surname: Vale
   name_short: Richard
   web: datascienceconfidential@github.io
   
 #- id: Example
 #  name: Example
+#  surname : Example
 #  name_short: Ex
 #  web: github.io
 #  email: example@gmail.com

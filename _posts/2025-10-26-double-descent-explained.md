@@ -7,6 +7,7 @@ date: 2025-10-26
 author: Richard
 categories: r ai deep-learning predictive-models
 published: true
+citable: true
 ---
 This is a post about the famous double descent phenomenon in machine learning. I aim to constrct the simplest possible example of double descent and explain exactly how it arises and why it doesn't contradict the bias-variance tradeoff.
 

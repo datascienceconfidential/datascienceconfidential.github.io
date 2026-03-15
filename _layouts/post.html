@@ -29,13 +29,43 @@ layout: default
   <span class="post-date">{{ page.date | date_to_string }}</span>
   {{ content }}
   
-  <div style="font-size:50%; color:#D3D3D3;">
-    &copy; Data Science Confidential {{ page.date | date: "%Y" }} All rights reserved.
+  <div style="font-size:70%; color:#D3D3D3;">
+    &copy; Data Science Confidential {{ page.date | date: "%Y" }} All rights reserved. 
+    {% if page.citable == true %}   
+      For attribution please cite this work as:<br>
+    {% endif %}
   </div>
-  
+  {% if page.citable == true %} 
+  <div style="font-size:70%; color:#D3D3D3;">
+    {{author.surname}}, {{author.name_short}}, {{ page.date | date: "%Y" }}. "{{ page.title }}", 
+    {{ page.date | date_to_string }}. {{ page.url | absolute_url }}
+  </div>
+
+  <div class="code-header">
+    <span class="code-language">BibTeX</span>
+    <button class="copy-btn" id="copyBibTeX">
+      <svg class="copy-icon" viewBox="0 0 24 24" width="16" height="16">
+        <rect x="9" y="9" width="13" height="13" rx="2" fill="none" stroke="currentColor" stroke-width="2"/>
+        <rect x="2" y="2" width="13" height="13" rx="2" fill="none" stroke="currentColor" stroke-width="2"/>
+      </svg>
+      <span class="copy-text"></span>
+    </button>
+  </div>
+<pre style="font-size:60%; color:#a8a8a8;" id="citation">
+@online{% raw %}{{% endraw %}
+  {{author.surname}}{{ page.date | date: "%Y" }},
+  author = {% raw %}{{% endraw %}{{author.surname}}, {{author.name_short}}{% raw %}}{% endraw %},
+  title = {% raw %}{{% endraw %}{{ page.title }}{% raw %}}{% endraw %},
+  date = {% raw %}{{% endraw %}{{ page.date | date : "%Y-%m-%d" }}{% raw %}}{% endraw %},
+  url = {% raw %}{{% endraw %}{{ page.url | absolute_url }}{% raw %}}{% endraw %},
+  langid = {en}
+}
+</pre>
+{% endif %}
+
   <hr>
   
-  <div class="pagination">  
+  <div class="pagination" style="font-size:100%;">  
   {% if page.previous.url %}  
     <a class="prev" href="{{page.previous.url}}">&laquo; Prev</a>  
   {% endif %}

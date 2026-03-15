@@ -7,6 +7,7 @@ date: 2026-01-07
 author: Richard
 categories: economics ai llm r
 published: true
+citable: true
 ---
 # Introduction: Copyright Law and Whatnot
 
