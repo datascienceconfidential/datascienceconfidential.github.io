@@ -12,12 +12,10 @@ I recently found a [useful tutorial on AWS S3 in R](https://blog.djnavarro.net/p
 
 To implement the system, I simply added the following lines to my `post.html` file in the `_layouts` directory.
 
-```
+```html
   {% if page.citable == true %} 
-  <div style="font-size:70%; color:#D3D3D3;">
     {{author.surname}}, {{author.name_short}}, {{ page.date | date: "%Y" }}. "{{ page.title }}", 
     {{ page.date | date_to_string }}. {{ page.url | absolute_url }}
-  </div>
   {% endif %}
   ```
 
