@@ -12,12 +12,16 @@ I recently found a [useful tutorial on AWS S3 in R](https://blog.djnavarro.net/p
 
 To implement the system, I simply added the following lines to my `post.html` file in the `_layouts` directory.
 
+{% raw %}
 ```html
-  {% if page.citable == true %} 
-    {{author.surname}}, {{author.name_short}}, {{ page.date | date: "%Y" }}. "{{ page.title }}", 
-    {{ page.date | date_to_string }}. {{ page.url | absolute_url }}
-  {% endif %}
-  ```
+{% if page.citable == true %} 
+<div style="font-size:70%; color:#D3D3D3;">
+  {{author.surname}}, {{author.name_short}}, {{ page.date | date: "%Y" }}. "{{ page.title }}", 
+  {{ page.date | date_to_string }}. {{ page.url | absolute_url }}
+</div>
+{% endif %}
+```
+{% endraw %}
 
 This piece of code prints the author, date and URL, but only if the `citable` flag is set to `true`. For most posts (like this one) I don't set it at all, and then the citation option does not appear. 
 
