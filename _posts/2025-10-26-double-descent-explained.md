@@ -9,7 +9,7 @@ categories: r ai deep-learning predictive-models
 published: true
 citable: true
 ---
-This is a post about the famous double descent phenomenon in machine learning. I aim to constrct the simplest possible example of double descent and explain exactly how it arises and why it doesn't contradict the bias-variance tradeoff.
+This is a post about the famous double descent phenomenon in machine learning. I aim to construct the simplest possible example of double descent and explain exactly how it arises and why it doesn't contradict the bias-variance tradeoff.
 
 I was inspired to write this post by an excellent [video by Welch Labs entitled *What the Books Get Wrong about AI*](https://www.youtube.com/watch?v=z64a7USuGX0). Despite the provocative title, the video explains why double descent doesn't really mean that the books are wrong. A [blog post by Alex Shtoff](https://alexshtf.github.io/2025/03/27/Free-Poly.html) contains detailed Python code for an example which is similar to the one in the video. 
 
