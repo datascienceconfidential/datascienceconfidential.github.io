@@ -100,7 +100,7 @@ What about logistic regression? In this case, the model is predicting $P(Y=1 \ve
 ___________________________
 
 <small>
-<a name="myfootnote1">1</a>: I'm a little wary of calling myself a data scientist these days, partly because I think the profession has been devalued by various attempts to cash in on its popularity, and partly because I think data science is becoming a bit of a toxic brand with all the [real-world harm]({{site.baseurl}}/economics/ai/llm/r/2026/01/07/so-how-much-does-openai-owe-us.html) being done by AI, data centres, mass surveillance, etc.
+<a name="myfootnote1">1</a>: I'm a little wary of calling myself a data scientist these days, partly because I think the profession has been devalued by various attempts to cash in on its popularity (leading to a glut of people with high confidence and low experience) and partly because I think data science is becoming a bit of a toxic brand with all the [real-world harm]({{site.baseurl}}/economics/ai/llm/r/2026/01/07/so-how-much-does-openai-owe-us.html) being done by AI, data centres, mass surveillance, etc.
 </small>
 
 <small>
