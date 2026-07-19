@@ -71,7 +71,7 @@ $$V(x) = 1 - \sum_{i=1}^4 (x_i – p_i)^2.$$
 
 You can check that the Bayesian always does better than the maximum-likelihoodist. But the conservative maximum-likelihoodist who follows the Kay-King recipe (follow your reference narrative while trying to hedge against the unknowable) can actually get a higher verisimilitude than the Bayesian who fails to take radical uncertainty into account, for example if $p_1=1/30, p_2=2/30$.
 
-```{r}
+```r
 p1 <- 1/30
 p2 <- 2/30
 p_true <- c(p1, p2, 1-p1-p2, 0)
