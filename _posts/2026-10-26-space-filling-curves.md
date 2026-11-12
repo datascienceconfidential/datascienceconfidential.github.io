@@ -65,3 +65,5 @@ I've highlighted a few interesting features. The most obvious is the line of poi
 Various other patterns can be detected by staring at the map. The weird-looking row of points near London highlighted in green are various battles from the twentieth century, mostly associated with the two world wars, including the Battle of Britain and various naval engagements.
 
 Overall, I thought this was a very interesting technique, and I wonder where it comes from. Who came up with the idea of using a space-filling curve for dimension reduction? Is there an optimal way to do it (i.e. given some data, is there a "best" way of choosing a space-filling curve to minimise distortion in your plot?) I don't know!
+
+[Edit: [Kevin Feasel of Curated SQL](https://curatedsql.com/2026/11/04/space-filling-curves-to-display-battles-over-time/) asked for the code. [Here's a link](https://github.com/rtrvale/EDA/blob/main/battles_viz.R) to a reproducible example.]
