@@ -77,15 +77,15 @@ __________________________
 </small>
 
 <small>
-<a name="footnote2">2</a>: I know that some readers will probably whine about elliptic curves and cryptography, but the point is that, at the time when pure mathematics is funded, it usually doesn't have any immediate applications, and most research in pure mathematics never gets applied to anything. Applied mathematicians, on the other hand, do seem to care about how their work is reported. I had a friend who once got negative press in the *Daily Mail* for doing mathematics related (among other things) to undulations in carpets.
+<a name="footnote2">2</a>: I believe that "Robert Simpson" refers to Robert Simson of Glasgow rather than [Thomas Simpson](https://en.wikipedia.org/wiki/Thomas_Simpson), a self-taught mathematician from England who introduced the abbreviations $sin$, $cos$ and $tan$ for the trigonometric functions. This is the Simpson after whom Simpson's Rule is named.
 </small>
 
 <small>
-<a name="footnote3">3</a>: I believe that "Robert Simpson" refers to Robert Simson of Glasgow rather than [Thomas Simpson](https://en.wikipedia.org/wiki/Thomas_Simpson), a self-taught mathematician from England who introduced the abbreviations $sin$, $cos$ and $tan$ for the trigonometric functions. This is the Simpson after whom Simpson's Rule is named.
+<a name="footnote3">3</a>: This is a typically Smithian passage. It starts with a wildly false claim (Simson and Stewart were decidedly not the greatest mathematicians of the age) which is then backed up by a second "confirmatory" claim which, if you read it carefully, is actually just something he made up. Yet his point seems to be very plausible.
 </small>
 
 <small>
-<a name="footnote4">4</a>: This is a typically Smithian passage. It starts with a wildly false claim (Simson and Stewart were decidedly not the greatest mathematicians of the age) which is then backed up by a second "confirmatory" claim which, if you read it carefully, is actually just something he made up. Yet his point seems to be very plausible.
+<a name="footnote4">4</a>: I know that some readers will probably whine about elliptic curves and cryptography, but the point is that, at the time when pure mathematics is funded, it usually doesn't have any immediate applications, and most research in pure mathematics never gets applied to anything. Applied mathematicians, on the other hand, do seem to care about how their work is reported. I had a friend who once got negative press in the *Daily Mail* for doing mathematics related (among other things) to undulations in carpets.
 </small>
 
 <small>
