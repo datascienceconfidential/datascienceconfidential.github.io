@@ -15,6 +15,8 @@ baseurl:          /
 
 title: Data Science Confidential
 tagline: Data Science Confidential
+author: Richard Vale
+author-bio: Dr. Richard Vale is an experienced economist with a deep interest in data science and statistics
 
 paginate:     5
 paginate_path: "/blog/page:num/"
